@@ -277,6 +277,11 @@ export default function QuotePage() {
                     </div>
                   </div>
 
+                  <div className="mt-6 p-4 rounded-xl bg-surface-alt dark:bg-dark border border-border dark:border-white/5">
+                    <p className="text-sm font-medium text-dark dark:text-white mb-2">🔐 Vérification anti-spam : {captcha.q} = ?</p>
+                    <input type="text" value={captchaInput} onChange={(e) => setCaptchaInput(e.target.value)} placeholder="Votre réponse" className="w-full px-4 py-2.5 rounded-xl border-2 border-border bg-transparent text-dark dark:text-white focus:border-accent outline-none text-sm" />
+                  </div>
+
                   <div className="mt-8 p-6 rounded-2xl bg-surface-alt dark:bg-dark border border-border dark:border-white/5">
                     <h3 className="font-heading font-bold text-dark dark:text-white mb-4">{loc === "fr" ? "Récapitulatif" : loc === "en" ? "Summary" : "ملخص"}</h3>
                     <div className="space-y-2 text-sm">
@@ -324,6 +329,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
