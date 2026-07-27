@@ -272,6 +272,10 @@ function addSecurityHeaders(
     "Content-Security-Policy",
     `frame-ancestors ${FRAME_ANCESTORS}`
   );
+  response.headers.set("X-Content-Type-Options", "nosniff");
+  response.headers.set("X-XSS-Protection", "1; mode=block");
+  response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+  response.headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
 
   return response;
 }
@@ -279,3 +283,4 @@ function addSecurityHeaders(
 export const config = {
   matcher: "/:path*",
 };
+
