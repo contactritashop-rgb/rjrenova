@@ -12,8 +12,9 @@ export interface ServiceData {
   ctaTitle: { fr: string; en: string; ar: string; tzm: string };
 }
 
-function s(slug: string, icon: string, tfr: string, ten: string, tar: string, ttzm: string, sfr: string, sen: string, sar: string, stzm: string, dfr: string, den: string, dar: string, dtzm: string, hero: string, adv: any[], proc: any[], gal: any[], faq: any[], ctafr: string, ctaen: string, ctaar: string, ctatzm?: string): ServiceData {
-  return { slug, icon, title: { fr: tfr, en: ten, ar: tar, tzm: ttzm || tfr }, subtitle: { fr: sfr, en: sen, ar: sar, tzm: stzm || sfr }, description: { fr: dfr, en: den, ar: dar, tzm: dtzm || dfr }, heroImage: hero, advantages: adv, process: proc, gallery: gal, faq, ctaTitle: { fr: ctafr, en: ctaen, ar: ctaar, tzm: ctatzm || ctafr } };
+function s(slug: string, icon: string, tfr: string, ten: string, tar: string, ttzm?: string, sfr?: string, sen?: string, sar?: string, stzm?: string, dfr?: string, den?: string, dar?: string, dtzm?: string, hero?: string, adv?: any[], proc?: any[], gal?: any[], faq?: any[], ctafr?: string, ctaen?: string, ctaar?: string, ctatzm?: string): ServiceData {
+  const tt = ttzm || tfr; const st = stzm || sfr || ""; const dt = dtzm || dfr || ""; const ct = ctatzm || ctafr || "";
+  return { slug, icon, title: { fr: tfr, en: ten || "", ar: tar || "", tzm: tt }, subtitle: { fr: sfr || "", en: sen || "", ar: sar || "", tzm: st }, description: { fr: dfr || "", en: den || "", ar: dar || "", tzm: dt }, heroImage: hero || "", advantages: adv || [], process: proc || [], gallery: gal || [], faq: faq || [], ctaTitle: { fr: ctafr || "", en: ctaen || "", ar: ctaar || "", tzm: ct } };
 }
 
 export const servicesData: Record<string, ServiceData> = {
@@ -139,6 +140,7 @@ export const servicesData: Record<string, ServiceData> = {
 
 export default servicesData;
 export const serviceSlugs = Object.keys(servicesData);
+
 
 
 
