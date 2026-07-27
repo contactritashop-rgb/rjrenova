@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, Globe, Moon, Sun } from "lucide-react";
 import { useI18n } from "@/lib/i18n/i18n-provider";
 import type { Locale } from "@/lib/i18n/translations";
+import { Logo } from "@/components/ui/logo";
 
 const navLinks = [
   { href: "#services", key: "nav.services" as const },
@@ -163,4 +164,5 @@ export function Header() {
     </>
   );
 }
+
 
