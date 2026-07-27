@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { LayoutDashboard, Wrench, FolderOpen, Star, FileText, Settings, LogOut, Menu, X, ChevronRight } from "lucide-react";
 import { isAuthenticated, logout, getCurrentAdmin, type AdminUser } from "@/lib/admin/auth";
+import { Logo } from "@/components/ui/logo";
 
 const navItems = [
   { href: "/admin/dashboard", icon: LayoutDashboard, label: "Tableau de bord" },
@@ -86,4 +87,5 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     </div>
   );
 }
+
 
