@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     siteName: "RJ RENOVA",
     countryName: "Morocco",
-    alternateLocales: ["en_US", "ar_MA"],
+    alternateLocale: ["en_US", "ar_MA"],
   },
   twitter: {
     card: "summary_large_image",
@@ -61,4 +61,5 @@ export const metadata: Metadata = {
     },
   },
 };
+
 
