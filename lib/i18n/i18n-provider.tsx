@@ -73,10 +73,6 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     flag: localeFlags[code],
   }));
 
-  if (!mounted) {
-    return <>{children}</>;
-  }
-
   return (
     <I18nContext.Provider
       value={{
@@ -99,4 +95,5 @@ export function useI18n() {
   if (!ctx) throw new Error("useI18n must be used within I18nProvider");
   return ctx;
 }
+
 
