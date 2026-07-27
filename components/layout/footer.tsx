@@ -20,12 +20,10 @@ export function Footer() {
       <div className="container-custom px-6 lg:px-12 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <Building2 className="text-accent" size={28} />
-              <span className="font-accent text-2xl font-bold text-white">
-                RJ<span className="text-accent">RENOVA</span>
-              </span>
-            </div>
+            <a href="/" className="block mb-5">
+              {/* Full logo with tagline on dark footer */}
+              <Logo variant="full" dark={true} className="h-16 w-auto" />
+            </a>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               {t("footer.description")}
             </p>
@@ -108,5 +106,6 @@ export function Footer() {
     </footer>
   );
 }
+
 
 
