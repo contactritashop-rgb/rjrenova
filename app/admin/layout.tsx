@@ -35,9 +35,11 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   return (
     <div className="min-h-screen bg-surface-alt dark:bg-dark">
       <aside className="hidden lg:flex fixed left-0 top-0 bottom-0 w-64 bg-dark flex-col z-30">
-        <div className="p-6 border-b border-white/10">
-          <span className="font-accent text-xl font-bold text-white">RJ<span className="text-accent">RENOVA</span></span>
-          <p className="text-white/40 text-xs mt-1">Administration</p>
+        <div className="p-5 border-b border-white/10">
+          <a href="/" className="block">
+            <Logo variant="compact" dark={true} className="h-7 w-auto" />
+          </a>
+          <p className="text-white/40 text-xs mt-2 pl-0.5">Administration</p>
         </div>
         <nav className="flex-1 p-4 space-y-1">
           {navItems.map((item) => (
@@ -87,5 +89,6 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     </div>
   );
 }
+
 
 
