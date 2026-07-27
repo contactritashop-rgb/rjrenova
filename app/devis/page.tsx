@@ -294,9 +294,13 @@ export default function QuotePage() {
                 <ArrowRight size={18} />
               </button>
             ) : (
-              <button onClick={handleSubmit} disabled={!canNext()} className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-white font-bold rounded-full hover:bg-accent-light disabled:opacity-40 disabled:cursor-not-allowed transition-all shadow-xl shadow-accent/25">
-                <Send size={20} />
-                {loc === "fr" ? "Envoyer la demande" : loc === "en" ? "Send request" : "إرسال الطلب"}
+              <button onClick={handleSubmit} disabled={!canNext() || sending} className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-white font-bold rounded-full hover:bg-accent-light disabled:opacity-40 disabled:cursor-not-allowed transition-all shadow-xl shadow-accent/25">
+                {sending ? (
+                  <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                ) : (
+                  <Send size={20} />
+                )}
+                {sending ? (loc === "fr" ? "Envoi..." : loc === "en" ? "Sending..." : "جاري الإرسال...") : (loc === "fr" ? "Envoyer la demande" : loc === "en" ? "Send request" : "إرسال الطلب")}
               </button>
             )}
           </div>
@@ -310,6 +314,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
