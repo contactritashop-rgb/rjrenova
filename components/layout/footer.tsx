@@ -5,12 +5,12 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import { Logo } from "@/components/ui/logo";
 
 const serviceLinks = [
-  "services.curtain",
-  "services.cladding",
-  "services.joinery",
-  "services.canopies",
-  "services.pergolas",
-];
+  { key: "services.curtain", slug: "mur-rideau" },
+  { key: "services.cladding", slug: "bardage" },
+  { key: "services.joinery", slug: "menuiserie-aluminium" },
+  { key: "services.canopies", slug: "verrieres" },
+  { key: "services.pergolas", slug: "pergolas" },
+] as const;
 
 export function Footer() {
   const { t } = useI18n();
@@ -21,7 +21,6 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-1">
             <a href="/" className="block mb-5">
-              {/* Full logo with tagline on dark footer */}
               <Logo variant="full" dark={true} className="h-16 w-auto" />
             </a>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
@@ -34,13 +33,13 @@ export function Footer() {
               {t("footer.services")}
             </h4>
             <ul className="space-y-3">
-              {serviceLinks.map((key) => (
-                <li key={key}>
+              {serviceLinks.map((link) => (
+                <li key={link.key}>
                   <a
-                    href="#services"
+                    href={`/services/${link.slug}`}
                     className="text-white/60 hover:text-accent transition-colors duration-300 text-sm"
                   >
-                    {t(key as any)}
+                    {t(link.key as any)}
                   </a>
                 </li>
               ))}
@@ -53,18 +52,18 @@ export function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="#why" className="text-white/60 hover:text-accent transition-colors duration-300 text-sm">
+                <a href="/entreprise" className="text-white/60 hover:text-accent transition-colors duration-300 text-sm">
                   {t("nav.company")}
                 </a>
               </li>
               <li>
-                <a href="#gallery" className="text-white/60 hover:text-accent transition-colors duration-300 text-sm">
+                <a href="/realisations" className="text-white/60 hover:text-accent transition-colors duration-300 text-sm">
                   {t("nav.projects")}
                 </a>
               </li>
               <li>
-                <a href="#faq" className="text-white/60 hover:text-accent transition-colors duration-300 text-sm">
-                  {t("nav.faq")}
+                <a href="/devis" className="text-white/60 hover:text-accent transition-colors duration-300 text-sm">
+                  {t("nav.quote")}
                 </a>
               </li>
             </ul>
@@ -94,10 +93,10 @@ export function Footer() {
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
           <p>© {new Date().getFullYear()} RJ RENOVA. {t("footer.rights")}</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-accent transition-colors duration-300">
+            <a href="/politique-confidentialite" className="hover:text-accent transition-colors duration-300">
               {t("footer.privacy")}
             </a>
-            <a href="#" className="hover:text-accent transition-colors duration-300">
+            <a href="/mentions-legales" className="hover:text-accent transition-colors duration-300">
               {t("footer.terms")}
             </a>
           </div>
@@ -106,6 +105,4 @@ export function Footer() {
     </footer>
   );
 }
-
-
 
