@@ -47,7 +47,7 @@ function useApiStore<T>(
       if (!cancelled) {
         const local = loadLocal<T[]>(localKey, fallback);
         if (local !== fallback) setData(local);
-        setError("MySQL indisponible — données locales");
+        setError("MySQL indisponible - données locales");
         setLoading(false);
       }
     }
@@ -145,5 +145,6 @@ export function useSettings() {
   const setSettings = (s: AdminSettings) => { setSettingsState(s); saveLocal("rjrenova_settings", s); };
   return { settings, setSettings };
 }
+
 
 

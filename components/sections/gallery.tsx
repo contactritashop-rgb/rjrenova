@@ -90,7 +90,7 @@ export function Gallery() {
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
                   <span className="text-accent text-xs font-semibold uppercase tracking-wider">
-                    {project.city} — {project.year}
+                    {project.city} - {project.year}
                   </span>
                   <h3 className="text-white font-heading text-xl font-bold mt-1">
                     {project.title}
@@ -105,4 +105,5 @@ export function Gallery() {
     </section>
   );
 }
+
 

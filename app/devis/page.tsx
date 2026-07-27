@@ -227,7 +227,7 @@ export default function QuotePage() {
                   <div className="border-2 border-dashed border-border rounded-2xl p-10 text-center hover:border-accent/50 transition-colors cursor-pointer" onClick={() => fileInputRef.current?.click()}>
                     <Upload size={40} className="mx-auto mb-4 text-muted" />
                     <p className="font-medium text-dark dark:text-white mb-1">{loc === "fr" ? "Déposez vos fichiers ici" : loc === "en" ? "Drop your files here" : "أسقط ملفاتكم هنا"}</p>
-                    <p className="text-muted text-sm">PDF, DWG, JPG, PNG — Max 10 Mo</p>
+                    <p className="text-muted text-sm">PDF, DWG, JPG, PNG - Max 10 Mo</p>
                     <input ref={fileInputRef} type="file" multiple accept=".pdf,.dwg,.jpg,.jpeg,.png" onChange={(e) => update("files", Array.from(e.target.files || []))} className="hidden" />
                   </div>
                   {form.files.length > 0 && (
@@ -314,6 +314,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
