@@ -77,8 +77,8 @@ export default function EntreprisePage() {
                       <v.icon size={24} className="text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-heading font-bold text-dark dark:text-white mb-1">{v[l as keyof typeof v]}</h3>
-                      <p className="text-muted text-sm">{v[`${l}Desc` as keyof typeof v] as string}</p>
+                      <h3 className="font-heading font-bold text-dark dark:text-white mb-1">{v.fr && typeof v.fr === "string" ? (l === "fr" ? v.fr : l === "en" ? v.en : v.ar) : ""}</h3>
+                      <p className="text-muted text-sm">{l === "fr" ? v.frDesc : l === "en" ? v.enDesc : v.arDesc}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -139,4 +139,5 @@ export default function EntreprisePage() {
     </>
   );
 }
+
 
