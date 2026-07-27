@@ -19,7 +19,7 @@ export function ServicePageClient({ slug }: { slug: string }) {
   if (!service) notFound();
 
   // Safe accessor: try locale, fall back to fr
-  const t = (obj: any, key: string) => obj?.[loc] || obj?.fr || "";
+  const tx = (obj: any) => obj?.[loc] || obj?.fr || "";
 
   return (
     <>
@@ -124,6 +124,7 @@ export function ServicePageClient({ slug }: { slug: string }) {
     </>
   );
 }
+
 
 
 
