@@ -5,15 +5,15 @@ import { ArrowRight, Cuboid, Layers, PaintBucket, LayoutGrid, Sun, Umbrella, Shi
 import { useI18n } from "@/lib/i18n/i18n-provider";
 
 const services = [
-  { key: "services.curtain" as const, descKey: "services.curtain.desc" as const, icon: Cuboid },
-  { key: "services.cladding" as const, descKey: "services.cladding.desc" as const, icon: Layers },
-  { key: "services.dressing" as const, descKey: "services.dressing.desc" as const, icon: PaintBucket },
-  { key: "services.joinery" as const, descKey: "services.joinery.desc" as const, icon: LayoutGrid },
-  { key: "services.canopies" as const, descKey: "services.canopies.desc" as const, icon: Sun },
-  { key: "services.pergolas" as const, descKey: "services.pergolas.desc" as const, icon: Umbrella },
-  { key: "services.guardrails" as const, descKey: "services.guardrails.desc" as const, icon: Shield },
-  { key: "services.doors" as const, descKey: "services.doors.desc" as const, icon: DoorOpen },
-  { key: "services.windows" as const, descKey: "services.windows.desc" as const, icon: AppWindow },
+  { key: "services.curtain" as const, descKey: "services.curtain.desc" as const, icon: Cuboid, slug: "mur-rideau" },
+  { key: "services.cladding" as const, descKey: "services.cladding.desc" as const, icon: Layers, slug: "bardage" },
+  { key: "services.dressing" as const, descKey: "services.dressing.desc" as const, icon: PaintBucket, slug: "habillage-facade" },
+  { key: "services.joinery" as const, descKey: "services.joinery.desc" as const, icon: LayoutGrid, slug: "menuiserie-aluminium" },
+  { key: "services.canopies" as const, descKey: "services.canopies.desc" as const, icon: Sun, slug: "verrieres" },
+  { key: "services.pergolas" as const, descKey: "services.pergolas.desc" as const, icon: Umbrella, slug: "pergolas" },
+  { key: "services.guardrails" as const, descKey: "services.guardrails.desc" as const, icon: Shield, slug: "garde-corps" },
+  { key: "services.doors" as const, descKey: "services.doors.desc" as const, icon: DoorOpen, slug: "portes-aluminium" },
+  { key: "services.windows" as const, descKey: "services.windows.desc" as const, icon: AppWindow, slug: "fenetres-aluminium" },
 ];
 
 export function Services() {
@@ -59,7 +59,7 @@ export function Services() {
                 {t(service.descKey)}
               </p>
               <a
-                href="#"
+                href={`/services/${service.slug}`}
                 className="inline-flex items-center gap-2 text-accent font-semibold text-sm group/link hover:gap-3 transition-all duration-300"
               >
                 {t("services.discover")}
