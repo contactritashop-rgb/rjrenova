@@ -153,13 +153,6 @@ export function Header() {
                   {t(link.key)}
                 </a>
               ))}
-              <a
-                href="/devis"
-                onClick={() => setMobileOpen(false)}
-                className="mt-4 px-6 py-3 bg-accent text-white font-semibold rounded-full text-center hover:bg-accent-dark transition-all duration-300"
-              >
-                {t("nav.quote")}
-              </a>
             </nav>
           </motion.div>
         )}
@@ -167,6 +160,7 @@ export function Header() {
     </>
   );
 }
+
 
 
 
