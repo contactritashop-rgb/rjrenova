@@ -62,8 +62,10 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <div className="lg:hidden fixed inset-0 z-40">
           <div className="absolute inset-0 bg-black/50" onClick={() => setMobileOpen(false)} />
           <div className="absolute left-0 top-0 bottom-0 w-64 bg-dark flex flex-col">
-            <div className="p-6 border-b border-white/10">
-              <span className="font-accent text-xl font-bold text-white">RJ<span className="text-accent">RENOVA</span></span>
+            <div className="p-5 border-b border-white/10">
+              <a href="/" className="block">
+                <Logo variant="compact" dark={true} className="h-7 w-auto" />
+              </a>
             </div>
             <nav className="flex-1 p-4 space-y-1">
               {navItems.map((item) => (
@@ -89,6 +91,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     </div>
   );
 }
+
 
 
 
