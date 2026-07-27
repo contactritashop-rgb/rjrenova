@@ -5,192 +5,136 @@ export interface ServiceData {
   subtitle: { fr: string; en: string; ar: string };
   description: { fr: string; en: string; ar: string };
   heroImage: string;
-  advantages: {
-    title: { fr: string; en: string; ar: string };
-    description: { fr: string; en: string; ar: string };
-    icon: string;
-  }[];
-  process: {
-    step: string;
-    title: { fr: string; en: string; ar: string };
-    description: { fr: string; en: string; ar: string };
-     icon: string;
-   }[];
-   gallery: { src: string; alt: { fr: string; en: string; ar: string } }[];
-   faq: { q: { fr: string; en: string; ar: string }; a: { fr: string; en: string; ar: string } }[];
-   ctaTitle: { fr: string; en: string; ar: string };
- }
+  advantages: { title: { fr: string; en: string; ar: string }; description: { fr: string; en: string; ar: string }; icon: string }[];
+  process: { step: string; title: { fr: string; en: string; ar: string }; description: { fr: string; en: string; ar: string }; icon: string }[];
+  gallery: { src: string; alt: { fr: string; en: string; ar: string } }[];
+  faq: { q: { fr: string; en: string; ar: string }; a: { fr: string; en: string; ar: string } }[];
+  ctaTitle: { fr: string; en: string; ar: string };
+}
 
- const servicesData: Record<string, ServiceData> = {
-   "mur-rideau": {
-     slug: "mur-rideau",
-     icon: "Cuboid",
-     title: {
-       fr: "Mur Rideau Aluminium",
-       en: "Aluminum Curtain Wall",
-       ar: "واجهات زجاجية من الألمنيوم",
-     },
-     subtitle: {
-       fr: "Façades légères et transparentes pour une architecture moderne",
-       en: "Lightweight, transparent facades for modern architecture",
-       ar: "واجهات خفيفة وشفافة لعمارة عصرية",
-     },
-     description: {
-       fr: "Le mur rideau est la signature architecturale des bâtiments contemporains. RJ RENOVA conçoit et installe des murs rideaux aluminium sur mesure, alliant performance thermique, étanchéité parfaite et esthétique minimaliste. Nos solutions s'adaptent à tous les types de projets : tours de bureaux, centres commerciaux, hôtels de luxe et bâtiments institutionnels.",
-       en: "The curtain wall is the architectural signature of contemporary buildings. RJ RENOVA designs and installs custom aluminum curtain walls, combining thermal performance, perfect sealing, and minimalist aesthetics. Our solutions adapt to all project types: office towers, shopping centers, luxury hotels, and institutional buildings.",
-       ar: "الواجهة الزجاجية هي التوقيع المعماري للمباني المعاصرة. تصمم وتركب RJ RENOVA واجهات زجاجية من الألمنيوم حسب الطلب، تجمع بين الأداء الحراري والإحكام المثالي والجمالية البسيطة. تتكيف حلولنا مع جميع أنواع المشاريع: أبراج المكاتب، المراكز التجارية، الفنادق الفاخرة والمباني المؤسساتية.",
-     },
-     heroImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80",
-     advantages: [
-       { title: { fr: "Luminosité Maximale", en: "Maximum Light", ar: "إضاءة قصوى" }, description: { fr: "Jusqu'à 90% de surface vitrée pour des espaces baignés de lumière naturelle.", en: "Up to 90% glazed surface for spaces flooded with natural light.", ar: "حتى 90% من السطح مزجج لمساحات تغمرها الإضاءة الطبيعية." }, icon: "Sun" },
-       { title: { fr: "Isolation Thermique", en: "Thermal Insulation", ar: "عزل حراري" }, description: { fr: "Rupture de pont thermique intégrée pour une performance énergétique optimale.", en: "Integrated thermal break for optimal energy performance.", ar: "قاطع حراري مدمج لأداء طاقي مثالي." }, icon: "Thermometer" },
-       { title: { fr: "Étanchéité Parfaite", en: "Perfect Sealing", ar: "إحكام مثالي" }, description: { fr: "Système de drainage intégré et joints EPDM haute performance.", en: "Integrated drainage system and high-performance EPDM seals.", ar: "نظام تصريف مدمج ومانعات تسرب عالية الأداء." }, icon: "Shield" },
-       { title: { fr: "Design Sur Mesure", en: "Custom Design", ar: "تصميم حسب الطلب" }, description: { fr: "Large choix de profilés, couleurs et finitions pour une identité unique.", en: "Wide choice of profiles, colors, and finishes for a unique identity.", ar: "تشكيلة واسعة من البروفيلات والألوان والتشطيبات لهوية فريدة." }, icon: "Palette" },
-     ],
-     process: [
-       { step: "01", title: { fr: "Étude de Faisabilité", en: "Feasibility Study", ar: "دراسة الجدوى" }, description: { fr: "Analyse structurelle et thermique du bâtiment.", en: "Structural and thermal analysis of the building.", ar: "تحليل هيكلي وحراري للمبنى." }, icon: "ClipboardCheck" },
-       { step: "02", title: { fr: "Conception 3D", en: "3D Design", ar: "تصميم ثلاثي الأبعاد" }, description: { fr: "Modélisation complète et validation des profilés.", en: "Complete modeling and profile validation.", ar: "نمذجة كاملة والتحقق من البروفيلات." }, icon: "PencilRuler" },
-       { step: "03", title: { fr: "Fabrication", en: "Manufacturing", ar: "التصنيع" }, description: { fr: "Usinage de précision et contrôle qualité.", en: "Precision machining and quality control.", ar: "تصنيع دقيق ومراقبة الجودة." }, icon: "Factory" },
-       { step: "04", title: { fr: "Installation", en: "Installation", ar: "التركيب" }, description: { fr: "Pose par équipes certifiées avec nacelles.", en: "Installation by certified teams with platforms.", ar: "تركيب من قبل فرق معتمدة بمنصات." }, icon: "Wrench" },
-     ],
-     gallery: [
-       { src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80", alt: { fr: "Tour de bureaux", en: "Office tower", ar: "برج مكاتب" } },
-       { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80", alt: { fr: "Façade vitrée", en: "Glass facade", ar: "واجهة زجاجية" } },
-       { src: "https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?w=600&q=80", alt: { fr: "Détail aluminium", en: "Aluminum detail", ar: "تفصيل ألمنيوم" } },
-     ],
-     faq: [
-       { q: { fr: "Quelle est la durée de vie d'un mur rideau ?", en: "What is the lifespan of a curtain wall?", ar: "ما هو عمر الواجهة الزجاجية؟" }, a: { fr: "Nos murs rideaux sont conçus pour durer plus de 30 ans avec un entretien minimal.", en: "Our curtain walls are designed to last over 30 years with minimal maintenance.", ar: "صممت واجهاتنا الزجاجية لتدوم أكثر من 30 سنة مع صيانة بسيطة." } },
-       { q: { fr: "Quels types de vitrage proposez-vous ?", en: "What types of glazing do you offer?", ar: "ما أنواع الزجاج التي تقترحونها؟" }, a: { fr: "Simple, double ou triple vitrage, avec options : contrôle solaire, autonettoyant, opacifiant, acoustique.", en: "Single, double, or triple glazing with options: solar control, self-cleaning, switchable, acoustic.", ar: "زجاج بسيط، مزدوج أو ثلاثي مع خيارات: تحكم شمسي، ذاتي التنظيف، قابل للتعتيم، صوتي." } },
-     ],
-     ctaTitle: { fr: "Prêt à illuminer votre bâtiment ?", en: "Ready to brighten your building?", ar: "مستعد لإضاءة مبناك؟" },
-   },
+function s(slug: string, icon: string, tfr: string, ten: string, tar: string, sfr: string, sen: string, sar: string, dfr: string, den: string, dar: string, hero: string, adv: any[], proc: any[], gal: any[], faq: any[], ctafr: string, ctaen: string, ctaar: string): ServiceData {
+  return { slug, icon, title: { fr: tfr, en: ten, ar: tar }, subtitle: { fr: sfr, en: sen, ar: sar }, description: { fr: dfr, en: den, ar: dar }, heroImage: hero, advantages: adv, process: proc, gallery: gal, faq, ctaTitle: { fr: ctafr, en: ctaen, ar: ctaar } };
+}
 
-   "bardage": {
-     slug: "bardage",
-     icon: "Layers",
-     title: {
-       fr: "Bardage Aluminium",
-       en: "Aluminum Cladding",
-       ar: "تكسية خارجية من الألمنيوم",
-     },
-     subtitle: {
-       fr: "Revêtement extérieur alliant esthétique, isolation et protection durable",
-       en: "Exterior cladding combining aesthetics, insulation, and lasting protection",
-       ar: "تكسية خارجية تجمع بين الجمال والعزل والحماية الدائمة",
-     },
-     description: {
-       fr: "Le bardage aluminium RJ RENOVA transforme l'apparence de vos bâtiments tout en améliorant leur performance énergétique. Disponible en de multiples finitions — laqué, anodisé, effet bois, perforé — notre bardage s'adapte à tous les styles architecturaux, du plus classique au plus contemporain.",
-       en: "RJ RENOVA aluminum cladding transforms the appearance of your buildings while improving energy performance. Available in multiple finishes — lacquered, anodized, wood effect, perforated — our cladding adapts to all architectural styles, from classic to contemporary.",
-       ar: "تحول التكسية الخارجية من RJ RENOVA مظهر مبانيها مع تحسين أدائها الطاقي. متوفرة بتشطيبات متعددة — مطلية، مؤكسدة، تأثير خشب، مثقبة — تتكيف تكسيتنا مع جميع الأساليب المعمارية.",
-     },
-     heroImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80",
-     advantages: [
-       { title: { fr: "Protection Durable", en: "Lasting Protection", ar: "حماية دائمة" }, description: { fr: "Résistance exceptionnelle aux intempéries, UV et corrosion.", en: "Exceptional resistance to weather, UV, and corrosion.", ar: "مقاومة استثنائية للعوامل الجوية والأشعة فوق البنفسجية والتآكل." }, icon: "Shield" },
-       { title: { fr: "Isolation Renforcée", en: "Enhanced Insulation", ar: "عزل معزز" }, description: { fr: "Réduction jusqu'à 30% des déperditions thermiques.", en: "Up to 30% reduction in thermal loss.", ar: "تقليص يصل إلى 30% من الفقدان الحراري." }, icon: "Thermometer" },
-       { title: { fr: "Entretien Minimal", en: "Minimal Maintenance", ar: "صيانة بسيطة" }, description: { fr: "Aucun traitement requis, un simple nettoyage à l'eau suffit.", en: "No treatment required, a simple water cleaning is enough.", ar: "لا حاجة لأي معالجة، تنظيف بسيط بالماء يكفي." }, icon: "Sparkles" },
-       { title: { fr: "Finitions Multiples", en: "Multiple Finishes", ar: "تشطيبات متعددة" }, description: { fr: "Plus de 200 couleurs RAL et finitions spéciales disponibles.", en: "Over 200 RAL colors and special finishes available.", ar: "أكثر من 200 لون وتشطيبات خاصة متوفرة." }, icon: "Palette" },
-     ],
-     process: [
-       { step: "01", title: { fr: "Diagnostic", en: "Diagnosis", ar: "تشخيص" }, description: { fr: "Analyse de la façade existante et recommandations.", en: "Analysis of existing facade and recommendations.", ar: "تحليل الواجهة الحالية وتوصيات." }, icon: "ClipboardCheck" },
-       { step: "02", title: { fr: "Design", en: "Design", ar: "تصميم" }, description: { fr: "Choix des finitions et modélisation.", en: "Choice of finishes and modeling.", ar: "اختيار التشطيبات والنمذجة." }, icon: "PencilRuler" },
-       { step: "03", title: { fr: "Production", en: "Production", ar: "إنتاج" }, description: { fr: "Découpe et laquage en usine.", en: "Cutting and lacquering in factory.", ar: "تقطيع وطلاء في المصنع." }, icon: "Factory" },
-       { step: "04", title: { fr: "Pose", en: "Installation", ar: "تركيب" }, description: { fr: "Fixation sur ossature avec isolation intégrée.", en: "Fixing on framework with integrated insulation.", ar: "تثبيت على هيكل مع عزل مدمج." }, icon: "Wrench" },
-     ],
-     gallery: [
-       { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80", alt: { fr: "Bardage moderne", en: "Modern cladding", ar: "تكسية عصرية" } },
-       { src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80", alt: { fr: "Villa contemporaine", en: "Contemporary villa", ar: "فيلا عصرية" } },
-       { src: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80", alt: { fr: "Résidence bardée", en: "Clad residence", ar: "مسكن مكسو" } },
-     ],
-     faq: [
-       { q: { fr: "Le bardage aluminium est-il adapté au climat marocain ?", en: "Is aluminum cladding suitable for the Moroccan climate?", ar: "هل التكسية مناسبة للمناخ المغربي؟" }, a: { fr: "Absolument. L'aluminium résiste parfaitement à la chaleur, au soleil intense et à l'air salin des zones côtières.", en: "Absolutely. Aluminum resists heat, intense sun, and saline air of coastal areas perfectly.", ar: "بالتأكيد. الألمنيوم يقاوم الحرارة والشمس القوية والهواء المالح للمناطق الساحلية." } },
-     ],
-     ctaTitle: { fr: "Transformez votre façade dès maintenant", en: "Transform your facade now", ar: "حول واجهتك الآن" },
-   },
+export const servicesData: Record<string, ServiceData> = {
+  "mur-rideau": s("mur-rideau", "Cuboid", "Mur Rideau Aluminium", "Aluminum Curtain Wall", "واجهات زجاجية",
+    "Façades légères et transparentes", "Lightweight transparent facades", "واجهات خفيفة وشفافة",
+    "Le mur rideau est la signature architecturale des bâtiments contemporains. RJ RENOVA conçoit et installe des murs rideaux aluminium sur mesure, alliant performance thermique, étanchéité parfaite et esthétique minimaliste.",
+    "The curtain wall is the architectural signature of contemporary buildings. RJ RENOVA designs and installs custom aluminum curtain walls, combining thermal performance, perfect sealing, and minimalist aesthetics.",
+    "الواجهة الزجاجية هي التوقيع المعماري للمباني المعاصرة. تصمم RJ RENOVA واجهات زجاجية من الألمنيوم حسب الطلب.",
+    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80",
+    [{ title: { fr: "Luminosité Maximale", en: "Maximum Light", ar: "إضاءة قصوى" }, description: { fr: "Jusqu'à 90% de surface vitrée.", en: "Up to 90% glazed surface.", ar: "حتى 90% سطح مزجج." }, icon: "Sun" }, { title: { fr: "Isolation Thermique", en: "Thermal Insulation", ar: "عزل حراري" }, description: { fr: "Rupture de pont thermique intégrée.", en: "Integrated thermal break.", ar: "قاطع حراري مدمج." }, icon: "Thermometer" }, { title: { fr: "Étanchéité Parfaite", en: "Perfect Sealing", ar: "إحكام مثالي" }, description: { fr: "Joints EPDM haute performance.", en: "High-performance EPDM seals.", ar: "مانعات تسرب عالية الأداء." }, icon: "Shield" }, { title: { fr: "Design Sur Mesure", en: "Custom Design", ar: "تصميم حسب الطلب" }, description: { fr: "Large choix de profilés et couleurs.", en: "Wide choice of profiles and colors.", ar: "تشكيلة واسعة من البروفيلات." }, icon: "Palette" }],
+    [{ step: "01", title: { fr: "Étude", en: "Study", ar: "دراسة" }, description: { fr: "Analyse structurelle et thermique.", en: "Structural and thermal analysis.", ar: "تحليل هيكلي وحراري." }, icon: "ClipboardCheck" }, { step: "02", title: { fr: "Conception 3D", en: "3D Design", ar: "تصميم ثلاثي الأبعاد" }, description: { fr: "Modélisation et validation.", en: "Modeling and validation.", ar: "نمذجة وتحقق." }, icon: "PencilRuler" }, { step: "03", title: { fr: "Fabrication", en: "Manufacturing", ar: "تصنيع" }, description: { fr: "Usinage de précision.", en: "Precision machining.", ar: "تصنيع دقيق." }, icon: "Factory" }, { step: "04", title: { fr: "Installation", en: "Installation", ar: "تركيب" }, description: { fr: "Pose par équipes certifiées.", en: "Installation by certified teams.", ar: "تركيب من فرق معتمدة." }, icon: "Wrench" }],
+    [{ src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80", alt: { fr: "Tour de bureaux", en: "Office tower", ar: "برج مكاتب" } }, { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80", alt: { fr: "Façade vitrée", en: "Glass facade", ar: "واجهة زجاجية" } }],
+    [{ q: { fr: "Quelle est la durée de vie ?", en: "What is the lifespan?", ar: "ما هو العمر الافتراضي؟" }, a: { fr: "Plus de 30 ans avec entretien minimal.", en: "Over 30 years with minimal maintenance.", ar: "أكثر من 30 سنة بصيانة بسيطة." } }, { q: { fr: "Quels types de vitrage ?", en: "What types of glazing?", ar: "ما أنواع الزجاج؟" }, a: { fr: "Simple, double, triple avec contrôle solaire, autonettoyant, acoustique.", en: "Single, double, triple with solar control, self-cleaning, acoustic.", ar: "بسيط، مزدوج، ثلاثي مع تحكم شمسي." } }],
+    "Prêt à illuminer votre bâtiment ?", "Ready to brighten your building?", "مستعد لإضاءة مبناك؟"
+  ),
 
-   "habillage-facade": {
-     slug: "habillage-facade",
-     icon: "PaintBucket",
-     title: {
-       fr: "Habillage de Façade",
-       en: "Facade Dressing",
-       ar: "تلبيس الواجهات",
-     },
-     subtitle: {
-       fr: "Rénovation et embellissement de façades existantes avec des solutions aluminium",
-       en: "Renovation and beautification of existing facades with aluminum solutions",
-       ar: "تجديد وتجميل الواجهات القائمة بحلول الألمنيوم",
-     },
-     description: {
-       fr: "L'habillage de façade RJ RENOVA donne une seconde vie à vos bâtiments. Sans démolir, nous transformons l'apparence et améliorons les performances énergétiques de vos façades existantes. Une solution rapide, économique et spectaculaire pour moderniser votre patrimoine immobilier.",
-       en: "RJ RENOVA facade dressing gives a second life to your buildings. Without demolition, we transform the appearance and improve the energy performance of your existing facades. A fast, economical, and spectacular solution to modernize your real estate assets.",
-       ar: "يمنح تلبيس الواجهات من RJ RENOVA حياة ثانية لمبانيها. بدون هدم، نحول المظهر ونحسن الأداء الطاقي لواجهاتكم الحالية. حل سريع واقتصادي ورائع لتحديث ممتلكاتكم العقارية.",
-     },
-     heroImage: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1200&q=80",
-     advantages: [
-       { title: { fr: "Sans Démolition", en: "No Demolition", ar: "بدون هدم" }, description: { fr: "Intervention rapide sans gêne pour les occupants.", en: "Fast intervention without disturbance to occupants.", ar: "تدخل سريع دون إزعاج للسكان." }, icon: "Zap" },
-       { title: { fr: "Économie d'Énergie", en: "Energy Savings", ar: "توفير الطاقة" }, description: { fr: "Amélioration thermique immédiate de votre bâtiment.", en: "Immediate thermal improvement of your building.", ar: "تحسين حراري فوري لمبناكم." }, icon: "Leaf" },
-       { title: { fr: "Valorisation", en: "Added Value", ar: "زيادة القيمة" }, description: { fr: "Augmentation significative de la valeur du bien.", en: "Significant increase in property value.", ar: "زيادة كبيرة في قيمة العقار." }, icon: "TrendingUp" },
-       { title: { fr: "Design Moderne", en: "Modern Design", ar: "تصميم عصري" }, description: { fr: "Métamorphose architecturale complète.", en: "Complete architectural metamorphosis.", ar: "تحول معماري كامل." }, icon: "Sparkles" },
-     ],
-     process: [
-       { step: "01", title: { fr: "Audit", en: "Audit", ar: "تدقيق" }, description: { fr: "Inspection et diagnostic de la façade.", en: "Inspection and diagnosis of the facade.", ar: "فحص وتشخيص الواجهة." }, icon: "ClipboardCheck" },
-       { step: "02", title: { fr: "Proposition", en: "Proposal", ar: "اقتراح" }, description: { fr: "Choix des matériaux et rendu 3D.", en: "Material selection and 3D rendering.", ar: "اختيار المواد وتصور ثلاثي الأبعاد." }, icon: "PencilRuler" },
-       { step: "03", title: { fr: "Préparation", en: "Preparation", ar: "تحضير" }, description: { fr: "Nettoyage et préparation du support.", en: "Cleaning and surface preparation.", ar: "تنظيف وتحضير السطح." }, icon: "Factory" },
-       { step: "04", title: { fr: "Habillage", en: "Dressing", ar: "تلبيس" }, description: { fr: "Pose des éléments aluminium sur ossature.", en: "Installation of aluminum elements on framework.", ar: "تركيب عناصر الألمنيوم على الهيكل." }, icon: "Wrench" },
-     ],
-     gallery: [
-       { src: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600&q=80", alt: { fr: "Rénovation façade", en: "Facade renovation", ar: "تجديد واجهة" } },
-       { src: "https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?w=600&q=80", alt: { fr: "Avant/Après", en: "Before/After", ar: "قبل/بعد" } },
-     ],
-     faq: [
-       { q: { fr: "Combien de temps dure un chantier d'habillage ?", en: "How long does a dressing project take?", ar: "كم يستغرق مشروع التلبيس؟" }, a: { fr: "En moyenne 2 à 4 semaines selon la surface, sans évacuation des lieux nécessaire.", en: "On average 2 to 4 weeks depending on surface area, no evacuation required.", ar: "في المتوسط 2 إلى 4 أسابيع حسب المساحة، دون الحاجة للإخلاء." } },
-     ],
-     ctaTitle: { fr: "Offrez un nouveau visage à votre bâtiment", en: "Give your building a new face", ar: "امنح مبناك وجهاً جديداً" },
-   },
+  "bardage": s("bardage", "Layers", "Bardage Aluminium", "Aluminum Cladding", "تكسية خارجية",
+    "Revêtement esthétique et protecteur", "Aesthetic and protective cladding", "تكسية جمالية وواقية",
+    "Le bardage aluminium RJ RENOVA transforme l'apparence de vos bâtiments tout en améliorant leur performance énergétique. Multiples finitions : laqué, anodisé, effet bois, perforé.",
+    "RJ RENOVA aluminum cladding transforms building appearance while improving energy performance. Multiple finishes available.",
+    "تحول التكسية الخارجية من RJ RENOVA مظهر المباني مع تحسين الأداء الطاقي.",
+    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80",
+    [{ title: { fr: "Protection Durable", en: "Lasting Protection", ar: "حماية دائمة" }, description: { fr: "Résistance intempéries, UV, corrosion.", en: "Weather, UV, corrosion resistance.", ar: "مقاومة للعوامل الجوية." }, icon: "Shield" }, { title: { fr: "Isolation Renforcée", en: "Enhanced Insulation", ar: "عزل معزز" }, description: { fr: "-30% de déperditions thermiques.", en: "-30% thermal loss.", ar: "-30% من الفقدان الحراري." }, icon: "Thermometer" }, { title: { fr: "Entretien Zéro", en: "Zero Maintenance", ar: "صفر صيانة" }, description: { fr: "Un simple nettoyage à l'eau.", en: "Simple water cleaning only.", ar: "تنظيف بسيط بالماء فقط." }, icon: "Sparkles" }, { title: { fr: "200+ Couleurs", en: "200+ Colors", ar: "+200 لون" }, description: { fr: "Toutes les couleurs RAL disponibles.", en: "All RAL colors available.", ar: "جميع ألوان RAL متوفرة." }, icon: "Palette" }],
+    [{ step: "01", title: { fr: "Diagnostic", en: "Diagnosis", ar: "تشخيص" }, description: { fr: "Analyse de la façade existante.", en: "Analysis of existing facade.", ar: "تحليل الواجهة الحالية." }, icon: "ClipboardCheck" }, { step: "02", title: { fr: "Design", en: "Design", ar: "تصميم" }, description: { fr: "Choix des finitions.", en: "Finish selection.", ar: "اختيار التشطيبات." }, icon: "PencilRuler" }, { step: "03", title: { fr: "Production", en: "Production", ar: "إنتاج" }, description: { fr: "Découpe et laquage.", en: "Cutting and lacquering.", ar: "تقطيع وطلاء." }, icon: "Factory" }, { step: "04", title: { fr: "Pose", en: "Installation", ar: "تركيب" }, description: { fr: "Fixation avec isolation.", en: "Fixing with insulation.", ar: "تثبيت مع عزل." }, icon: "Wrench" }],
+    [{ src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80", alt: { fr: "Bardage moderne", en: "Modern cladding", ar: "تكسية عصرية" } }],
+    [{ q: { fr: "Adapté au climat marocain ?", en: "Suitable for Morocco?", ar: "مناسب للمناخ المغربي؟" }, a: { fr: "Oui, résiste chaleur, soleil et air salin.", en: "Yes, resists heat, sun, and saline air.", ar: "نعم، يقاوم الحرارة والشمس والهواء المالح." } }],
+    "Transformez votre façade maintenant", "Transform your facade now", "حول واجهتك الآن"
+  ),
 
-   "menuiserie-aluminium": {
-     slug: "menuiserie-aluminium",
-     icon: "LayoutGrid",
-     title: {
-       fr: "Menuiserie Aluminium",
-       en: "Aluminum Joinery",
-       ar: "نجارة الألمنيوم",
-     },
-     subtitle: {
-       fr: "Fenêtres, portes et baies vitrées sur mesure alliant design et performance",
-       en: "Custom windows, doors, and bay windows combining design and performance",
-       ar: "نوافذ وأبواب وواجهات زجاجية حسب الطلب تجمع بين التصميم والأداء",
-     },
-     description: {
-       fr: "La menuiserie aluminium RJ RENOVA incarne l'alliance parfaite entre esthétique contemporaine et performance technique. Nos menuiseries sur mesure s'intègrent harmonieusement à tous les styles architecturaux, offrant luminosité, isolation et sécurité pour votre habitat ou vos locaux professionnels.",
-       en: "RJ RENOVA aluminum joinery embodies the perfect alliance between contemporary aesthetics and technical performance. Our custom joinery integrates harmoniously into all architectural styles, offering light, insulation, and security for your home or professional premises.",
-       ar: "تجسد نجارة الألمنيوم من RJ RENOVA التحالف المثالي بين الجمالية العصرية والأداء التقني. تندمج نجارتنا حسب الطلب بتناغم مع جميع الأساليب المعمارية، وتوفر الإضاءة والعزل والأمان لمنزلكم أو مقركم المهني.",
-     },
-     heroImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80",
-     advantages: [
-       { title: { fr: "Isolation Maximale", en: "Maximum Insulation", ar: "عزل أقصى" }, description: { fr: "Double vitrage à isolation renforcée, jusqu'à 44 dB d'affaiblissement acoustique.", en: "Double glazing with reinforced insulation, up to 44 dB acoustic reduction.", ar: "زجاج مزدوج بعزل معزز، حتى 44 ديسيبل من التوهين الصوتي." }, icon: "VolumeX" },
-       { title: { fr: "Sécurité", en: "Security", ar: "أمان" }, description: { fr: "Ferrages multipoints et vitrage anti-effraction certifiés.", en: "Certified multi-point locking and anti-burglary glazing.", ar: "أقفال متعددة النقاط وزجاج مضاد للكسر معتمد." }, icon: "Lock" },
-       { title: { fr: "Design Épuré", en: "Clean Design", ar: "تصميم نظيف" }, description: { fr: "Profilés fins pour un maximum de surface vitrée et de luminosité.", en: "Slim profiles for maximum glazed surface and light.", ar: "بروفيلات رفيعة لأقصى سطح مزجج وإضاءة." }, icon: "Eye" },
-       { title: { fr: "Sur Mesure", en: "Custom Made", ar: "حسب الطلب" }, description: { fr: "Toutes dimensions, formes et couleurs disponibles.", en: "All dimensions, shapes, and colors available.", ar: "جميع الأحجام والأشكال والألوان متوفرة." }, icon: "Ruler" },
-     ],
-     process: [
-       { step: "01", title: { fr: "Prise de Cotes", en: "Measurement", ar: "أخذ القياسات" }, description: { fr: "Relevé précis des dimensions par notre technicien.", en: "Precise measurement by our technician.", ar: "قياس دقيق للأبعاد من قبل تقنينا." }, icon: "ClipboardCheck" },
-       { step: "02", title: { fr: "Devis 3D", en: "3D Quote", ar: "عرض سعر ثلاثي الأبعاد" }, description: { fr: "Visualisation de vos menuiseries avant fabrication.", en: "Visualization of your joinery before manufacturing.", ar: "تصور نجارتكم قبل التصنيع." }, icon: "PencilRuler" },
-       { step: "03", title: { fr: "Fabrication", en: "Manufacturing", ar: "تصنيع" }, description: { fr: "Usinage CNC de précision en usine.", en: "Precision CNC machining in factory.", ar: "تصنيع دقيق باستخدام CNC في المصنع." }, icon: "Factory" },
-       { step: "04", title: { fr: "Installation", en: "Installation", ar: "تركيب" }, description: { fr: "Pose soignée avec finitions impeccables.", en: "Careful installation with impeccable finishes.", ar: "تركيب دقيق بتشطيبات لا تشوبها شائبة." }, icon: "Wrench" },
-     ],
-     gallery: [
-       { src: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80", alt: { fr: "Baie vitrée", en: "Bay window", ar: "نافذة كبيرة" } },
-       { src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80", alt: { fr: "Fenêtres aluminium", en: "Aluminum windows", ar: "نوافذ ألمنيوم" } },
-     ],
-     faq: [
-       { q: { fr: "Quelle est la différence avec le PVC ?", en: "What is the difference with PVC?", ar: "ما الفرق مع PVC؟" }, a: { fr: "L'aluminium est plus résistant, plus fin (plus de vitrage), 100% recyclable et offre une durée de vie supérieure.", en: "Aluminum is stronger, thinner (more glass), 100% recyclable, and offers a longer lifespan.", ar: "الألمنيوم أقوى وأنحف (زجاج أكثر) وقابل للتدوير بنسبة 100% ويدوم طويلاً." } },
-     ],
-     ctaTitle: { fr: "Des menuiseries qui subliment vos espaces", en: "Joinery that enhances your spaces", ar: "نجارة تضفي جمالاً على مساحاتكم" },
-   },
- };
+  "habillage-facade": s("habillage-facade", "PaintBucket", "Habillage de Façade", "Facade Dressing", "تلبيس الواجهات",
+    "Rénovation sans démolition", "Renovation without demolition", "تجديد بدون هدم",
+    "L'habillage de façade donne une seconde vie à vos bâtiments sans démolir. Solution rapide, économique et spectaculaire.",
+    "Facade dressing gives a second life to buildings without demolition. Fast, economical, and spectacular.",
+    "يمنح تلبيس الواجهات حياة ثانية للمباني بدون هدم. حل سريع واقتصادي ورائع.",
+    "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1200&q=80",
+    [{ title: { fr: "Sans Démolition", en: "No Demolition", ar: "بدون هدم" }, description: { fr: "Intervention rapide sans gêne.", en: "Fast, no disturbance.", ar: "سريع، بدون إزعاج." }, icon: "Zap" }, { title: { fr: "Économie d'Énergie", en: "Energy Savings", ar: "توفير الطاقة" }, description: { fr: "Amélioration thermique immédiate.", en: "Immediate thermal improvement.", ar: "تحسين حراري فوري." }, icon: "Leaf" }, { title: { fr: "Valorisation", en: "Added Value", ar: "زيادة القيمة" }, description: { fr: "Augmentation valeur du bien.", en: "Property value increase.", ar: "زيادة قيمة العقار." }, icon: "TrendingUp" }, { title: { fr: "Design Moderne", en: "Modern Design", ar: "تصميم عصري" }, description: { fr: "Métamorphose architecturale.", en: "Architectural metamorphosis.", ar: "تحول معماري." }, icon: "Sparkles" }],
+    [{ step: "01", title: { fr: "Audit", en: "Audit", ar: "تدقيق" }, description: { fr: "Inspection et diagnostic.", en: "Inspection and diagnosis.", ar: "فحص وتشخيص." }, icon: "ClipboardCheck" }, { step: "02", title: { fr: "Proposition", en: "Proposal", ar: "اقتراح" }, description: { fr: "Choix matériaux et 3D.", en: "Material selection and 3D.", ar: "اختيار المواد و3D." }, icon: "PencilRuler" }, { step: "03", title: { fr: "Préparation", en: "Preparation", ar: "تحضير" }, description: { fr: "Nettoyage du support.", en: "Surface cleaning.", ar: "تنظيف السطح." }, icon: "Factory" }, { step: "04", title: { fr: "Habillage", en: "Dressing", ar: "تلبيس" }, description: { fr: "Pose éléments aluminium.", en: "Aluminum element installation.", ar: "تركيب عناصر الألمنيوم." }, icon: "Wrench" }],
+    [{ src: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600&q=80", alt: { fr: "Rénovation", en: "Renovation", ar: "تجديد" } }],
+    [{ q: { fr: "Durée d'un chantier ?", en: "Project duration?", ar: "مدة المشروع؟" }, a: { fr: "2 à 4 semaines selon surface.", en: "2-4 weeks depending on area.", ar: "2-4 أسابيع حسب المساحة." } }],
+    "Offrez un nouveau visage à votre bâtiment", "Give your building a new face", "امنح مبناك وجهاً جديداً"
+  ),
 
- export default servicesData;
- export { servicesData };
- export const serviceSlugs = Object.keys(servicesData);
+  "menuiserie-aluminium": s("menuiserie-aluminium", "LayoutGrid", "Menuiserie Aluminium", "Aluminum Joinery", "نجارة الألمنيوم",
+    "Fenêtres et portes sur mesure", "Custom windows and doors", "نوافذ وأبواب حسب الطلب",
+    "La menuiserie aluminium RJ RENOVA incarne l'alliance parfaite entre esthétique contemporaine et performance technique. Fenêtres, portes et baies vitrées sur mesure.",
+    "RJ RENOVA aluminum joinery embodies the perfect alliance between contemporary aesthetics and technical performance.",
+    "تجسد نجارة الألمنيوم من RJ RENOVA التحالف المثالي بين الجمالية العصرية والأداء التقني.",
+    "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80",
+    [{ title: { fr: "Isolation Maximale", en: "Maximum Insulation", ar: "عزل أقصى" }, description: { fr: "Jusqu'à 44 dB acoustique.", en: "Up to 44 dB acoustic.", ar: "حتى 44 ديسيبل." }, icon: "VolumeX" }, { title: { fr: "Sécurité A2P", en: "A2P Security", ar: "أمان A2P" }, description: { fr: "Ferrages multipoints certifiés.", en: "Certified multi-point locking.", ar: "أقفال متعددة النقاط." }, icon: "Lock" }, { title: { fr: "Design Épuré", en: "Clean Design", ar: "تصميم نظيف" }, description: { fr: "Profilés fins, plus de vitrage.", en: "Slim profiles, more glass.", ar: "بروفيلات رفيعة، زجاج أكثر." }, icon: "Eye" }, { title: { fr: "Sur Mesure", en: "Custom Made", ar: "حسب الطلب" }, description: { fr: "Toutes dimensions, formes, couleurs.", en: "All sizes, shapes, colors.", ar: "جميع الأحجام والأشكال." }, icon: "Ruler" }],
+    [{ step: "01", title: { fr: "Prise de Cotes", en: "Measurement", ar: "أخذ القياسات" }, description: { fr: "Relevé précis des dimensions.", en: "Precise measurement.", ar: "قياس دقيق." }, icon: "ClipboardCheck" }, { step: "02", title: { fr: "Devis 3D", en: "3D Quote", ar: "عرض سعر 3D" }, description: { fr: "Visualisation avant fabrication.", en: "Visualization before manufacturing.", ar: "تصور قبل التصنيع." }, icon: "PencilRuler" }, { step: "03", title: { fr: "Fabrication", en: "Manufacturing", ar: "تصنيع" }, description: { fr: "Usinage CNC de précision.", en: "Precision CNC machining.", ar: "تصنيع CNC دقيق." }, icon: "Factory" }, { step: "04", title: { fr: "Installation", en: "Installation", ar: "تركيب" }, description: { fr: "Pose soignée et finitions.", en: "Careful installation.", ar: "تركيب دقيق." }, icon: "Wrench" }],
+    [{ src: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80", alt: { fr: "Baie vitrée", en: "Bay window", ar: "نافذة كبيرة" } }],
+    [{ q: { fr: "Aluminium vs PVC ?", en: "Aluminum vs PVC?", ar: "الألمنيوم أم PVC؟" }, a: { fr: "Plus résistant, plus fin, 100% recyclable, durée de vie supérieure.", en: "Stronger, thinner, 100% recyclable, longer lifespan.", ar: "أقوى، أنحف، قابل للتدوير 100%." } }],
+    "Des menuiseries qui subliment vos espaces", "Joinery that enhances your spaces", "نجارة تضفي جمالاً"
+  ),
+
+  "verrieres": s("verrieres", "Sun", "Verrières Aluminium", "Aluminum Canopies", "مظلات زجاجية",
+    "Structures vitrées élégantes", "Elegant glass structures", "هياكل زجاجية أنيقة",
+    "Nos verrières aluminium apportent luminosité et élégance. Vérandas, verrières d'atelier, toitures vitrées — des structures sur mesure pour agrandir visuellement vos espaces.",
+    "Our aluminum canopies bring light and elegance. Custom structures that visually enlarge your spaces.",
+    "تضفي مظلاتنا الزجاجية إضاءة وأناقة. هياكل حسب الطلب توسع المساحات بصريًا.",
+    "https://images.unsplash.com/photo-1600566753086-00f18f6b0050?w=1200&q=80",
+    [{ title: { fr: "Luminosité Naturelle", en: "Natural Light", ar: "إضاءة طبيعية" }, description: { fr: "Apport maximal de lumière.", en: "Maximum natural light.", ar: "إضاءة طبيعية قصوى." }, icon: "Sun" }, { title: { fr: "Espace de Vie +", en: "Extra Space", ar: "مساحة إضافية" }, description: { fr: "Pièce supplémentaire utilisable.", en: "Extra usable room.", ar: "غرفة إضافية." }, icon: "Home" }, { title: { fr: "Design Personnalisé", en: "Custom Design", ar: "تصميم مخصص" }, description: { fr: "Formes et finitions sur mesure.", en: "Custom shapes and finishes.", ar: "أشكال وتشطيبات حسب الطلب." }, icon: "Palette" }, { title: { fr: "Isolation Performante", en: "High-Performance", ar: "عزل عالي" }, description: { fr: "Vitrage contrôle solaire.", en: "Solar control glazing.", ar: "زجاج تحكم شمسي." }, icon: "Thermometer" }],
+    [{ step: "01", title: { fr: "Relevé", en: "Survey", ar: "مسح" }, description: { fr: "Prise de cotes et étude.", en: "Measurement and study.", ar: "قياس ودراسة." }, icon: "ClipboardCheck" }, { step: "02", title: { fr: "Conception", en: "Design", ar: "تصميم" }, description: { fr: "Plans 3D et matériaux.", en: "3D plans and materials.", ar: "مخططات 3D." }, icon: "PencilRuler" }, { step: "03", title: { fr: "Fabrication", en: "Manufacturing", ar: "تصنيع" }, description: { fr: "Usinage et préparation.", en: "Machining and preparation.", ar: "تصنيع وتحضير." }, icon: "Factory" }, { step: "04", title: { fr: "Installation", en: "Installation", ar: "تركيب" }, description: { fr: "Montage et étanchéité.", en: "Assembly and sealing.", ar: "تجميع وإحكام." }, icon: "Wrench" }],
+    [{ src: "https://images.unsplash.com/photo-1600566753086-00f18f6b0050?w=600&q=80", alt: { fr: "Verrière", en: "Canopy", ar: "مظلة" } }],
+    [{ q: { fr: "Chauffe en été ?", en: "Overheats in summer?", ar: "تسخن صيفاً؟" }, a: { fr: "Non, vitrage contrôle solaire rejette 70% de la chaleur.", en: "No, solar control glass rejects 70% of heat.", ar: "لا، زجاج التحكم يرفض 70% من الحرارة." } }],
+    "Créez votre espace de vie idéal", "Create your ideal living space", "اصنع مساحة معيشتك المثالية"
+  ),
+
+  "pergolas": s("pergolas", "Umbrella", "Pergolas Aluminium", "Aluminum Pergolas", "برجولات",
+    "Pergolas bioclimatiques haut de gamme", "Premium bioclimatic pergolas", "برجولات مناخية فاخرة",
+    "Les pergolas RJ RENOVA transforment vos espaces extérieurs en lieux de vie. Lames orientables, contrôle naturel de l'ensoleillement, motorisation intelligente.",
+    "RJ RENOVA pergolas transform your outdoor spaces. Adjustable blades, natural sunlight control, intelligent motorization.",
+    "تحول برجولات RJ RENOVA المساحات الخارجية. شرائح قابلة للتوجيه، تحكم طبيعي بالإضاءة.",
+    "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=80",
+    [{ title: { fr: "Lames Orientables", en: "Adjustable Blades", ar: "شرائح متحركة" }, description: { fr: "Contrôle total de la lumière.", en: "Total light control.", ar: "تحكم كامل بالإضاءة." }, icon: "Sliders" }, { title: { fr: "Protection Pluie", en: "Rain Protection", ar: "حماية من المطر" }, description: { fr: "Étanchéité en position fermée.", en: "Sealing when closed.", ar: "إحكام عند الإغلاق." }, icon: "CloudRain" }, { title: { fr: "Éclairage LED", en: "LED Lighting", ar: "إضاءة LED" }, description: { fr: "Ambiance pour vos soirées.", en: "Ambiance for your evenings.", ar: "أجواء لأمسياتكم." }, icon: "Lightbulb" }, { title: { fr: "Motorisation", en: "Motorization", ar: "تحريك آلي" }, description: { fr: "Commande à distance.", en: "Remote control.", ar: "تحكم عن بعد." }, icon: "Zap" }],
+    [{ step: "01", title: { fr: "Étude", en: "Study", ar: "دراسة" }, description: { fr: "Analyse de votre espace.", en: "Space analysis.", ar: "تحليل المساحة." }, icon: "ClipboardCheck" }, { step: "02", title: { fr: "Design 3D", en: "3D Design", ar: "تصميم 3D" }, description: { fr: "Visualisation réaliste.", en: "Realistic visualization.", ar: "تصور واقعي." }, icon: "PencilRuler" }, { step: "03", title: { fr: "Fabrication", en: "Manufacturing", ar: "تصنيع" }, description: { fr: "Production sur mesure.", en: "Custom production.", ar: "إنتاج حسب الطلب." }, icon: "Factory" }, { step: "04", title: { fr: "Installation", en: "Installation", ar: "تركيب" }, description: { fr: "Montage et réglages.", en: "Assembly and adjustment.", ar: "تجميع وضبط." }, icon: "Wrench" }],
+    [{ src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80", alt: { fr: "Pergola", en: "Pergola", ar: "برجولة" } }],
+    [{ q: { fr: "Différence pergola vs bioclimatique ?", en: "Difference vs bioclimatic?", ar: "الفرق عن المناخية؟" }, a: { fr: "La bioclimatique a des lames orientables pour le contrôle climatique.", en: "Bioclimatic has adjustable blades for climate control.", ar: "المناخية لها شرائح قابلة للتوجيه." } }],
+    "Vivez l'extérieur toute l'année", "Live outdoors all year round", "عش في الهواء الطلق"
+  ),
+
+  "garde-corps": s("garde-corps", "Shield", "Garde-corps Aluminium", "Aluminum Guardrails", "درابزينات",
+    "Protection et design pour vos espaces", "Protection and design", "حماية وتصميم",
+    "Les garde-corps RJ RENOVA allient sécurité et esthétique. Aluminium, inox ou verre, nos garde-corps sur mesure s'intègrent parfaitement à votre architecture.",
+    "RJ RENOVA guardrails combine safety and aesthetics. Custom-designed to integrate perfectly with your architecture.",
+    "تجمع درابزينات RJ RENOVA بين الأمان والجمالية. مصممة حسب الطلب.",
+    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80",
+    [{ title: { fr: "Sécurité Normée", en: "Standard Safety", ar: "أمان معياري" }, description: { fr: "Conforme aux normes.", en: "Standards compliant.", ar: "مطابق للمعايير." }, icon: "Shield" }, { title: { fr: "Design Minimaliste", en: "Minimalist Design", ar: "تصميم بسيط" }, description: { fr: "Profilés fins, transparence.", en: "Slim profiles, transparency.", ar: "بروفيلات رفيعة." }, icon: "Eye" }, { title: { fr: "Résistance", en: "Durability", ar: "متانة" }, description: { fr: "Anti-corrosion, zéro entretien.", en: "Anti-corrosion, zero maintenance.", ar: "مضاد للتآكل." }, icon: "ShieldCheck" }, { title: { fr: "Personnalisation", en: "Customization", ar: "تخصيص" }, description: { fr: "Verre, barreaux ou panneaux.", en: "Glass, bars, or panels.", ar: "زجاج، قضبان، ألواح." }, icon: "Palette" }],
+    [{ step: "01", title: { fr: "Métrage", en: "Measurement", ar: "قياس" }, description: { fr: "Relevé sur site.", en: "On-site measurement.", ar: "قياس في الموقع." }, icon: "ClipboardCheck" }, { step: "02", title: { fr: "Design", en: "Design", ar: "تصميم" }, description: { fr: "Modèles et finitions.", en: "Models and finishes.", ar: "نماذج وتشطيبات." }, icon: "PencilRuler" }, { step: "03", title: { fr: "Fabrication", en: "Manufacturing", ar: "تصنيع" }, description: { fr: "Découpe et assemblage.", en: "Cutting and assembly.", ar: "تقطيع وتجميع." }, icon: "Factory" }, { step: "04", title: { fr: "Pose", en: "Installation", ar: "تركيب" }, description: { fr: "Fixation sécurisée.", en: "Secure fixing.", ar: "تثبيت آمن." }, icon: "Wrench" }],
+    [{ src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80", alt: { fr: "Garde-corps", en: "Guardrail", ar: "درابزين" } }],
+    [{ q: { fr: "Hauteur réglementaire ?", en: "Regulatory height?", ar: "الارتفاع القانوني؟" }, a: { fr: "1 mètre minimum, adaptable à votre projet.", en: "1 meter minimum, adaptable.", ar: "1 متر كحد أدنى." } }],
+    "Sécurisez vos espaces avec style", "Secure your spaces with style", "أمّن مساحاتكم بأناقة"
+  ),
+
+  "portes-aluminium": s("portes-aluminium", "DoorOpen", "Portes Aluminium", "Aluminum Doors", "أبواب ألمنيوم",
+    "Portes d'entrée et intérieures design", "Design entrance and interior doors", "أبواب مدخل وداخلية",
+    "Les portes aluminium RJ RENOVA sont la première impression de votre habitat. Robustes, isolantes et design, sur mesure pour sécurité et esthétique.",
+    "RJ RENOVA aluminum doors are the first impression of your home. Robust, insulating, and stylish.",
+    "أبواب RJ RENOVA هي الانطباع الأول عن منزلكم. قوية وعازلة وأنيقة.",
+    "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80",
+    [{ title: { fr: "Haute Sécurité", en: "High Security", ar: "أمان عالٍ" }, description: { fr: "Serrures A2P, anti-effraction.", en: "A2P locks, anti-burglary.", ar: "أقفال A2P." }, icon: "Lock" }, { title: { fr: "Isolation", en: "Insulation", ar: "عزل" }, description: { fr: "Rupture pont thermique.", en: "Thermal break.", ar: "قاطع حراري." }, icon: "Thermometer" }, { title: { fr: "Design Premium", en: "Premium Design", ar: "تصميم ممتاز" }, description: { fr: "Finitions et accessoires.", en: "Finishes and accessories.", ar: "تشطيبات وإكسسوارات." }, icon: "Palette" }, { title: { fr: "Motorisation", en: "Motorization", ar: "تحريك آلي" }, description: { fr: "Ouverture automatique.", en: "Automatic opening.", ar: "فتح آلي." }, icon: "Zap" }],
+    [{ step: "01", title: { fr: "Prise de Cotes", en: "Measurement", ar: "قياس" }, description: { fr: "Relevé précis.", en: "Precise measurement.", ar: "قياس دقيق." }, icon: "ClipboardCheck" }, { step: "02", title: { fr: "Choix Design", en: "Design", ar: "تصميم" }, description: { fr: "Modèle, couleur, accessoires.", en: "Model, color, accessories.", ar: "نموذج، لون." }, icon: "PencilRuler" }, { step: "03", title: { fr: "Fabrication", en: "Manufacturing", ar: "تصنيع" }, description: { fr: "Assemblage et contrôle.", en: "Assembly and QC.", ar: "تجميع ومراقبة." }, icon: "Factory" }, { step: "04", title: { fr: "Installation", en: "Installation", ar: "تركيب" }, description: { fr: "Pose avec réglage.", en: "Installation with adjustment.", ar: "تركيب مع ضبط." }, icon: "Wrench" }],
+    [{ src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80", alt: { fr: "Porte", en: "Door", ar: "باب" } }],
+    [{ q: { fr: "Résistantes aux effractions ?", en: "Burglar resistant?", ar: "مقاومة للكسر؟" }, a: { fr: "Oui, serrures A2P et vitrage anti-effraction.", en: "Yes, A2P locks and anti-burglary glazing.", ar: "نعم، أقفال A2P وزجاج مضاد." } }],
+    "Une porte à votre image", "A door in your image", "باب على صورتكم"
+  ),
+
+  "fenetres-aluminium": s("fenetres-aluminium", "AppWindow", "Fenêtres Aluminium", "Aluminum Windows", "نوافذ ألمنيوم",
+    "Fenêtres haute performance", "High-performance windows", "نوافذ عالية الأداء",
+    "Les fenêtres RJ RENOVA redéfinissent le confort. Rupture de pont thermique, double vitrage, isolation exceptionnelle et maximisation de la surface vitrée.",
+    "RJ RENOVA windows redefine comfort. Thermal break, double glazing, exceptional insulation, and maximized glazed surface.",
+    "تعيد نوافذ RJ RENOVA تعريف الراحة. قاطع حراري، زجاج مزدوج، عزل استثنائي.",
+    "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80",
+    [{ title: { fr: "Performance Thermique", en: "Thermal Performance", ar: "أداء حراري" }, description: { fr: "-60% sur la climatisation.", en: "-60% on air conditioning.", ar: "-60% على التكييف." }, icon: "Thermometer" }, { title: { fr: "Isolation Acoustique", en: "Acoustic Insulation", ar: "عزل صوتي" }, description: { fr: "-44 dB de bruit extérieur.", en: "-44 dB external noise.", ar: "-44 ديسيبل." }, icon: "VolumeX" }, { title: { fr: "Profilés Fins", en: "Slim Profiles", ar: "بروفيلات رفيعة" }, description: { fr: "Plus de vitrage, plus de lumière.", en: "More glass, more light.", ar: "زجاج أكثر، إضاءة أكثر." }, icon: "Eye" }, { title: { fr: "Entretien Zéro", en: "Zero Maintenance", ar: "صفر صيانة" }, description: { fr: "Ne rouille pas, ne se déforme pas.", en: "No rust, no warping.", ar: "لا يصدأ، لا يتشوه." }, icon: "Sparkles" }],
+    [{ step: "01", title: { fr: "Métrage", en: "Measurement", ar: "قياس" }, description: { fr: "Relevé des ouvertures.", en: "Opening measurement.", ar: "قياس الفتحات." }, icon: "ClipboardCheck" }, { step: "02", title: { fr: "Configuration", en: "Configuration", ar: "تهيئة" }, description: { fr: "Type, vitrage, finition.", en: "Type, glazing, finish.", ar: "نوع، زجاج، تشطيب." }, icon: "PencilRuler" }, { step: "03", title: { fr: "Fabrication", en: "Manufacturing", ar: "تصنيع" }, description: { fr: "Production avec contrôle.", en: "Production with QC.", ar: "إنتاج مع مراقبة." }, icon: "Factory" }, { step: "04", title: { fr: "Installation", en: "Installation", ar: "تركيب" }, description: { fr: "Pose et étanchéité.", en: "Installation and sealing.", ar: "تركيب وإحكام." }, icon: "Wrench" }],
+    [{ src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80", alt: { fr: "Fenêtre", en: "Window", ar: "نافذة" } }, { src: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80", alt: { fr: "Baie", en: "Bay", ar: "نافذة كبيرة" } }],
+    [{ q: { fr: "Aluminium ou PVC ?", en: "Aluminum or PVC?", ar: "ألمنيوم أم PVC؟" }, a: { fr: "Aluminium : plus résistant, plus fin, 40+ ans vs 20-25 pour le PVC.", en: "Aluminum: stronger, thinner, 40+ years vs 20-25 for PVC.", ar: "ألمنيوم: أقوى، 40+ سنة." } }],
+    "Offrez la meilleure vue à votre intérieur", "Give your interior the best view", "امنح داخلك أفضل إطلالة"
+  ),
+};
+
+export default servicesData;
+export const serviceSlugs = Object.keys(servicesData);
 
