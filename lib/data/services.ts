@@ -17,8 +17,8 @@ function s(slug: string, icon: string, tfr: string, ten: string, tar: string, sf
 }
 
 export const servicesData: Record<string, ServiceData> = {
-  "mur-rideau": s("mur-rideau", "Cuboid", "Mur Rideau Aluminium", "Aluminum Curtain Wall", "واجهات زجاجية", "ⵉⵖⴼⴰⵡⵏ ⵏ ⵜⵣⴳⴰ",
-    "Façades légères et transparentes", "Lightweight transparent facades", "واجهات خفيفة وشفافة", "ⵉⵖⴼⴰⵡⵏ ⵉⴼⵙⵙⴰⵙⵏ ⴷ ⵉⵎⵎⴰⵍⵏ",
+  "mur-rideau": s("mur-rideau", "Cuboid", "Mur Rideau Aluminium", "Aluminum Curtain Wall", "واجهات زجاجية",
+    "Façades légères et transparentes", "Lightweight transparent facades", "واجهات خفيفة وشفافة",
     "Le mur rideau est la signature architecturale des bâtiments contemporains. RJ RENOVA conçoit et installe des murs rideaux aluminium sur mesure, alliant performance thermique, étanchéité parfaite et esthétique minimaliste.",
     "The curtain wall is the architectural signature of contemporary buildings. RJ RENOVA designs and installs custom aluminum curtain walls, combining thermal performance, perfect sealing, and minimalist aesthetics.",
     "الواجهة الزجاجية هي التوقيع المعماري للمباني المعاصرة. تصمم RJ RENOVA واجهات زجاجية من الألمنيوم حسب الطلب.",
@@ -139,6 +139,7 @@ export const servicesData: Record<string, ServiceData> = {
 
 export default servicesData;
 export const serviceSlugs = Object.keys(servicesData);
+
 
 
 
