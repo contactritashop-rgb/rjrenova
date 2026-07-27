@@ -40,7 +40,7 @@ ${filesCount > 0 ? `<tr><td style="padding:6px 0;color:#64748b">Fichiers joints<
 ${message ? `<tr><td style="padding:6px 0;color:#64748b" colspan="2">Message :<br/><em>${message}</em></td></tr>` : ""}
 </table>
 </div>
-<p style="color:#94a3b8;font-size:13px;text-align:center;margin:0">RJ RENOVA — Casablanca, Maroc<br/><a href="https://rjrenova.codewords.run" style="color:#F28C28">rjrenova.codewords.run</a></p>
+<p style="color:#94a3b8;font-size:13px;text-align:center;margin:0">RJ RENOVA - Casablanca, Maroc<br/><a href="https://rjrenova.codewords.run" style="color:#F28C28">rjrenova.codewords.run</a></p>
 </div>
 </div>
 </body>
@@ -63,8 +63,8 @@ ${message ? `<tr><td style="padding:6px 12px;font-weight:600">Message</td><td>${
 </body></html>`;
 
     const [clientResult, companyResult] = await Promise.allSettled([
-      resend.emails.send({ from: FROM_EMAIL, to: [email], subject: `Votre demande de devis — ${COMPANY_NAME}`, html: clientEmailHtml }),
-      resend.emails.send({ from: FROM_EMAIL, to: [COMPANY_EMAIL], subject: `Nouveau devis de ${name} — ${serviceLabel || serviceType}`, html: companyEmailHtml }),
+      resend.emails.send({ from: FROM_EMAIL, to: [email], subject: `Votre demande de devis - ${COMPANY_NAME}`, html: clientEmailHtml }),
+      resend.emails.send({ from: FROM_EMAIL, to: [COMPANY_EMAIL], subject: `Nouveau devis de ${name} - ${serviceLabel || serviceType}`, html: companyEmailHtml }),
     ]);
 
     const clientOk = clientResult.status === "fulfilled" && !(clientResult.value as any)?.error;
@@ -80,5 +80,6 @@ ${message ? `<tr><td style="padding:6px 12px;font-weight:600">Message</td><td>${
     return NextResponse.json({ error: err?.message || "Erreur serveur" }, { status: 500 });
   }
 }
+
 
 
