@@ -28,9 +28,9 @@ export default function AdminLoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-dark p-6">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-md">
-        <div className="text-center mb-8">
-          <span className="font-accent text-3xl font-bold text-white">RJ<span className="text-accent">RENOVA</span></span>
-          <p className="text-white/40 text-sm mt-2">Administration</p>
+        <div className="flex flex-col items-center mb-10">
+          <Logo variant="full" dark={true} className="h-20 w-auto" />
+          <p className="text-white/40 text-sm mt-3">Administration</p>
         </div>
 
         <form onSubmit={handleSubmit} className="glass-heavy rounded-2xl p-8 border border-white/10">
@@ -66,5 +66,6 @@ export default function AdminLoginPage() {
     </div>
   );
 }
+
 
 
