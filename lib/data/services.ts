@@ -30,7 +30,7 @@ export const servicesData: Record<string, ServiceData> = {
     "Prêt à illuminer votre bâtiment ?", "Ready to brighten your building?", "مستعد لإضاءة مبناك؟"
   ),
 
-  "bardage": s("bardage", "Layers", "Bardage Aluminium", "Aluminum Cladding", "تكسية خارجية", "ⴰⵙⵙⵓⵎⵔ ⵏ ⵓⵍⵓⵎⵉⵏⵢⵓⵎ",
+  "bardage": s("bardage", "Layers", "Bardage Aluminium", "Aluminum Cladding", "تكسية خارجية",
     "Revêtement esthétique et protecteur", "Aesthetic and protective cladding", "تكسية جمالية وواقية",
     "Le bardage aluminium RJ RENOVA transforme l'apparence de vos bâtiments tout en améliorant leur performance énergétique. Multiples finitions : laqué, anodisé, effet bois, perforé.",
     "RJ RENOVA aluminum cladding transforms building appearance while improving energy performance. Multiple finishes available.",
@@ -137,6 +137,7 @@ export const servicesData: Record<string, ServiceData> = {
 
 export default servicesData;
 export const serviceSlugs = Object.keys(servicesData);
+
 
 
 
