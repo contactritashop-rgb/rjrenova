@@ -8,9 +8,9 @@ import { Footer } from "@/components/layout/footer";
 import { useI18n } from "@/lib/i18n/i18n-provider";
 
 const info = {
-  fr: { title: "Contactez-nous", subtitle: "Une question, un projet ? Notre équipe est à votre écoute.", address: "Casablanca, Maroc", phone: "+212 5XX-XXXXXX", email: "contact@rjrenova.ma", hours: "Lun-Ven: 8h-18h / Sam: 9h-13h" },
-  en: { title: "Contact Us", subtitle: "A question, a project? Our team is here to listen.", address: "Casablanca, Morocco", phone: "+212 5XX-XXXXXX", email: "contact@rjrenova.ma", hours: "Mon-Fri: 8AM-6PM / Sat: 9AM-1PM" },
-  ar: { title: "اتصل بنا", subtitle: "سؤال، مشروع؟ فريقنا في خدمتكم.", address: "الدار البيضاء، المغرب", phone: "+212 5XX-XXXXXX", email: "contact@rjrenova.ma", hours: "الإثنين-الجمعة: 8-18 / السبت: 9-13" },
+  fr: { title: "Contactez-nous", subtitle: "Une question, un projet ? Notre équipe est à votre écoute.", address: "Siège social : Agadir, Maroc", phone: "(+212) 0660 006 757", email: "contact@rjrenova.ma", hours: "Lun-Ven: 8h-18h / Sam: 9h-13h" },
+  en: { title: "Contact Us", subtitle: "A question, a project? Our team is here to listen.", address: "Head office: Agadir, Morocco", phone: "(+212) 0660 006 757", email: "contact@rjrenova.ma", hours: "Mon-Fri: 8AM-6PM / Sat: 9AM-1PM" },
+  ar: { title: "اتصل بنا", subtitle: "سؤال، مشروع؟ فريقنا في خدمتكم.", address: "المقر الاجتماعي : أكادير، المغرب", phone: "(+212) 0660 006 757", email: "contact@rjrenova.ma", hours: "الإثنين-الجمعة: 8-18 / السبت: 9-13" },
 };
 
 export default function ContactPage() {
@@ -79,4 +79,5 @@ export default function ContactPage() {
     </>
   );
 }
+
 
