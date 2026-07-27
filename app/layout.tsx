@@ -37,10 +37,14 @@ export default function RootLayout({
         <I18nProvider>
           {children}
         </I18nProvider>
+        <LocalBusinessSchema />
+        <FAQSchema />
+        <BreadcrumbSchema />
         <MadeWithBadge />
       </body>
     </html>
   );
 }
+
 
 
