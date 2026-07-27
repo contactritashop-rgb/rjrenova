@@ -1,0 +1,286 @@
+"use client";
+
+import { useState, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, ArrowLeft, Check, Upload, MapPin, Building2, Ruler, Wallet, FileText, Send, Image as ImageIcon } from "lucide-react";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import { useI18n } from "@/lib/i18n/i18n-provider";
+
+const buildingTypes = [
+  { id: "residential", icon: "🏠", fr: "Résidentiel", en: "Residential", ar: "سكني" },
+  { id: "commercial", icon: "🏢", fr: "Commercial", en: "Commercial", ar: "تجاري" },
+  { id: "industrial", icon: "🏭", fr: "Industriel", en: "Industrial", ar: "صناعي" },
+  { id: "hotel", icon: "🏨", fr: "Hôtelier", en: "Hotel", ar: "فندقي" },
+  { id: "institutional", icon: "🏛️", fr: "Institutionnel", en: "Institutional", ar: "مؤسساتي" },
+];
+
+const serviceTypes = [
+  { id: "mur-rideau", fr: "Mur Rideau", en: "Curtain Wall", ar: "واجهات زجاجية" },
+  { id: "bardage", fr: "Bardage", en: "Cladding", ar: "تكسية خارجية" },
+  { id: "menuiserie", fr: "Menuiserie Aluminium", en: "Aluminum Joinery", ar: "نجارة الألمنيوم" },
+  { id: "verrieres", fr: "Verrières", en: "Canopies", ar: "مظلات زجاجية" },
+  { id: "pergolas", fr: "Pergolas", en: "Pergolas", ar: "برجولات" },
+  { id: "garde-corps", fr: "Garde-corps", en: "Guardrails", ar: "درابزينات" },
+  { id: "portes", fr: "Portes Aluminium", en: "Aluminum Doors", ar: "أبواب ألمنيوم" },
+  { id: "fenetres", fr: "Fenêtres Aluminium", en: "Aluminum Windows", ar: "نوافذ ألمنيوم" },
+  { id: "habillage", fr: "Habillage de Façade", en: "Facade Dressing", ar: "تلبيس الواجهات" },
+  { id: "other", fr: "Autre", en: "Other", ar: "أخرى" },
+];
+
+const cities = ["Casablanca", "Rabat", "Marrakech", "Tanger", "Agadir", "Fès", "Meknès", "Oujda", "Tétouan", "Autre"];
+
+const budgetRanges = [
+  { id: "small", fr: "Moins de 100 000 MAD", en: "Under 100,000 MAD", ar: "أقل من 100,000 درهم" },
+  { id: "medium", fr: "100 000 - 500 000 MAD", en: "100,000 - 500,000 MAD", ar: "100,000 - 500,000 درهم" },
+  { id: "large", fr: "500 000 - 2 000 000 MAD", en: "500,000 - 2,000,000 MAD", ar: "500,000 - 2,000,000 درهم" },
+  { id: "xlarge", fr: "Plus de 2 000 000 MAD", en: "Over 2,000,000 MAD", ar: "أكثر من 2,000,000 درهم" },
+  { id: "unknown", fr: "Je ne sais pas encore", en: "I don't know yet", ar: "لا أعرف بعد" },
+];
+
+const stepLabels = [
+  { fr: "Bâtiment", en: "Building", ar: "المبنى" },
+  { fr: "Prestation", en: "Service", ar: "الخدمة" },
+  { fr: "Surface", en: "Surface", ar: "المساحة" },
+  { fr: "Ville", en: "City", ar: "المدينة" },
+  { fr: "Budget", en: "Budget", ar: "الميزانية" },
+  { fr: "Fichiers", en: "Files", ar: "الملفات" },
+  { fr: "Contact", en: "Contact", ar: "الاتصال" },
+];
+
+const stepIcons = [Building2, Wrench, Ruler, MapPin, Wallet, Upload, Send];
+
+type FormData = {
+  buildingType: string;
+  serviceType: string;
+  surface: string;
+  city: string;
+  budget: string;
+  files: File[];
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+};
+
+export default function QuotePage() {
+  const { t, locale } = useI18n();
+  const loc = locale as "fr" | "en" | "ar";
+  const [step, setStep] = useState(0);
+  const [form, setForm] = useState<FormData>({ buildingType: "", serviceType: "", surface: "", city: "", budget: "", files: [], name: "", email: "", phone: "", message: "" });
+  const [submitted, setSubmitted] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const update = (key: keyof FormData, value: any) => setForm((f) => ({ ...f, [key]: value }));
+  const canNext = (): boolean => {
+    if (step === 0) return !!form.buildingType;
+    if (step === 1) return !!form.serviceType;
+    if (step === 2) return !!form.surface;
+    if (step === 3) return !!form.city;
+    if (step === 4) return !!form.budget;
+    if (step === 6) return !!form.name && !!form.email && !!form.phone;
+    return true;
+  };
+
+  const handleSubmit = () => { setSubmitted(true); };
+
+  if (submitted) {
+    return (
+      <>
+        <Header />
+        <main className="min-h-screen flex items-center justify-center section-padding">
+          <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="text-center max-w-lg">
+            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-accent/10 flex items-center justify-center">
+              <Check size={40} className="text-accent" />
+            </div>
+            <h1 className="font-heading text-3xl md:text-4xl font-extrabold text-dark dark:text-white mb-4">
+              {loc === "fr" ? "Merci !" : loc === "en" ? "Thank you!" : "شكراً !"}
+            </h1>
+            <p className="text-muted text-lg mb-8">
+              {loc === "fr" ? "Votre demande de devis a été envoyée. Notre équipe vous répond sous 48h." : loc === "en" ? "Your quote request has been sent. Our team will respond within 48 hours." : "تم إرسال طلبكم. سيرد عليكم فريقنا في غضون 48 ساعة."}
+            </p>
+            <a href="/" className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-semibold rounded-full hover:bg-accent-light transition-all">
+              {t("nav.home")}
+              <ArrowRight size={18} />
+            </a>
+          </motion.div>
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  return (
+    <>
+      <Header />
+      <main className="min-h-screen pt-28 pb-20">
+        <div className="container-custom px-6 lg:px-12 max-w-3xl mx-auto">
+          <div className="mb-12 text-center">
+            <h1 className="font-heading text-4xl md:text-5xl font-extrabold text-dark dark:text-white mb-4">
+              {loc === "fr" ? "Configurateur de Devis" : loc === "en" ? "Quote Configurator" : "مكون عرض السعر"}
+            </h1>
+            <p className="text-muted">
+              {loc === "fr" ? "7 étapes pour obtenir votre devis personnalisé" : loc === "en" ? "7 steps to get your personalized quote" : "7 خطوات للحصول على عرض السعر المخصص"}
+            </p>
+          </div>
+
+          <div className="flex items-center justify-center gap-1 mb-12 overflow-x-auto pb-2">
+            {stepLabels.map((label, i) => (
+              <button key={i} onClick={() => i < step && setStep(i)} className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-medium transition-all whitespace-nowrap ${i === step ? "bg-accent text-white" : i < step ? "bg-accent/10 text-accent cursor-pointer" : "bg-surface-alt text-muted dark:bg-dark-alt"}`}>
+                <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold ${i === step ? "bg-white text-accent" : i < step ? "bg-accent/20" : "bg-muted/20"}`}>{i < step ? "✓" : i + 1}</span>
+                {label[loc]}
+              </button>
+            ))}
+          </div>
+
+          <AnimatePresence mode="wait">
+            <motion.div key={step} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.3 }} className="bg-surface dark:bg-dark-alt rounded-2xl p-8 md:p-10 border border-border dark:border-white/5">
+              {step === 0 && (
+                <div>
+                  <h2 className="font-heading text-2xl font-bold text-dark dark:text-white mb-6">{loc === "fr" ? "Type de bâtiment" : loc === "en" ? "Building type" : "نوع المبنى"}</h2>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    {buildingTypes.map((bt) => (
+                      <button key={bt.id} onClick={() => update("buildingType", bt.id)} className={`p-6 rounded-2xl border-2 text-center transition-all ${form.buildingType === bt.id ? "border-accent bg-accent/5" : "border-border hover:border-accent/30"}`}>
+                        <span className="text-3xl block mb-2">{bt.icon}</span>
+                        <span className="font-medium text-sm text-dark dark:text-white">{bt[loc]}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {step === 1 && (
+                <div>
+                  <h2 className="font-heading text-2xl font-bold text-dark dark:text-white mb-6">{loc === "fr" ? "Type de prestation" : loc === "en" ? "Service type" : "نوع الخدمة"}</h2>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    {serviceTypes.map((st) => (
+                      <button key={st.id} onClick={() => update("serviceType", st.id)} className={`p-4 rounded-xl border-2 text-center text-sm font-medium transition-all ${form.serviceType === st.id ? "border-accent bg-accent/5 text-accent" : "border-border hover:border-accent/30 text-dark dark:text-white"}`}>{st[loc]}</button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {step === 2 && (
+                <div>
+                  <h2 className="font-heading text-2xl font-bold text-dark dark:text-white mb-6">{loc === "fr" ? "Surface approximative" : loc === "en" ? "Approximate surface" : "المساحة التقريبية"}</h2>
+                  <div className="relative">
+                    <input type="number" value={form.surface} onChange={(e) => update("surface", e.target.value)} placeholder={loc === "fr" ? "Ex: 500 m²" : "E.g. 500 m²"} className="w-full px-6 py-5 rounded-xl border-2 border-border bg-transparent text-dark dark:text-white text-lg font-medium focus:border-accent outline-none transition-colors" />
+                    <span className="absolute right-5 top-1/2 -translate-y-1/2 text-muted font-medium">m²</span>
+                  </div>
+                </div>
+              )}
+
+              {step === 3 && (
+                <div>
+                  <h2 className="font-heading text-2xl font-bold text-dark dark:text-white mb-6">{loc === "fr" ? "Ville du projet" : loc === "en" ? "Project city" : "مدينة المشروع"}</h2>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    {cities.map((city) => (
+                      <button key={city} onClick={() => update("city", city)} className={`p-4 rounded-xl border-2 text-center text-sm font-medium transition-all ${form.city === city ? "border-accent bg-accent/5 text-accent" : "border-border hover:border-accent/30 text-dark dark:text-white"}`}>{city}</button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {step === 4 && (
+                <div>
+                  <h2 className="font-heading text-2xl font-bold text-dark dark:text-white mb-6">{loc === "fr" ? "Budget estimé" : loc === "en" ? "Estimated budget" : "الميزانية المقدرة"}</h2>
+                  <div className="space-y-3">
+                    {budgetRanges.map((br) => (
+                      <button key={br.id} onClick={() => update("budget", br.id)} className={`w-full p-5 rounded-xl border-2 text-left transition-all ${form.budget === br.id ? "border-accent bg-accent/5" : "border-border hover:border-accent/30"}`}>
+                        <span className="font-medium text-dark dark:text-white">{br[loc]}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {step === 5 && (
+                <div>
+                  <h2 className="font-heading text-2xl font-bold text-dark dark:text-white mb-6">{loc === "fr" ? "Documents du projet (optionnel)" : loc === "en" ? "Project documents (optional)" : "وثائق المشروع (اختياري)"}</h2>
+                  <div className="border-2 border-dashed border-border rounded-2xl p-10 text-center hover:border-accent/50 transition-colors cursor-pointer" onClick={() => fileInputRef.current?.click()}>
+                    <Upload size={40} className="mx-auto mb-4 text-muted" />
+                    <p className="font-medium text-dark dark:text-white mb-1">{loc === "fr" ? "Déposez vos fichiers ici" : loc === "en" ? "Drop your files here" : "أسقط ملفاتكم هنا"}</p>
+                    <p className="text-muted text-sm">PDF, DWG, JPG, PNG — Max 10 Mo</p>
+                    <input ref={fileInputRef} type="file" multiple accept=".pdf,.dwg,.jpg,.jpeg,.png" onChange={(e) => update("files", Array.from(e.target.files || []))} className="hidden" />
+                  </div>
+                  {form.files.length > 0 && (
+                    <div className="mt-4 space-y-2">
+                      {form.files.map((f, i) => (
+                        <div key={i} className="flex items-center gap-3 p-3 bg-surface-alt dark:bg-dark rounded-xl text-sm">
+                          {f.type.startsWith("image") ? <ImageIcon size={18} className="text-accent" /> : <FileText size={18} className="text-accent" />}
+                          <span className="text-dark dark:text-white">{f.name}</span>
+                          <span className="text-muted ml-auto">{(f.size / 1024 / 1024).toFixed(1)} Mo</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {step === 6 && (
+                <div>
+                  <h2 className="font-heading text-2xl font-bold text-dark dark:text-white mb-2">{loc === "fr" ? "Vos coordonnées" : loc === "en" ? "Your contact info" : "معلومات الاتصال"}</h2>
+                  <p className="text-muted text-sm mb-6">{loc === "fr" ? "Nous vous répondrons sous 48h." : loc === "en" ? "We will respond within 48 hours." : "سنرد عليكم في غضون 48 ساعة."}</p>
+                  <div className="space-y-4">
+                    <div>
+                      <label className="block text-sm font-medium text-dark dark:text-white mb-1.5">{loc === "fr" ? "Nom complet" : loc === "en" ? "Full name" : "الاسم الكامل"} *</label>
+                      <input type="text" value={form.name} onChange={(e) => update("name", e.target.value)} className="w-full px-4 py-3 rounded-xl border-2 border-border bg-transparent text-dark dark:text-white focus:border-accent outline-none transition-colors" />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-dark dark:text-white mb-1.5">Email *</label>
+                      <input type="email" value={form.email} onChange={(e) => update("email", e.target.value)} className="w-full px-4 py-3 rounded-xl border-2 border-border bg-transparent text-dark dark:text-white focus:border-accent outline-none transition-colors" />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-dark dark:text-white mb-1.5">{loc === "fr" ? "Téléphone" : loc === "en" ? "Phone" : "الهاتف"} *</label>
+                      <input type="tel" value={form.phone} onChange={(e) => update("phone", e.target.value)} className="w-full px-4 py-3 rounded-xl border-2 border-border bg-transparent text-dark dark:text-white focus:border-accent outline-none transition-colors" />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-dark dark:text-white mb-1.5">{loc === "fr" ? "Message (optionnel)" : loc === "en" ? "Message (optional)" : "رسالة (اختياري)"}</label>
+                      <textarea value={form.message} onChange={(e) => update("message", e.target.value)} rows={3} className="w-full px-4 py-3 rounded-xl border-2 border-border bg-transparent text-dark dark:text-white focus:border-accent outline-none transition-colors resize-none" />
+                    </div>
+                  </div>
+
+                  <div className="mt-8 p-6 rounded-2xl bg-surface-alt dark:bg-dark border border-border dark:border-white/5">
+                    <h3 className="font-heading font-bold text-dark dark:text-white mb-4">{loc === "fr" ? "Récapitulatif" : loc === "en" ? "Summary" : "ملخص"}</h3>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between"><span className="text-muted">{loc === "fr" ? "Bâtiment" : "Building"}</span><span className="font-medium text-dark dark:text-white">{buildingTypes.find((b) => b.id === form.buildingType)?.[loc] || "—"}</span></div>
+                      <div className="flex justify-between"><span className="text-muted">{loc === "fr" ? "Prestation" : "Service"}</span><span className="font-medium text-dark dark:text-white">{serviceTypes.find((s) => s.id === form.serviceType)?.[loc] || "—"}</span></div>
+                      <div className="flex justify-between"><span className="text-muted">{loc === "fr" ? "Surface" : "Surface"}</span><span className="font-medium text-dark dark:text-white">{form.surface ? `${form.surface} m²` : "—"}</span></div>
+                      <div className="flex justify-between"><span className="text-muted">{loc === "fr" ? "Ville" : "City"}</span><span className="font-medium text-dark dark:text-white">{form.city || "—"}</span></div>
+                      <div className="flex justify-between"><span className="text-muted">{loc === "fr" ? "Budget" : "Budget"}</span><span className="font-medium text-dark dark:text-white">{budgetRanges.find((b) => b.id === form.budget)?.[loc] || "—"}</span></div>
+                      <div className="flex justify-between"><span className="text-muted">{loc === "fr" ? "Fichiers" : "Files"}</span><span className="font-medium text-dark dark:text-white">{form.files.length > 0 ? `${form.files.length} fichier(s)` : "Aucun"}</span></div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </motion.div>
+          </AnimatePresence>
+
+          <div className="flex items-center justify-between mt-8">
+            <button onClick={() => setStep(Math.max(0, step - 1))} className={`inline-flex items-center gap-2 px-5 py-3 rounded-full font-medium transition-all ${step === 0 ? "invisible" : "hover:bg-surface-alt dark:hover:bg-dark-alt text-muted"}`}>
+              <ArrowLeft size={18} />
+              {loc === "fr" ? "Précédent" : loc === "en" ? "Previous" : "السابق"}
+            </button>
+            {step < 6 ? (
+              <button onClick={() => setStep(step + 1)} disabled={!canNext()} className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-semibold rounded-full hover:bg-accent-light disabled:opacity-40 disabled:cursor-not-allowed transition-all">
+                {loc === "fr" ? "Suivant" : loc === "en" ? "Next" : "التالي"}
+                <ArrowRight size={18} />
+              </button>
+            ) : (
+              <button onClick={handleSubmit} disabled={!canNext()} className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-white font-bold rounded-full hover:bg-accent-light disabled:opacity-40 disabled:cursor-not-allowed transition-all shadow-xl shadow-accent/25">
+                <Send size={20} />
+                {loc === "fr" ? "Envoyer la demande" : loc === "en" ? "Send request" : "إرسال الطلب"}
+              </button>
+            )}
+          </div>
+
+          <div className="mt-4 h-2 bg-surface-alt dark:bg-dark-alt rounded-full overflow-hidden">
+            <motion.div className="h-full bg-accent rounded-full" animate={{ width: `${((step + 1) / 7) * 100}%` }} transition={{ duration: 0.3 }} />
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
