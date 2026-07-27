@@ -87,7 +87,7 @@ export default function QuotePage() {
     if (step === 2) return !!form.surface;
     if (step === 3) return !!form.city;
     if (step === 4) return !!form.budget;
-    if (step === 6) return !!form.name && !!form.email && !!form.phone;
+    if (step === 6) return !!form.name && !!form.email && !!form.phone && !!captchaInput;
     return true;
   };
 
@@ -324,6 +324,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
