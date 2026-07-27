@@ -68,7 +68,7 @@ export function Header() {
               </a>
             ))}
             <a
-              href="#cta"
+              href="/devis"
               className="px-6 py-2.5 bg-accent text-white font-semibold text-sm rounded-full hover:bg-accent-dark transition-all duration-300 shadow-lg shadow-accent/25 hover:shadow-accent/40"
             >
               {t("nav.quote")}
@@ -167,6 +167,7 @@ export function Header() {
     </>
   );
 }
+
 
 
 
