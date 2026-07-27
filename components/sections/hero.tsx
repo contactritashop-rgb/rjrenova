@@ -47,7 +47,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border-white/20 text-white/90 text-sm mb-8"
           >
             <Play size={14} className="text-accent" fill="currentColor" />
-            <span>RJ RENOVA — Maroc</span>
+            <span>RJ RENOVA - Maroc</span>
           </motion.div>
 
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-white leading-[1.05] mb-6 max-w-5xl mx-auto">
@@ -97,5 +97,6 @@ export function Hero() {
     </section>
   );
 }
+
 
 

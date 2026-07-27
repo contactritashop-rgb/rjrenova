@@ -31,7 +31,7 @@ export const translations = {
     "nav.contact": "Contact",
 
     "hero.title": "Construisons des façades qui marquent l'architecture",
-    "hero.subtitle": "Fabrication et installation de façades aluminium sur mesure — Maroc",
+    "hero.subtitle": "Fabrication et installation de façades aluminium sur mesure - Maroc",
     "hero.cta.quote": "Demander un devis",
     "hero.cta.projects": "Voir nos réalisations",
 
@@ -113,7 +113,7 @@ export const translations = {
     "cta.subtitle": "Notre équipe vous accompagne de la conception à la réalisation",
     "cta.button": "Demander un devis gratuit",
 
-    "footer.description": "RJ RENOVA — Spécialiste de la fabrication et installation de façades aluminium au Maroc. Qualité, innovation et excellence architecturale.",
+    "footer.description": "RJ RENOVA - Spécialiste de la fabrication et installation de façades aluminium au Maroc. Qualité, innovation et excellence architecturale.",
     "footer.services": "Services",
     "footer.company": "Entreprise",
     "footer.legal": "Légal",
@@ -136,7 +136,7 @@ export const translations = {
     "nav.contact": "Contact",
 
     "hero.title": "Building facades that define architecture",
-    "hero.subtitle": "Custom aluminum facade manufacturing and installation — Morocco",
+    "hero.subtitle": "Custom aluminum facade manufacturing and installation - Morocco",
     "hero.cta.quote": "Request a quote",
     "hero.cta.projects": "View our projects",
 
@@ -154,7 +154,7 @@ export const translations = {
     "services.dressing": "Facade Dressing",
     "services.dressing.desc": "Renovation and beautification of existing facades with aluminum solutions",
     "services.joinery": "Aluminum Joinery",
-    "services.joinery.desc": "Custom windows, doors, and bay windows — design and performance",
+    "services.joinery.desc": "Custom windows, doors, and bay windows - design and performance",
     "services.canopies": "Glass Canopies",
     "services.canopies.desc": "Elegant glass structures for terraces, patios, and living spaces",
     "services.pergolas": "Pergolas",
@@ -218,7 +218,7 @@ export const translations = {
     "cta.subtitle": "Our team supports you from design to completion",
     "cta.button": "Request a free quote",
 
-    "footer.description": "RJ RENOVA — Specialist in aluminum facade manufacturing and installation in Morocco. Quality, innovation, and architectural excellence.",
+    "footer.description": "RJ RENOVA - Specialist in aluminum facade manufacturing and installation in Morocco. Quality, innovation, and architectural excellence.",
     "footer.services": "Services",
     "footer.company": "Company",
     "footer.legal": "Legal",
@@ -241,7 +241,7 @@ export const translations = {
     "nav.contact": "اتصل بنا",
 
     "hero.title": "نبني واجهات تحدد معالم العمارة",
-    "hero.subtitle": "تصنيع وتركيب واجهات الألمنيوم حسب الطلب — المغرب",
+    "hero.subtitle": "تصنيع وتركيب واجهات الألمنيوم حسب الطلب - المغرب",
     "hero.cta.quote": "طلب عرض سعر",
     "hero.cta.projects": "شاهد أعمالنا",
 
@@ -323,7 +323,7 @@ export const translations = {
     "cta.subtitle": "فريقنا يرافقكم من التصميم إلى التنفيذ",
     "cta.button": "طلب عرض سعر مجاني",
 
-    "footer.description": "RJ RENOVA — متخصص في تصنيع وتركيب واجهات الألمنيوم في المغرب. الجودة والابتكار والتميز المعماري.",
+    "footer.description": "RJ RENOVA - متخصص في تصنيع وتركيب واجهات الألمنيوم في المغرب. الجودة والابتكار والتميز المعماري.",
     "footer.services": "الخدمات",
     "footer.company": "الشركة",
     "footer.legal": "قانوني",
@@ -345,7 +345,7 @@ export const translations = {
     "nav.contact": "ⴰⵎⵢⴰⵡⴰⴹ",
 
     "hero.title": "ⴰⴷ ⵏⵙⴱⵖⵔ ⵉⵖⴼⴰⵡⵏ ⵏⵏⴰ ⵉⵙⵙⵏⵄⴰⵍⵏ ⵜⴰⵡⵡⵓⵏⴽⵜ",
-    "hero.subtitle": "ⴰⵙⵏⴼⵍⵓⵍ ⴷ ⵓⵙⴱⴷⴷ ⵏ ⵉⵖⴼⴰⵡⵏ ⵏ ⵓⵍⵓⵎⵉⵏⵢⵓⵎ ⵙ ⵓⴽⵜⵜⵓⵔ — ⵍⵎⵖⵔⵉⴱ",
+    "hero.subtitle": "ⴰⵙⵏⴼⵍⵓⵍ ⴷ ⵓⵙⴱⴷⴷ ⵏ ⵉⵖⴼⴰⵡⵏ ⵏ ⵓⵍⵓⵎⵉⵏⵢⵓⵎ ⵙ ⵓⴽⵜⵜⵓⵔ - ⵍⵎⵖⵔⵉⴱ",
     "hero.cta.quote": "ⵙⵙⵓⵜⵔ ⴰⵙⵡⵉⵔⵉ",
     "hero.cta.projects": "ⵥⵕ ⵉⵙⵏⴼⴰⵔⵏ ⵏⵏⵖ",
 
@@ -363,7 +363,7 @@ export const translations = {
     "services.dressing": "ⴰⵙⵙⵓⵏ ⵏ ⵓⵖⴼⴰⵡ",
     "services.dressing.desc": "ⴰⵙⵎⴰⵢⵏⵓ ⴷ ⵓⵙⴼⴰⵍⴽⵉ ⵏ ⵉⵖⴼⴰⵡⵏ ⵉⵍⵍⴰⵏ ⵙ ⵜⴼⵔⴰⵜⵉⵏ ⵏ ⵓⵍⵓⵎⵉⵏⵢⵓⵎ",
     "services.joinery": "ⵜⴰⵡⵡⵓⵔⵉ ⵏ ⵓⵍⵓⵎⵉⵏⵢⵓⵎ",
-    "services.joinery.desc": "ⵜⵉⵣⴳⴰⵔ, ⵜⵉⴼⵍⵡⵉⵏ ⴷ ⵜⵣⴳⴰⵔ ⵜⵉⵎⵇⵔⴰⵏⵉⵏ ⵙ ⵓⴽⵜⵜⵓⵔ — ⴰⵙⵇⵇⵙⵉ ⴷ ⵜⵓⵙⵙⵏⴰ",
+    "services.joinery.desc": "ⵜⵉⵣⴳⴰⵔ, ⵜⵉⴼⵍⵡⵉⵏ ⴷ ⵜⵣⴳⴰⵔ ⵜⵉⵎⵇⵔⴰⵏⵉⵏ ⵙ ⵓⴽⵜⵜⵓⵔ - ⴰⵙⵇⵇⵙⵉ ⴷ ⵜⵓⵙⵙⵏⴰ",
     "services.canopies": "ⵜⵉⵎⴱⵡⴰⵢⵉⵏ ⵏ ⵜⵣⴳⴰ",
     "services.canopies.desc": "ⵜⵉⵖⴰⵡⵙⵉⵡⵉⵏ ⵏ ⵜⵣⴳⴰ ⵉⵛⴱⵀⴰⵏ ⵉ ⵜⴳⴰⵏⵉⵏ, ⵉⴱⵔⴰⵔⵏ ⴷ ⵉⴹⵓⵔⴰⵏ ⵏ ⵜⵓⴷⵔⵜ",
     "services.pergolas": "ⵉⴱⵔⴰⵔⵏ ⵉⵎⵙⵓⵜⵍⵏ",
@@ -427,7 +427,7 @@ export const translations = {
     "cta.subtitle": "ⵜⴰⵔⴰⴱⴱⵓⵜ ⵏⵏⵖ ⴰⴽ ⵜⵎⵓⵏ ⵙⴳ ⵓⵙⵇⵇⵙⵉ ⴰⵔ ⵓⵙⴽⴰⵔ",
     "cta.button": "ⵙⵙⵓⵜⵔ ⴰⵙⵡⵉⵔⵉ ⵙ ⴱⴰⵟⵍ",
 
-    "footer.description": "RJ RENOVA — ⴰⵎⵣⵡⴰⵔⵓ ⴳ ⵓⵙⵏⴼⵍⵓⵍ ⴷ ⵓⵙⴱⴷⴷ ⵏ ⵉⵖⴼⴰⵡⵏ ⵏ ⵓⵍⵓⵎⵉⵏⵢⵓⵎ ⴳ ⵍⵎⵖⵔⵉⴱ. ⵜⴰⵔⴰⵡⵉ, ⴰⵙⵏⴼⵍⵓⵍ ⴷ ⵓⵎⵏⵣⴰⵖ ⴳ ⵜⵡⵡⵓⵏⴽⵜ.",
+    "footer.description": "RJ RENOVA - ⴰⵎⵣⵡⴰⵔⵓ ⴳ ⵓⵙⵏⴼⵍⵓⵍ ⴷ ⵓⵙⴱⴷⴷ ⵏ ⵉⵖⴼⴰⵡⵏ ⵏ ⵓⵍⵓⵎⵉⵏⵢⵓⵎ ⴳ ⵍⵎⵖⵔⵉⴱ. ⵜⴰⵔⴰⵡⵉ, ⴰⵙⵏⴼⵍⵓⵍ ⴷ ⵓⵎⵏⵣⴰⵖ ⴳ ⵜⵡⵡⵓⵏⴽⵜ.",
     "footer.services": "ⵜⵉⵡⵓⵔⵉⵡⵉⵏ",
     "footer.company": "ⵜⴰⵎⵙⵙⵓⵔⵜ",
     "footer.legal": "ⴰⵣⵔⴼ",
@@ -440,6 +440,7 @@ export const translations = {
     "footer.email": "contact@rjrenova.ma",
   },
 } as const;
+
 
 
 
