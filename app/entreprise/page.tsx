@@ -30,12 +30,11 @@ const content = {
     { value: 50, suffix: "+", fr: "Collaborateurs", en: "Team members", ar: "متعاون" },
   ],
   timeline: [
-    { year: "2010", fr: "Création de RJ RENOVA à Casablanca", en: "RJ RENOVA founded in Casablanca", ar: "تأسيس RJ RENOVA في الدار البيضاء" },
-    { year: "2013", fr: "Ouverture de l'usine de production", en: "Production plant opening", ar: "افتتاح مصنع الإنتاج" },
-    { year: "2016", fr: "Premier projet hôtelier 5 étoiles", en: "First 5-star hotel project", ar: "أول مشروع فندقي 5 نجوم" },
-    { year: "2019", fr: "Certification ISO 9001", en: "ISO 9001 certification", ar: "شهادة ISO 9001" },
-    { year: "2022", fr: "Expansion nationale, 12 villes", en: "National expansion, 12 cities", ar: "توسع وطني، 12 مدينة" },
-    { year: "2025", fr: "Lancement nouvelle gamme bioclimatique", en: "New bioclimatic range launch", ar: "إطلاق مجموعة مناخية جديدة" },
+    { year: "2023", fr: "Création de RJ RENOVA à Casablanca", en: "RJ RENOVA founded in Casablanca", ar: "تأسيس RJ RENOVA في الدار البيضاء" },
+    { year: "2024", fr: "Ouverture de l'usine de production", en: "Production plant opening", ar: "افتتاح مصنع الإنتاج" },
+    { year: "2024", fr: "Premier projet hôtelier 5 étoiles", en: "First 5-star hotel project", ar: "أول مشروع فندقي 5 نجوم" },
+    { year: "2025", fr: "Expansion nationale, 12 villes", en: "National expansion, 12 cities", ar: "توسع وطني، 12 مدينة" },
+    { year: "2026", fr: "Lancement nouvelle gamme bioclimatique", en: "New bioclimatic range launch", ar: "إطلاق مجموعة مناخية جديدة" },
   ],
 };
 
@@ -139,6 +138,7 @@ export default function EntreprisePage() {
     </>
   );
 }
+
 
 
 
