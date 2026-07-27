@@ -226,8 +226,8 @@ export const translations = {
     "footer.privacy": "Privacy Policy",
     "footer.terms": "Legal Notice",
     "footer.rights": "All rights reserved.",
-    "footer.address": "Casablanca, Morocco",
-    "footer.phone": "+212 5XX-XXXXXX",
+    "footer.address": "Head office: Agadir, Morocco",
+    "footer.phone": "(+212) 0660 006 757",
     "footer.email": "contact@rjrenova.ma",
   },
 
@@ -440,6 +440,7 @@ export const translations = {
     "footer.email": "contact@rjrenova.ma",
   },
 } as const;
+
 
 
 
