@@ -83,7 +83,33 @@ export default function QuotePage() {
     return true;
   };
 
-  const handleSubmit = () => { setSubmitted(true); };
+  const handleSubmit = async () => {
+    setSending(true);
+    try {
+      await fetch("/api/send-quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          buildingType: buildingTypes.find((b) => b.id === form.buildingType)?.[loc] || form.buildingType,
+          serviceType: form.serviceType,
+          serviceLabel: serviceTypes.find((s) => s.id === form.serviceType)?.[loc] || form.serviceType,
+          surface: form.surface,
+          city: form.city,
+          budget: form.budget,
+          budgetLabel: budgetRanges.find((b) => b.id === form.budget)?.[loc] || form.budget,
+          message: form.message,
+          filesCount: form.files.length,
+        }),
+      });
+    } catch (e) {
+      // email sending is best-effort; still show success
+    }
+    setSending(false);
+    setSubmitted(true);
+  };
 
   if (submitted) {
     return (
@@ -284,6 +310,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
