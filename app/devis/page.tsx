@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ArrowLeft, Check, Upload, MapPin, Building2, Ruler, Wallet, FileText, Send, Image as ImageIcon, Wrench } from "lucide-react";
 import { Header } from "@/components/layout/header";
@@ -322,6 +322,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
