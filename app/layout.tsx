@@ -1,26 +1,26 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Manrope, Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-// DO NOT remove this @/components/made-with-badge/made-with-badge file
 import { MadeWithBadge } from "@/components/made-with-badge/made-with-badge";
-/**
- * For the root page layout you can edit metadata in this file
- * @/components/root-metadata
- * Do not add a const metadata export here directly
- * 
- * and DO NOT remove this @/components/root-metadata file
- * only edit it
- */
 import { metadata } from "@/components/root-metadata";
-export { metadata }
+import { I18nProvider } from "@/lib/i18n/i18n-provider";
+export { metadata };
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export default function RootLayout({
@@ -29,14 +29,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${manrope.variable} ${inter.variable} ${spaceGrotesk.variable} font-sans antialiased bg-surface text-dark`}
       >
-        {children}
-        {/* DO NOT UNDER ANY CIRCUMSTANCES REMOVE THIS & DO NOT CHANGE made-with-badge contents */}
+        <I18nProvider>
+          {children}
+        </I18nProvider>
         <MadeWithBadge />
       </body>
     </html>
   );
 }
+
