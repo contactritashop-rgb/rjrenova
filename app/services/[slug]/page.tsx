@@ -1,15 +1,15 @@
 "use client";
 
-import { use } from "react";
+import { use, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Check, ChevronDown } from "lucide-react";
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { useI18n } from "@/lib/i18n/i18n-provider";
 import { servicesData, serviceSlugs } from "@/lib/data/services";
 import type { Locale } from "@/lib/i18n/translations";
-import { notFound } from "next/navigation";
-import type { Metadata } from "next";
 
 export function generateStaticParams() {
   return serviceSlugs.map((slug) => ({ slug }));
@@ -21,22 +21,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!service) return {};
   return {
     title: `${service.title.fr} | RJ RENOVA`,
-    description: service.description.fr,
-    openGraph: { title: service.title.fr, description: service.description.fr },
+    description: service.description.fr.substring(0, 160),
+    openGraph: { title: service.title.fr, description: service.description.fr.substring(0, 160) },
   };
 }
-
-const iconMap: Record<string, any> = {};
 
 export default function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
   const { t, locale } = useI18n();
   const loc = locale as Locale;
   const service = servicesData[slug];
-  if (!service) notFound();
+  const [faqOpen, setFaqOpen] = useState<number | null>(null);
 
-  const [faqOpen, setFaqOpen] = use<number | null>(null as any);
-  const [faqOpenState, setFaqOpenState] = React.useState<number | null>(null);
+  if (!service) notFound();
 
   return (
     <>
@@ -65,7 +62,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
 
               <h2 className="font-heading text-3xl font-bold text-dark dark:text-white mb-10 text-center">Avantages</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
-                {service.advantages.map((adv: any, i: number) => (
+                {service.advantages.map((adv, i) => (
                   <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="flex gap-4 p-6 rounded-2xl bg-surface-alt dark:bg-dark-alt">
                     <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
                       <Check size={22} className="text-accent" />
@@ -80,7 +77,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
 
               <h2 className="font-heading text-3xl font-bold text-dark dark:text-white mb-10 text-center">Étapes</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-                {service.process.map((step: any, i: number) => (
+                {service.process.map((step, i) => (
                   <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.12 }} className="text-center p-6">
                     <span className="font-accent text-4xl font-extrabold text-accent/20">{step.step}</span>
                     <h3 className="font-heading font-bold text-dark dark:text-white mt-2 mb-2">{step.title[loc]}</h3>
@@ -93,7 +90,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
                 <>
                   <h2 className="font-heading text-3xl font-bold text-dark dark:text-white mb-10 text-center">Galerie</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-20">
-                    {service.gallery.map((img: any, i: number) => (
+                    {service.gallery.map((img, i) => (
                       <motion.div key={i} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="rounded-2xl overflow-hidden aspect-[4/3]">
                         <img src={img.src} alt={img.alt[loc]} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                       </motion.div>
@@ -106,13 +103,13 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
                 <>
                   <h2 className="font-heading text-3xl font-bold text-dark dark:text-white mb-10 text-center">{t("faq.title")}</h2>
                   <div className="space-y-3 mb-20">
-                    {service.faq.map((item: any, i: number) => (
+                    {service.faq.map((item, i) => (
                       <div key={i} className="rounded-2xl border border-border dark:border-white/10 overflow-hidden">
-                        <button onClick={() => setFaqOpenState(faqOpenState === i ? null : i)} className="w-full flex items-center justify-between p-5 text-left hover:bg-surface-alt dark:hover:bg-dark-alt transition-colors">
+                        <button onClick={() => setFaqOpen(faqOpen === i ? null : i)} className="w-full flex items-center justify-between p-5 text-left hover:bg-surface-alt dark:hover:bg-dark-alt transition-colors">
                           <span className="font-heading font-semibold text-dark dark:text-white pr-4">{item.q[loc]}</span>
-                          <ChevronDown size={18} className={`shrink-0 text-muted transition-transform ${faqOpenState === i ? "rotate-180" : ""}`} />
+                          <ChevronDown size={18} className={`shrink-0 text-muted transition-transform ${faqOpen === i ? "rotate-180" : ""}`} />
                         </button>
-                        {faqOpenState === i && (
+                        {faqOpen === i && (
                           <div className="px-5 pb-5 text-muted text-sm">{item.a[loc]}</div>
                         )}
                       </div>
@@ -141,6 +138,4 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
     </>
   );
 }
-
-import React from "react";
 
