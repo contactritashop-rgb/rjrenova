@@ -1,0 +1,110 @@
+"use client";
+
+import { useI18n } from "@/lib/i18n/i18n-provider";
+import { Building2, Phone, Mail, MapPin } from "lucide-react";
+
+const serviceLinks = [
+  "services.curtain",
+  "services.cladding",
+  "services.joinery",
+  "services.canopies",
+  "services.pergolas",
+];
+
+export function Footer() {
+  const { t } = useI18n();
+
+  return (
+    <footer className="bg-dark text-white/80">
+      <div className="container-custom px-6 lg:px-12 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="lg:col-span-1">
+            <div className="flex items-center gap-2 mb-4">
+              <Building2 className="text-accent" size={28} />
+              <span className="font-accent text-2xl font-bold text-white">
+                RJ<span className="text-accent">RENOVA</span>
+              </span>
+            </div>
+            <p className="text-white/60 text-sm leading-relaxed mb-6">
+              {t("footer.description")}
+            </p>
+          </div>
+
+          <div>
+            <h4 className="font-heading text-white font-semibold mb-4 text-sm uppercase tracking-widest">
+              {t("footer.services")}
+            </h4>
+            <ul className="space-y-3">
+              {serviceLinks.map((key) => (
+                <li key={key}>
+                  <a
+                    href="#services"
+                    className="text-white/60 hover:text-accent transition-colors duration-300 text-sm"
+                  >
+                    {t(key as any)}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-heading text-white font-semibold mb-4 text-sm uppercase tracking-widest">
+              {t("footer.company")}
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="#why" className="text-white/60 hover:text-accent transition-colors duration-300 text-sm">
+                  {t("nav.company")}
+                </a>
+              </li>
+              <li>
+                <a href="#gallery" className="text-white/60 hover:text-accent transition-colors duration-300 text-sm">
+                  {t("nav.projects")}
+                </a>
+              </li>
+              <li>
+                <a href="#faq" className="text-white/60 hover:text-accent transition-colors duration-300 text-sm">
+                  {t("nav.faq")}
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-heading text-white font-semibold mb-4 text-sm uppercase tracking-widest">
+              {t("footer.contact")}
+            </h4>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-3 text-white/60 text-sm">
+                <MapPin size={16} className="text-accent shrink-0" />
+                {t("footer.address")}
+              </li>
+              <li className="flex items-center gap-3 text-white/60 text-sm">
+                <Phone size={16} className="text-accent shrink-0" />
+                {t("footer.phone")}
+              </li>
+              <li className="flex items-center gap-3 text-white/60 text-sm">
+                <Mail size={16} className="text-accent shrink-0" />
+                {t("footer.email")}
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
+          <p>© {new Date().getFullYear()} RJ RENOVA. {t("footer.rights")}</p>
+          <div className="flex gap-6">
+            <a href="#" className="hover:text-accent transition-colors duration-300">
+              {t("footer.privacy")}
+            </a>
+            <a href="#" className="hover:text-accent transition-colors duration-300">
+              {t("footer.terms")}
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
