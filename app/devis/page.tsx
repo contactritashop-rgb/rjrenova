@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, ArrowLeft, Check, Upload, MapPin, Building2, Ruler, Wallet, FileText, Send, Image as ImageIcon } from "lucide-react";
+import { ArrowRight, ArrowLeft, Check, Upload, MapPin, Building2, Ruler, Wallet, FileText, Send, Image as ImageIcon, Wrench } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { useI18n } from "@/lib/i18n/i18n-provider";
@@ -283,4 +283,5 @@ export default function QuotePage() {
     </>
   );
 }
+
 
