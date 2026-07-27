@@ -32,7 +32,7 @@ export function Cta() {
           </p>
 
           <a
-            href="#"
+            href="/devis"
             className="group inline-flex items-center gap-3 px-10 py-5 bg-accent text-white font-bold text-lg rounded-full hover:bg-accent-light transition-all duration-300 shadow-2xl shadow-accent/30 hover:shadow-accent/50 hover:scale-105"
           >
             {t("cta.button")}
@@ -43,4 +43,5 @@ export function Cta() {
     </section>
   );
 }
+
 

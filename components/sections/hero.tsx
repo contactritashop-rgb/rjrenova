@@ -70,7 +70,7 @@ export function Hero() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <a
-              href="#cta"
+              href="/devis"
               className="group px-8 py-4 bg-accent text-white font-bold text-lg rounded-full hover:bg-accent-light transition-all duration-300 shadow-2xl shadow-accent/30 hover:shadow-accent/50 flex items-center gap-2"
             >
               {t("hero.cta.quote")}
@@ -97,4 +97,5 @@ export function Hero() {
     </section>
   );
 }
+
 
