@@ -20,7 +20,7 @@ const STORAGE_KEY = "rjrenova-locale";
 function getInitialLocale(): Locale {
   if (typeof window === "undefined") return "fr";
   const stored = localStorage.getItem(STORAGE_KEY);
-  if (stored && (stored === "fr" || stored === "en" || stored === "ar")) {
+  if (stored && (stored === "fr" || stored === "en" || stored === "ar" || stored === "tzm")) {
     return stored;
   }
   const browserLang = navigator.language.split("-")[0];
@@ -95,5 +95,6 @@ export function useI18n() {
   if (!ctx) throw new Error("useI18n must be used within I18nProvider");
   return ctx;
 }
+
 
 
