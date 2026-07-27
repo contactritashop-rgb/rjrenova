@@ -26,7 +26,7 @@ export default function LegalPage() {
 
           <section className="mb-8">
             <h2 className="font-heading text-2xl font-bold text-dark dark:text-white mb-4">Crédits</h2>
-            <p className="text-dark/70 dark:text-white/70 leading-relaxed">Conception et développement : Agemo — CodeWords<br />Photographies : Unsplash (licence libre)</p>
+            <p className="text-dark/70 dark:text-white/70 leading-relaxed">Conception et développement : S. Hamouch<br />Photographies : Projets réalisés par nos équipes projets partout au Maroc.</p>
           </section>
         </div>
       </main>
@@ -34,4 +34,5 @@ export default function LegalPage() {
     </>
   );
 }
+
 
