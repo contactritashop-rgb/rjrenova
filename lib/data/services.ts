@@ -1,15 +1,15 @@
 export interface ServiceData {
   slug: string;
   icon: string;
-  title: { fr: string; en: string; ar: string };
-  subtitle: { fr: string; en: string; ar: string };
-  description: { fr: string; en: string; ar: string };
+  title: { fr: string; en: string; ar: string; tzm: string };
+  subtitle: { fr: string; en: string; ar: string; tzm: string };
+  description: { fr: string; en: string; ar: string; tzm: string };
   heroImage: string;
-  advantages: { title: { fr: string; en: string; ar: string }; description: { fr: string; en: string; ar: string }; icon: string }[];
-  process: { step: string; title: { fr: string; en: string; ar: string }; description: { fr: string; en: string; ar: string }; icon: string }[];
-  gallery: { src: string; alt: { fr: string; en: string; ar: string } }[];
-  faq: { q: { fr: string; en: string; ar: string }; a: { fr: string; en: string; ar: string } }[];
-  ctaTitle: { fr: string; en: string; ar: string };
+  advantages: { title: { fr: string; en: string; ar: string; tzm: string }; description: { fr: string; en: string; ar: string; tzm: string }; icon: string }[];
+  process: { step: string; title: { fr: string; en: string; ar: string; tzm: string }; description: { fr: string; en: string; ar: string; tzm: string }; icon: string }[];
+  gallery: { src: string; alt: { fr: string; en: string; ar: string; tzm: string } }[];
+  faq: { q: { fr: string; en: string; ar: string; tzm: string }; a: { fr: string; en: string; ar: string; tzm: string } }[];
+  ctaTitle: { fr: string; en: string; ar: string; tzm: string };
 }
 
 function s(slug: string, icon: string, tfr: string, ten: string, tar: string, sfr: string, sen: string, sar: string, dfr: string, den: string, dar: string, hero: string, adv: any[], proc: any[], gal: any[], faq: any[], ctafr: string, ctaen: string, ctaar: string): ServiceData {
@@ -137,6 +137,7 @@ export const servicesData: Record<string, ServiceData> = {
 
 export default servicesData;
 export const serviceSlugs = Object.keys(servicesData);
+
 
 
 
