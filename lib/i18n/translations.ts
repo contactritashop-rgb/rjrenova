@@ -121,8 +121,8 @@ export const translations = {
     "footer.privacy": "Politique de confidentialité",
     "footer.terms": "Mentions légales",
     "footer.rights": "Tous droits réservés.",
-    "footer.address": "Casablanca, Maroc",
-    "footer.phone": "+212 5XX-XXXXXX",
+    "footer.address": "Siège social : Agadir, Maroc",
+    "footer.phone": "(+212) 0660 006 757",
     "footer.email": "contact@rjrenova.ma",
   },
 
@@ -440,6 +440,7 @@ export const translations = {
     "footer.email": "contact@rjrenova.ma",
   },
 } as const;
+
 
 
 
