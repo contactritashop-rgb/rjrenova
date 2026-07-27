@@ -48,10 +48,13 @@ export function Header() {
         }`}
       >
         <div className="container-custom px-6 lg:px-12 flex items-center justify-between">
-          <a href="#" className="flex items-center gap-2">
-            <span className="font-accent text-2xl font-bold tracking-tight text-primary">
-              RJ<span className="text-accent">RENOVA</span>
-            </span>
+          <a href="/" className="flex items-center">
+            {/* Logo compact: adapts color based on scroll/dark mode */}
+            <Logo
+              variant="compact"
+              dark={scrolled ? dark : true}
+              className="h-8 w-auto"
+            />
           </a>
 
           <nav className="hidden lg:flex items-center gap-8">
@@ -164,5 +167,6 @@ export function Header() {
     </>
   );
 }
+
 
 
