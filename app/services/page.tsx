@@ -10,7 +10,7 @@ import type { Locale } from "@/lib/i18n/translations";
 
 export default function ServicesIndexPage() {
   const { t, locale } = useI18n();
-  const loc = locale as Locale;
+  const loc = (locale === "tzm" ? "fr" : locale) as "fr" | "en" | "ar";
   const services = Object.values(servicesData);
 
   return (
@@ -60,4 +60,5 @@ export default function ServicesIndexPage() {
     </>
   );
 }
+
 
