@@ -110,6 +110,8 @@ export default function QuotePage() {
           budgetLabel: budgetRanges.find((b) => b.id === form.budget)?.[loc] || form.budget,
           message: form.message,
           filesCount: form.files.length,
+          captchaQuestion: captcha.q,
+          captchaAnswer: captchaInput,
         }),
       });
     } catch (e) {
@@ -322,6 +324,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
