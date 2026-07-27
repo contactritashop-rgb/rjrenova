@@ -13,7 +13,7 @@ const DEFAULT_SERVICES: AdminService[] = [{ id: 1, name: "Chargement...", slug: 
 const DEFAULT_PROJECTS: AdminProject[] = [{ id: 1, name: "Chargement...", city: "-", category: "-", year: "-", status: "-" }];
 const DEFAULT_TESTIMONIALS: AdminTestimonial[] = [{ id: 1, name: "Chargement...", role: "-", rating: 5, date: "-", status: "-", text: "-" }];
 const DEFAULT_QUOTES: AdminQuote[] = [{ id: 1, name: "Chargement...", email: "-", phone: "-", service: "-", city: "-", budget: "-", date: "-", status: "-" }];
-const DEFAULT_SETTINGS: AdminSettings = { companyName: "RJ RENOVA", email: "contact@rjrenova.ma", phone: "+212 5XX-XXXXXX", address: "Casablanca, Maroc", whatsapp: "+212XXXXXXXXX", facebook: "", instagram: "" };
+const DEFAULT_SETTINGS: AdminSettings = { companyName: "RJ RENOVA", email: "contact@rjrenova.ma", phone: "(+212) 0660 006 757", address: "Agadir, Maroc", whatsapp: "+212660006757", facebook: "", instagram: "" };
 
 function loadLocal<T>(key: string, fallback: T): T {
   if (typeof window === "undefined") return fallback;
@@ -145,4 +145,5 @@ export function useSettings() {
   const setSettings = (s: AdminSettings) => { setSettingsState(s); saveLocal("rjrenova_settings", s); };
   return { settings, setSettings };
 }
+
 

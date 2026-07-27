@@ -14,7 +14,7 @@ const content = {
     s3t: "Propriété intellectuelle",
     s3b: "L'ensemble du contenu de ce site (textes, images, logos) est la propriété exclusive de RJ RENOVA. Toute reproduction est interdite sans autorisation préalable.",
     s4t: "Crédits",
-    s4b: "Conception et développement : S. Hamouch — Photographies : Projets réalisés par nos équipes projets partout au Maroc.",
+    s4b: "Conception et développement : HAMOUCH — Photographies : Projets réalisés par nos équipes projets partout au Maroc.",
   },
   en: {
     title: "Legal Notice",
@@ -25,7 +25,7 @@ const content = {
     s3t: "Intellectual Property",
     s3b: "All content on this site (text, images, logos) is the exclusive property of RJ RENOVA. Any reproduction is prohibited without prior authorization.",
     s4t: "Credits",
-    s4b: "Design & development: S. Hamouch — Photography: Projects carried out by our project teams across Morocco.",
+    s4b: "Design & development: HAMOUCH — Photography: Projects carried out by our project teams across Morocco.",
   },
   ar: {
     title: "إشعار قانوني",
@@ -36,7 +36,7 @@ const content = {
     s3t: "الملكية الفكرية",
     s3b: "جميع محتويات هذا الموقع (نصوص، صور، شعارات) هي ملكية حصرية لـ RJ RENOVA. أي استنساخ ممنوع بدون إذن مسبق.",
     s4t: "اعتمادات",
-    s4b: "التصميم والتطوير : S. Hamouch — الصور : مشاريع منجزة من طرف فرقنا عبر المغرب.",
+    s4b: "التصميم والتطوير : HAMOUCH — الصور : مشاريع منجزة من طرف فرقنا عبر المغرب.",
   },
   tzm: {
     title: "ⵜⵉⵡⴰⵍⵉⵏ ⵜⵉⵣⵔⴼⴰⵏⵉⵏ",
@@ -47,7 +47,7 @@ const content = {
     s3t: "ⴰⵢⵍⴰ ⴰⴷⵍⵙⴰⵏ",
     s3b: "ⵎⴰⵕⵕⴰ ⵉⴳⵎⴰⵎⵏ ⵏ ⵡⴰⵏⵜⵉⵔⵏⵉⵜ ⴰⴷ (ⵉⴹⵕⵉⵚⵏ, ⵜⵉⵡⵍⴰⴼⵉⵏ, ⵉⵛⵏⵢⴰⵍⵏ) ⴷ ⴰⵢⵍⴰ ⵏ RJ RENOVA. ⴽⵔⴰ ⵏ ⵓⵙⵏⵖⵍ ⵉⵜⵜⵓⵙⴳⴷⵍ ⴱⵍⴰ ⵜⵙⵉⵔⴳⵜ.",
     s4t: "ⵉⵙⵎⴰⵡⵏ",
-    s4b: "ⴰⵙⵇⵇⵙⵉ ⴷ ⵓⵙⵏⴼⵍⵓⵍ : S. Hamouch — ⵜⵉⵡⵍⴰⴼⵉⵏ : ⵉⵙⵏⴼⴰⵔⵏ ⵉⵜⵜⵡⴰⵙⴽⴰⵔⵏ ⵙⴳ ⵜⴰⵔⴰⴱⴱⵓⵜ ⵏⵏⵖ ⴳ ⵎⴰⵕⵕⴰ ⵍⵎⵖⵔⵉⴱ.",
+    s4b: "ⴰⵙⵇⵇⵙⵉ ⴷ ⵓⵙⵏⴼⵍⵓⵍ : HAMOUCH — ⵜⵉⵡⵍⴰⴼⵉⵏ : ⵉⵙⵏⴼⴰⵔⵏ ⵉⵜⵜⵡⴰⵙⴽⴰⵔⵏ ⵙⴳ ⵜⴰⵔⴰⴱⴱⵓⵜ ⵏⵏⵖ ⴳ ⵎⴰⵕⵕⴰ ⵍⵎⵖⵔⵉⴱ.",
   },
 };
 
@@ -72,4 +72,5 @@ export default function LegalPage() {
     </>
   );
 }
+
 

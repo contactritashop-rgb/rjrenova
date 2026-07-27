@@ -332,7 +332,7 @@ export const translations = {
     "footer.terms": "إشعار قانوني",
     "footer.rights": "جميع الحقوق محفوظة.",
     "footer.address": "الدار البيضاء، المغرب",
-    "footer.phone": "+212 5XX-XXXXXX",
+    "footer.phone": "(+212) 0660 006 757",
     "footer.email": "contact@rjrenova.ma",
   },
   tzm: {
@@ -440,6 +440,7 @@ export const translations = {
     "footer.email": "contact@rjrenova.ma",
   },
 } as const;
+
 
 
 
