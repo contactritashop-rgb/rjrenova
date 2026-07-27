@@ -103,7 +103,7 @@ export default function EntreprisePage() {
                     <motion.div key={item.year} initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className={`flex flex-col md:flex-row gap-4 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
                       <div className={`flex-1 ${i % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
                         <span className="font-accent text-accent font-extrabold text-lg">{item.year}</span>
-                        <p className="text-dark/70 dark:text-white/70 mt-1">{item[l as keyof typeof item] as string}</p>
+                        <p className="text-dark/70 dark:text-white/70 mt-1">{l === "fr" ? item.fr : l === "en" ? item.en : item.ar}</p>
                       </div>
                       <div className="hidden md:flex items-center justify-center">
                         <div className="w-4 h-4 rounded-full bg-accent shrink-0 z-10" />
@@ -139,5 +139,6 @@ export default function EntreprisePage() {
     </>
   );
 }
+
 
 
