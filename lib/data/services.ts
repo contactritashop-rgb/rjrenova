@@ -22,7 +22,6 @@ export const servicesData: Record<string, ServiceData> = {
     "Le mur rideau est la signature architecturale des bâtiments contemporains. RJ RENOVA conçoit et installe des murs rideaux aluminium sur mesure, alliant performance thermique, étanchéité parfaite et esthétique minimaliste.",
     "The curtain wall is the architectural signature of contemporary buildings. RJ RENOVA designs and installs custom aluminum curtain walls, combining thermal performance, perfect sealing, and minimalist aesthetics.",
     "الواجهة الزجاجية هي التوقيع المعماري للمباني المعاصرة. تصمم RJ RENOVA واجهات زجاجية من الألمنيوم حسب الطلب.",
-    "ⵉⵖⴼⴰⵡⵏ ⵏ ⵜⵣⴳⴰ ⴷ ⴰⵙⵙⵉⵏⴰⵍ ⴰⵎⵙⵡⵓⵔⵉ ⵏ ⵉⵙⴽⴰ ⵉⵎⴰⵢⵏⵓⵜⵏ. RJ RENOVA ⴷⴰ ⵜⵙⵇⵇⵙⴰ ⴷ ⴰⴷ ⵜⵙⴱⴷⴷ ⵉⵖⴼⴰⵡⵏ ⵏ ⵓⵍⵓⵎⵉⵏⵢⵓⵎ ⵙ ⵓⴽⵜⵜⵓⵔ.",
     "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80",
     [{ title: { fr: "Luminosité Maximale", en: "Maximum Light", ar: "إضاءة قصوى" }, description: { fr: "Jusqu'à 90% de surface vitrée.", en: "Up to 90% glazed surface.", ar: "حتى 90% سطح مزجج." }, icon: "Sun" }, { title: { fr: "Isolation Thermique", en: "Thermal Insulation", ar: "عزل حراري" }, description: { fr: "Rupture de pont thermique intégrée.", en: "Integrated thermal break.", ar: "قاطع حراري مدمج." }, icon: "Thermometer" }, { title: { fr: "Étanchéité Parfaite", en: "Perfect Sealing", ar: "إحكام مثالي" }, description: { fr: "Joints EPDM haute performance.", en: "High-performance EPDM seals.", ar: "مانعات تسرب عالية الأداء." }, icon: "Shield" }, { title: { fr: "Design Sur Mesure", en: "Custom Design", ar: "تصميم حسب الطلب" }, description: { fr: "Large choix de profilés et couleurs.", en: "Wide choice of profiles and colors.", ar: "تشكيلة واسعة من البروفيلات." }, icon: "Palette" }],
     [{ step: "01", title: { fr: "Étude", en: "Study", ar: "دراسة" }, description: { fr: "Analyse structurelle et thermique.", en: "Structural and thermal analysis.", ar: "تحليل هيكلي وحراري." }, icon: "ClipboardCheck" }, { step: "02", title: { fr: "Conception 3D", en: "3D Design", ar: "تصميم ثلاثي الأبعاد" }, description: { fr: "Modélisation et validation.", en: "Modeling and validation.", ar: "نمذجة وتحقق." }, icon: "PencilRuler" }, { step: "03", title: { fr: "Fabrication", en: "Manufacturing", ar: "تصنيع" }, description: { fr: "Usinage de précision.", en: "Precision machining.", ar: "تصنيع دقيق." }, icon: "Factory" }, { step: "04", title: { fr: "Installation", en: "Installation", ar: "تركيب" }, description: { fr: "Pose par équipes certifiées.", en: "Installation by certified teams.", ar: "تركيب من فرق معتمدة." }, icon: "Wrench" }],
@@ -139,6 +138,7 @@ export const servicesData: Record<string, ServiceData> = {
 
 export default servicesData;
 export const serviceSlugs = Object.keys(servicesData);
+
 
 
 
