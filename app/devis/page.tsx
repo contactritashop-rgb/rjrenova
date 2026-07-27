@@ -69,6 +69,7 @@ export default function QuotePage() {
   const [step, setStep] = useState(0);
   const [form, setForm] = useState<FormData>({ buildingType: "", serviceType: "", surface: "", city: "", budget: "", files: [], name: "", email: "", phone: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const update = (key: keyof FormData, value: any) => setForm((f) => ({ ...f, [key]: value }));
@@ -283,5 +284,6 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
