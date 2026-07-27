@@ -435,11 +435,12 @@ export const translations = {
     "footer.privacy": "ⵜⴰⵙⵔⵜⵉⵜ ⵏ ⵜⵉⵏⵏⵓⵜⵍⴰ",
     "footer.terms": "ⵜⵉⵡⴰⵍⵉⵏ ⵜⵉⵣⵔⴼⴰⵏⵉⵏ",
     "footer.rights": "ⵎⴰⵕⵕⴰ ⵉⵣⵔⴼⴰⵏ ⵉⵟⵟⴼⵏ.",
-    "footer.address": "ⴰⵏⴼⴰ, ⵍⵎⵖⵔⵉⴱ",
-    "footer.phone": "+212 5XX-XXXXXX",
+    "footer.address": "ⴰⴳⴰⴷⵉⵔ, ⵍⵎⵖⵔⵉⴱ",
+    "footer.phone": "(+212) 0660 006 757",
     "footer.email": "contact@rjrenova.ma",
   },
 } as const;
+
 
 
 
