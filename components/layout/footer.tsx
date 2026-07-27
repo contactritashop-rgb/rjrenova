@@ -1,7 +1,8 @@
 "use client";
 
 import { useI18n } from "@/lib/i18n/i18n-provider";
-import { Building2, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import { Logo } from "@/components/ui/logo";
 
 const serviceLinks = [
   "services.curtain",
@@ -107,4 +108,5 @@ export function Footer() {
     </footer>
   );
 }
+
 
