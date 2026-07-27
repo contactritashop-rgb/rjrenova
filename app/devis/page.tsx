@@ -70,7 +70,15 @@ export default function QuotePage() {
   const [form, setForm] = useState<FormData>({ buildingType: "", serviceType: "", surface: "", city: "", budget: "", files: [], name: "", email: "", phone: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
+  const [captcha, setCaptcha] = useState({ q: "", a: "" });
+  const [captchaInput, setCaptchaInput] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const n1 = Math.floor(Math.random() * 10) + 1;
+    const n2 = Math.floor(Math.random() * 10) + 1;
+    setCaptcha({ q: `${n1} + ${n2}`, a: String(n1 + n2) });
+  }, []);
 
   const update = (key: keyof FormData, value: any) => setForm((f) => ({ ...f, [key]: value }));
   const canNext = (): boolean => {
@@ -314,6 +322,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
