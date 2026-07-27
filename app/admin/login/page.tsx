@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { Lock, Mail, Eye, EyeOff, ArrowRight } from "lucide-react";
 import { login } from "@/lib/admin/auth";
+import { Logo } from "@/components/ui/logo";
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -65,4 +66,5 @@ export default function AdminLoginPage() {
     </div>
   );
 }
+
 
