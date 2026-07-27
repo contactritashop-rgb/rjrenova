@@ -8,10 +8,10 @@ import type { Locale } from "@/lib/i18n/translations";
 import { Logo } from "@/components/ui/logo";
 
 const navLinks = [
-  { href: "#services", key: "nav.services" as const },
-  { href: "#process", key: "nav.company" as const },
-  { href: "#gallery", key: "nav.projects" as const },
-  { href: "#faq", key: "nav.faq" as const },
+  { href: "/entreprise", key: "nav.company" as const },
+  { href: "/services", key: "nav.services" as const },
+  { href: "/realisations", key: "nav.projects" as const },
+  { href: "/contact", key: "nav.contact" as const },
 ];
 
 export function Header() {
@@ -167,6 +167,7 @@ export function Header() {
     </>
   );
 }
+
 
 
 
