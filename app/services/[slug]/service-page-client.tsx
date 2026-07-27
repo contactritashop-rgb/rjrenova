@@ -12,7 +12,7 @@ import type { Locale } from "@/lib/i18n/translations";
 
 export function ServicePageClient({ slug }: { slug: string }) {
   const { t, locale } = useI18n();
-  const loc = locale as Locale;
+  const loc = (locale === "tzm" ? "fr" : locale) as "fr" | "en" | "ar";
   const service = servicesData[slug];
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
 
@@ -121,4 +121,5 @@ export function ServicePageClient({ slug }: { slug: string }) {
     </>
   );
 }
+
 
