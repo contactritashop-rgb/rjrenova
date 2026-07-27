@@ -154,7 +154,7 @@ export function Header() {
                 </a>
               ))}
               <a
-                href="#cta"
+                href="/devis"
                 onClick={() => setMobileOpen(false)}
                 className="mt-4 px-6 py-3 bg-accent text-white font-semibold rounded-full text-center hover:bg-accent-dark transition-all duration-300"
               >
@@ -167,6 +167,7 @@ export function Header() {
     </>
   );
 }
+
 
 
 
