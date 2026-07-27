@@ -8,55 +8,49 @@ interface LogoProps {
 
 function LogoCompact({ dark, className }: { dark: boolean; className?: string }) {
   const tc = dark ? "#FFFFFF" : "#111827";
-  const or = "#F28C28";
   return (
-    <svg viewBox="0 0 240 40" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-label="RJ RENOVA" role="img">
-      {/* RJ */}
-      <text x="0" y="34" fontFamily="'Manrope','Space Grotesk',sans-serif" fontWeight="800" fontSize="38" fill={or} letterSpacing="-1">RJ</text>
-      {/* RE */}
-      <text x="64" y="34" fontFamily="'Manrope','Space Grotesk',sans-serif" fontWeight="800" fontSize="38" fill={tc} letterSpacing="-1">RE</text>
-      {/* slash diagonal */}
-      <line x1="122" y1="40" x2="132" y2="4" stroke={or} strokeWidth="5" strokeLinecap="round" />
-      {/* NOVA */}
-      <text x="134" y="34" fontFamily="'Manrope','Space Grotesk',sans-serif" fontWeight="800" fontSize="38" fill={tc} letterSpacing="-1">NOVA</text>
-    </svg>
+    <div className={`inline-flex items-baseline ${className ?? ""}`} aria-label="RJ RENOVA">
+      <span style={{ fontFamily: "var(--font-space-grotesk), var(--font-manrope), sans-serif", fontWeight: 800, fontSize: "1.6rem", color: "#F28C28", letterSpacing: "-0.02em", lineHeight: 1 }}>RJ</span>
+      <span style={{ fontFamily: "var(--font-space-grotesk), var(--font-manrope), sans-serif", fontWeight: 800, fontSize: "1.6rem", color: tc, letterSpacing: "-0.02em", lineHeight: 1, marginLeft: "0.3em" }}>RE</span>
+      <span style={{ display: "inline-block", width: "1.15em", height: "1.6rem", position: "relative", margin: "0 0.05em", lineHeight: 1 }}>
+        <svg viewBox="0 0 16 28" style={{ position: "absolute", inset: 0, width: "100%", height: "140%", top: "-20%" }}>
+          <line x1="14" y1="26" x2="2" y2="2" stroke="#F28C28" strokeWidth="3.5" strokeLinecap="round" />
+        </svg>
+      </span>
+      <span style={{ fontFamily: "var(--font-space-grotesk), var(--font-manrope), sans-serif", fontWeight: 800, fontSize: "1.6rem", color: tc, letterSpacing: "-0.02em", lineHeight: 1 }}>NOVA</span>
+    </div>
   );
 }
 
 function LogoFull({ dark, className }: { dark: boolean; className?: string }) {
   const tc = dark ? "#FFFFFF" : "#111827";
-  const or = "#F28C28";
   return (
-    <svg viewBox="0 0 240 72" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-label="RJ RENOVA" role="img">
-      {/* RJ */}
-      <text x="0" y="34" fontFamily="'Manrope','Space Grotesk',sans-serif" fontWeight="800" fontSize="38" fill={or} letterSpacing="-1">RJ</text>
-      {/* RE */}
-      <text x="64" y="34" fontFamily="'Manrope','Space Grotesk',sans-serif" fontWeight="800" fontSize="38" fill={tc} letterSpacing="-1">RE</text>
-      {/* slash diagonal */}
-      <line x1="122" y1="40" x2="132" y2="4" stroke={or} strokeWidth="5" strokeLinecap="round" />
-      {/* NOVA */}
-      <text x="134" y="34" fontFamily="'Manrope','Space Grotesk',sans-serif" fontWeight="800" fontSize="38" fill={tc} letterSpacing="-1">NOVA</text>
-      {/* tagline — aligned under NOVA */}
-      <text x="134" y="54" fontFamily="'Manrope','Inter',sans-serif" fontWeight="700" fontSize="10" fill={or} letterSpacing="2" fontStyle="italic">ALUMINIUM FAÇADES &amp;</text>
-      <text x="134" y="67" fontFamily="'Manrope','Inter',sans-serif" fontWeight="700" fontSize="10" fill={or} letterSpacing="2" fontStyle="italic">ARCHITECTURAL SOLUTIONS</text>
-    </svg>
+    <div className={`inline-flex flex-col ${className ?? ""}`} aria-label="RJ RENOVA">
+      <div className="inline-flex items-baseline">
+        <span style={{ fontFamily: "var(--font-space-grotesk), var(--font-manrope), sans-serif", fontWeight: 800, fontSize: "1.8rem", color: "#F28C28", letterSpacing: "-0.02em", lineHeight: 1 }}>RJ</span>
+        <span style={{ fontFamily: "var(--font-space-grotesk), var(--font-manrope), sans-serif", fontWeight: 800, fontSize: "1.8rem", color: tc, letterSpacing: "-0.02em", lineHeight: 1, marginLeft: "0.25em" }}>RE</span>
+        <span style={{ display: "inline-block", width: "1.1em", height: "1.8rem", position: "relative", margin: "0 0.02em", lineHeight: 1 }}>
+          <svg viewBox="0 0 16 28" style={{ position: "absolute", inset: 0, width: "100%", height: "140%", top: "-20%" }}>
+            <line x1="14" y1="26" x2="2" y2="2" stroke="#F28C28" strokeWidth="3.5" strokeLinecap="round" />
+          </svg>
+        </span>
+        <span style={{ fontFamily: "var(--font-space-grotesk), var(--font-manrope), sans-serif", fontWeight: 800, fontSize: "1.8rem", color: tc, letterSpacing: "-0.02em", lineHeight: 1 }}>NOVA</span>
+      </div>
+      <div style={{ marginLeft: "0.25em", marginTop: "0.15em" }}>
+        <p style={{ fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: "0.58rem", color: "#F28C28", letterSpacing: "0.12em", fontStyle: "italic", lineHeight: 1.3, margin: 0, whiteSpace: "nowrap" }}>
+          ALUMINIUM FAÇADES &amp; ARCHITECTURAL SOLUTIONS
+        </p>
+      </div>
+    </div>
   );
 }
 
 function LogoIcon({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 55 40" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-label="RJ" role="img">
-      <text x="0" y="34" fontFamily="'Manrope','Space Grotesk',sans-serif" fontWeight="800" fontSize="38" fill="#F28C28" letterSpacing="-1">RJ</text>
-    </svg>
+    <span className={className} style={{ fontFamily: "var(--font-space-grotesk), var(--font-manrope), sans-serif", fontWeight: 800, fontSize: "1.4rem", color: "#F28C28", letterSpacing: "-0.02em", lineHeight: 1 }} aria-label="RJ">RJ</span>
   );
 }
 
-/**
- * RJ RENOVA brand logo — text-based SVG.
- * variant="full"    – RJ + RE/NOVA + tagline (footer, login)
- * variant="compact" – RJ + RE/NOVA only (header)
- * variant="icon"    – RJ only (favicon)
- */
 export function Logo({ variant = "compact", dark = false, className = "" }: LogoProps) {
   if (variant === "icon") return <LogoIcon className={className} />;
   if (variant === "full") return <LogoFull dark={dark} className={className} />;
