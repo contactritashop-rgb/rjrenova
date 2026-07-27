@@ -28,10 +28,11 @@ export const servicesData: Record<string, ServiceData> = {
     [{ step: "01", title: { fr: "Étude", en: "Study", ar: "دراسة" }, description: { fr: "Analyse structurelle et thermique.", en: "Structural and thermal analysis.", ar: "تحليل هيكلي وحراري." }, icon: "ClipboardCheck" }, { step: "02", title: { fr: "Conception 3D", en: "3D Design", ar: "تصميم ثلاثي الأبعاد" }, description: { fr: "Modélisation et validation.", en: "Modeling and validation.", ar: "نمذجة وتحقق." }, icon: "PencilRuler" }, { step: "03", title: { fr: "Fabrication", en: "Manufacturing", ar: "تصنيع" }, description: { fr: "Usinage de précision.", en: "Precision machining.", ar: "تصنيع دقيق." }, icon: "Factory" }, { step: "04", title: { fr: "Installation", en: "Installation", ar: "تركيب" }, description: { fr: "Pose par équipes certifiées.", en: "Installation by certified teams.", ar: "تركيب من فرق معتمدة." }, icon: "Wrench" }],
     [{ src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80", alt: { fr: "Tour de bureaux", en: "Office tower", ar: "برج مكاتب" } }, { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80", alt: { fr: "Façade vitrée", en: "Glass facade", ar: "واجهة زجاجية" } }],
     [{ q: { fr: "Quelle est la durée de vie ?", en: "What is the lifespan?", ar: "ما هو العمر الافتراضي؟" }, a: { fr: "Plus de 30 ans avec entretien minimal.", en: "Over 30 years with minimal maintenance.", ar: "أكثر من 30 سنة بصيانة بسيطة." } }, { q: { fr: "Quels types de vitrage ?", en: "What types of glazing?", ar: "ما أنواع الزجاج؟" }, a: { fr: "Simple, double, triple avec contrôle solaire, autonettoyant, acoustique.", en: "Single, double, triple with solar control, self-cleaning, acoustic.", ar: "بسيط، مزدوج، ثلاثي مع تحكم شمسي." } }],
-    "Prêt à illuminer votre bâtiment ?", "Ready to brighten your building?", "مستعد لإضاءة مبناك؟"
+    "Prêt à illuminer votre bâtiment ?", "Ready to brighten your building?", "مستعد لإضاءة مبناك؟",
+    "ⵉⵙ ⵜⵓⵙⵉⴷ ⴰⴷ ⵜⵙⴼⴰⵡⴷ ⴰⵙⴽⴰ ⵏⵏⴽ ?"
   ),
 
-  "bardage": s("bardage", "Layers", "Bardage Aluminium", "Aluminum Cladding", "تكسية خارجية",
+  "bardage": s("bardage", "Layers", "Bardage Aluminium", "Aluminum Cladding", "تكسية خارجية", "ⴰⵙⵙⵓⵎⵔ ⵏ ⵓⵍⵓⵎⵉⵏⵢⵓⵎ",
     "Revêtement esthétique et protecteur", "Aesthetic and protective cladding", "تكسية جمالية وواقية",
     "Le bardage aluminium RJ RENOVA transforme l'apparence de vos bâtiments tout en améliorant leur performance énergétique. Multiples finitions : laqué, anodisé, effet bois, perforé.",
     "RJ RENOVA aluminum cladding transforms building appearance while improving energy performance. Multiple finishes available.",
@@ -138,6 +139,7 @@ export const servicesData: Record<string, ServiceData> = {
 
 export default servicesData;
 export const serviceSlugs = Object.keys(servicesData);
+
 
 
 
