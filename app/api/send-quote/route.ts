@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const FROM_EMAIL = "RJ RENOVA <devis@rjrenova.codewords.run>";
-const COMPANY_EMAIL = "contact@rjrenova.ma";
+const FROM_EMAIL = "RJ RENOVA <onboarding@resend.dev>";
+const COMPANY_EMAIL = "samir.hamouch@gmail.com";
 const COMPANY_NAME = "RJ RENOVA";
 
 export async function POST(request: Request) {
@@ -80,4 +80,5 @@ ${message ? `<tr><td style="padding:6px 12px;font-weight:600">Message</td><td>${
     return NextResponse.json({ error: err?.message || "Erreur serveur" }, { status: 500 });
   }
 }
+
 
