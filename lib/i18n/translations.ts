@@ -1,17 +1,19 @@
-export type Locale = "fr" | "en" | "ar";
+export type Locale = "fr" | "en" | "ar" | "tzm";
 
-export const locales: Locale[] = ["fr", "en", "ar"];
+export const locales: Locale[] = ["fr", "en", "ar", "tzm"];
 
 export const localeLabels: Record<Locale, string> = {
   fr: "Français",
   en: "English",
   ar: "العربية",
+  tzm: "ⵜⴰⵎⴰⵣⵉⵖⵜ",
 };
 
 export const localeFlags: Record<Locale, string> = {
   fr: "🇫🇷",
   en: "🇬🇧",
   ar: "🇲🇦",
+  tzm: "ⵣ",
 };
 
 export const isRTL = (locale: Locale): boolean => locale === "ar";
@@ -334,4 +336,5 @@ export const translations = {
     "footer.email": "contact@rjrenova.ma",
   },
 } as const;
+
 
