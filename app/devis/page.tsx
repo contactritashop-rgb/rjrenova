@@ -66,7 +66,6 @@ type FormData = {
 export default function QuotePage() {
   const { t, locale } = useI18n();
   const loc = locale as "fr" | "en" | "ar" | "tzm";
-  const ui = devisUIText[locale as keyof typeof devisUIText] || devisUIText.fr;
   const [step, setStep] = useState(0);
   const [form, setForm] = useState<FormData>({ buildingType: "", serviceType: "", surface: "", city: "", budget: "", files: [], name: "", email: "", phone: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
@@ -330,6 +329,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
