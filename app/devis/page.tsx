@@ -284,7 +284,7 @@ export default function QuotePage() {
                   </div>
 
                   <div className="mt-8 p-6 rounded-2xl bg-surface-alt dark:bg-dark border border-border dark:border-white/5">
-                    <h3 className="font-heading font-bold text-dark dark:text-white mb-4">{loc === "fr" ? "Récapitulatif" : loc === "en" ? "Summary" : "ملخص"}</h3>
+                    <h3 className="font-heading font-bold text-dark dark:text-white mb-4">{loc === "fr" ? "Récapitulatif" : loc === "en" ? "Summary" : loc === "ar" ? "ملخص" : "ⴰⴳⵣⵓⵎ"}</h3>
                     <div className="space-y-2 text-sm">
                       <div className="flex justify-between"><span className="text-muted">{loc === "fr" ? "Bâtiment" : "Building"}</span><span className="font-medium text-dark dark:text-white">{buildingTypes.find((b) => b.id === form.buildingType)?.[loc] || "-"}</span></div>
                       <div className="flex justify-between"><span className="text-muted">{loc === "fr" ? "Prestation" : "Service"}</span><span className="font-medium text-dark dark:text-white">{serviceTypes.find((s) => s.id === form.serviceType)?.[loc] || "-"}</span></div>
@@ -330,6 +330,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
