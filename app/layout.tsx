@@ -4,7 +4,6 @@ import { MadeWithBadge } from "@/components/made-with-badge/made-with-badge";
 import { metadata } from "@/components/root-metadata";
 import { I18nProvider } from "@/lib/i18n/i18n-provider";
 import { LocalBusinessSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/json-ld";
-import { ChatbotWrapper } from "@/components/chatbot/chatbot-wrapper";
 export { metadata };
 
 const manrope = Manrope({
@@ -47,6 +46,7 @@ export default function RootLayout({
     </html>
   );
 }
+
 
 
 
