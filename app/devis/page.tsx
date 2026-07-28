@@ -280,7 +280,7 @@ export default function QuotePage() {
                       <input type="email" value={form.email} onChange={(e) => update("email", e.target.value)} className="w-full px-4 py-3 rounded-xl border-2 border-border bg-transparent text-dark dark:text-white focus:border-accent outline-none transition-colors" />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-dark dark:text-white mb-1.5">{loc === "fr" ? "Téléphone" : loc === "en" ? "Phone" : "الهاتف"} *</label>
+                      <label className="block text-sm font-medium text-dark dark:text-white mb-1.5">{loc === "fr" ? "Téléphone" : loc === "en" ? "Phone" : loc === "ar" ? "الهاتف" : "ⵜⵉⵍⵉⴼⵓⵏ"} *</label>
                       <input type="tel" value={form.phone} onChange={(e) => update("phone", e.target.value)} className="w-full px-4 py-3 rounded-xl border-2 border-border bg-transparent text-dark dark:text-white focus:border-accent outline-none transition-colors" />
                     </div>
                     <div>
@@ -341,6 +341,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
