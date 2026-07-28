@@ -21,6 +21,10 @@ export function ServicePageClient({ slug }: { slug: string }) {
   // Safe accessor: try locale, fall back to fr
   const tx = (obj: any) => obj?.[loc] || obj?.fr || "";
 
+  // Render helper: use tx() for nested lookup
+  const renderL = (key: string) => (obj: any) => obj?.[key] || obj?.fr || "";
+  const L = (key: string) => renderL(key);
+
   return (
     <>
       <Header />
@@ -124,6 +128,7 @@ export function ServicePageClient({ slug }: { slug: string }) {
     </>
   );
 }
+
 
 
 
