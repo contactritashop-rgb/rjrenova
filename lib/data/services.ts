@@ -120,7 +120,7 @@ export const servicesData: Record<string, ServiceData> = {
     [{ title: { fr: "Haute Sécurité", en: "High Security", ar: "أمان عالٍ" }, description: { fr: "Serrures A2P, anti-effraction.", en: "A2P locks, anti-burglary.", ar: "أقفال A2P." }, icon: "Lock" }, { title: { fr: "Isolation", en: "Insulation", ar: "عزل" }, description: { fr: "Rupture pont thermique.", en: "Thermal break.", ar: "قاطع حراري." }, icon: "Thermometer" }, { title: { fr: "Design Premium", en: "Premium Design", ar: "تصميم ممتاز" }, description: { fr: "Finitions et accessoires.", en: "Finishes and accessories.", ar: "تشطيبات وإكسسوارات." }, icon: "Palette" }, { title: { fr: "Motorisation", en: "Motorization", ar: "تحريك آلي" }, description: { fr: "Ouverture automatique.", en: "Automatic opening.", ar: "فتح آلي." }, icon: "Zap" }],
     [{ step: "01", title: { fr: "Prise de Cotes", en: "Measurement", ar: "قياس" }, description: { fr: "Relevé précis.", en: "Precise measurement.", ar: "قياس دقيق." }, icon: "ClipboardCheck" }, { step: "02", title: { fr: "Choix Design", en: "Design", ar: "تصميم" }, description: { fr: "Modèle, couleur, accessoires.", en: "Model, color, accessories.", ar: "نموذج، لون." }, icon: "PencilRuler" }, { step: "03", title: { fr: "Fabrication", en: "Manufacturing", ar: "تصنيع" }, description: { fr: "Assemblage et contrôle.", en: "Assembly and QC.", ar: "تجميع ومراقبة." }, icon: "Factory" }, { step: "04", title: { fr: "Installation", en: "Installation", ar: "تركيب" }, description: { fr: "Pose avec réglage.", en: "Installation with adjustment.", ar: "تركيب مع ضبط." }, icon: "Wrench" }],
     [{ src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80", alt: { fr: "Porte", en: "Door", ar: "باب" } }],
-    [{ q: { fr: "Résistantes aux effractions ?", en: "Burglar resistant?", ar: "مقاومة للكسر؟" }, a: { fr: "Oui, serrures A2P et vitrage anti-effraction.", en: "Yes, A2P locks and anti-burglary glazing.", ar: "نعم، أقفال A2P وزجاج مضاد." } }],
+    [{ q: { fr: "Résistantes aux effractions ?", en: "Burglar resistant?", ar: "مقاومة للكسر؟", tzm: "ⵉⵙ ⵉⵇⵇⴰⵏⴷⵏⵜ ⵉ ⵉⵎⴰⴽⵔⴰⵏ ?" }, a: { fr: "Oui, serrures A2P et vitrage anti-effraction.", en: "Yes, A2P locks and anti-burglary glazing.", ar: "نعم، أقفال A2P وزجاج مضاد.", tzm: "ⵡⴰⵅⵅⴰ, ⵜⵉⵇⴼⵍⵉⵏ A2P ⴷ ⵜⵣⴳⴰ ⵎⵇⵇⵔⴰⵏⵜ ⵎⴳⴰⵍ ⵉⵎⴰⴽⵔⴰⵏ." } }],
     "Une porte à votre image", "A door in your image", "باب على صورتكم",
     "ⵜⵉⴼⵍⵡⵉⵏ ⵏ ⵓⵍⵓⵎⵉⵏⵢⵓⵎ", "ⵜⵉⴼⵍⵡⵉⵏ ⵏ ⵓⴷⴰⴼ ⴷ ⵡⴰⵅⵅⴰⵎ", "ⵜⵉⴼⵍⵡⵉⵏ ⵜⵉⵎⵇⵇⵔⴰⵏⵉⵏ", "ⵜⴰⴼⵍⵡⵉⵜ ⵙ ⵡⴰⵏⴰⵡ ⵏⵏⴽ"
   ),
@@ -141,6 +141,7 @@ export const servicesData: Record<string, ServiceData> = {
 
 export default servicesData;
 export const serviceSlugs = Object.keys(servicesData);
+
 
 
 
