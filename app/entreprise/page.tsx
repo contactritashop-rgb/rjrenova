@@ -8,9 +8,10 @@ import { useI18n } from "@/lib/i18n/i18n-provider";
 
 const content = {
   hero: {
-    fr: { title: "L'excellence en façades aluminium", subtitle: "Depuis 2010, RJ RENOVA façonne l'architecture marocaine avec des solutions aluminium innovantes et durables." },
-    en: { title: "Excellence in aluminum facades", subtitle: "Since 2010, RJ RENOVA has been shaping Moroccan architecture with innovative and sustainable aluminum solutions." },
-    ar: { title: "التميز في واجهات الألمنيوم", subtitle: "منذ 2010، تشكل RJ RENOVA العمارة المغربية بحلول ألمنيوم مبتكرة ومستدامة." },
+    fr: { title: "L'excellence en façades aluminium", subtitle: "Depuis 2023, RJ RENOVA façonne l'architecture marocaine avec des solutions aluminium innovantes et durables." },
+    en: { title: "Excellence in aluminum facades", subtitle: "Since 2023, RJ RENOVA has been shaping Moroccan architecture with innovative and sustainable aluminum solutions." },
+    ar: { title: "التميز في واجهات الألمنيوم", subtitle: "منذ 2023، تشكل RJ RENOVA العمارة المغربية بحلول ألمنيوم مبتكرة ومستدامة." },
+    tzm: { title: "ⴰⵎⵏⵣⴰⵖ ⴳ ⵉⵖⴼⴰⵡⵏ ⵏ ⵓⵍⵓⵎⵉⵏⵢⵓⵎ", subtitle: "ⵙⴳ 2023, RJ RENOVA ⴷⴰ ⵜⵙⵇⵇⵙⴰ ⵜⴰⵡⵡⵓⵏⴽⵜ ⵜⴰⵎⵖⵔⵉⴱⵉⵜ ⵙ ⵜⴼⵔⴰⵜⵉⵏ ⵏ ⵓⵍⵓⵎⵉⵏⵢⵓⵎ ⵉⵎⴰⵢⵏⵓⵜⵏ." },
   },
   mission: {
     fr: { title: "Notre Mission", text: "Concevoir, fabriquer et installer des façades aluminium qui allient performance technique, esthétique architecturale et respect de l'environnement. Nous accompagnons nos clients de la conception à la réalisation pour des projets qui durent." },
@@ -138,6 +139,7 @@ export default function EntreprisePage() {
     </>
   );
 }
+
 
 
 
