@@ -96,7 +96,7 @@ export function ServicePageClient({ slug }: { slug: string }) {
                     {service.faq.map((item, i) => (
                       <div key={i} className="rounded-2xl border border-border dark:border-white/10 overflow-hidden">
                         <button onClick={() => setFaqOpen(faqOpen === i ? null : i)} className="w-full flex items-center justify-between p-5 text-left hover:bg-surface-alt dark:hover:bg-dark-alt transition-colors">
-                          <span className="font-heading font-semibold text-dark dark:text-white pr-4">{item.q[loc]}</span>
+                          <span className="font-heading font-semibold text-dark dark:text-white pr-4">{tx(item.q)}</span>
                           <ChevronDown size={18} className={`shrink-0 text-muted transition-transform ${faqOpen === i ? "rotate-180" : ""}`} />
                         </button>
                         {faqOpen === i && (
@@ -128,6 +128,7 @@ export function ServicePageClient({ slug }: { slug: string }) {
     </>
   );
 }
+
 
 
 
