@@ -3,8 +3,9 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Send, Loader2 } from "lucide-react";
-import { useChat } from "@ai-sdk/react";
 import { useI18n } from "@/lib/i18n/i18n-provider";
+
+type Msg = { role: "user" | "assistant"; content: string };
 
 const greetings: Record<string, string> = {
   fr: "👋 Bonjour ! Je suis l'assistant RJ RENOVA. Comment puis-je vous aider ?",
@@ -25,17 +26,59 @@ export function Chatbot() {
   const l = (locale === "tzm" ? "tzm" : locale) as "fr" | "en" | "ar" | "tzm";
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
+  const [messages, setMessages] = useState<Msg[]>([]);
+  const [loading, setLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const { messages, sendMessage, status } = useChat({ api: "/api/chat" });
 
-  useEffect(() => {
-    if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-  }, [messages]);
+  useEffect(() => { if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight; }, [messages]);
 
-  const handleSend = () => {
-    if (!input.trim() || status !== "ready") return;
-    sendMessage({ text: input });
+  const handleSend = async () => {
+    if (!input.trim() || loading) return;
+    const userMsg: Msg = { role: "user", content: input };
+    setMessages((prev) => [...prev, userMsg]);
     setInput("");
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: [...messages, userMsg] }),
+      });
+
+      if (!res.ok) throw new Error("API error");
+
+      const reader = res.body?.getReader();
+      if (!reader) throw new Error("No reader");
+
+      const decoder = new TextDecoder();
+      let botContent = "";
+      setMessages((prev) => [...prev, { role: "assistant", content: "" }]);
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        const chunk = decoder.decode(value, { stream: true });
+        const lines = chunk.split("\n");
+        for (const line of lines) {
+          if (line.startsWith("data: ")) {
+            try {
+              const data = JSON.parse(line.slice(6));
+              const text = data.choices?.[0]?.delta?.content || "";
+              botContent += text;
+              setMessages((prev) => {
+                const copy = [...prev];
+                copy[copy.length - 1] = { role: "assistant", content: botContent };
+                return copy;
+              });
+            } catch {}
+          }
+        }
+      }
+    } catch {
+      setMessages((prev) => [...prev, { role: "assistant", content: "Désolé, une erreur est survenue. Veuillez réessayer." }]);
+    }
+    setLoading(false);
   };
 
   return (
@@ -75,44 +118,20 @@ export function Chatbot() {
                 </div>
               )}
 
-              {messages.map((m) => (
-                <div key={m.id} className={`flex gap-3 ${m.role === "user" ? "flex-row-reverse" : ""}`}>
-                  {m.role !== "user" && (
-                    <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent shrink-0 text-xs font-bold">RJ</div>
-                  )}
-                  <div className={`rounded-2xl px-4 py-3 text-sm leading-relaxed max-w-[85%] ${
-                    m.role === "user"
-                      ? "bg-accent text-white rounded-tr-sm"
-                      : "bg-surface-alt dark:bg-dark text-dark dark:text-white rounded-tl-sm"
-                  }`}>
-                    {m.parts
-                      .filter((p) => p.type === "text")
-                      .map((p, i) => <span key={i}>{p.text}</span>)}
-                    {m.parts.some((p) => p.type?.startsWith("tool-")) && (
-                      <div className="text-xs text-accent mt-1 animate-pulse">⚙️ Traitement en cours...</div>
-                    )}
+              {messages.map((m, i) => (
+                <div key={i} className={`flex gap-3 ${m.role === "user" ? "flex-row-reverse" : ""}`}>
+                  {m.role !== "user" && <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent shrink-0 text-xs font-bold">RJ</div>}
+                  <div className={`rounded-2xl px-4 py-3 text-sm leading-relaxed max-w-[85%] ${m.role === "user" ? "bg-accent text-white rounded-tr-sm" : "bg-surface-alt dark:bg-dark text-dark dark:text-white rounded-tl-sm"}`}>
+                    {m.content || (loading && i === messages.length - 1 ? <Loader2 size={14} className="animate-spin inline" /> : "")}
                   </div>
                 </div>
               ))}
             </div>
 
-            <form
-              onSubmit={(e) => { e.preventDefault(); handleSend(); }}
-              className="p-4 border-t border-border dark:border-white/5 flex gap-2 shrink-0 bg-surface dark:bg-dark-alt"
-            >
-              <input
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                placeholder={placeholders[l] || placeholders.fr}
-                disabled={status !== "ready"}
-                className="flex-1 px-4 py-2.5 rounded-xl border-2 border-border bg-transparent text-dark dark:text-white text-sm focus:border-accent outline-none disabled:opacity-50"
-              />
-              <button
-                type="submit"
-                disabled={status !== "ready" || !input.trim()}
-                className="w-10 h-10 rounded-xl bg-accent text-white flex items-center justify-center hover:bg-accent-light disabled:opacity-40 transition-all shrink-0"
-              >
-                {status !== "ready" ? <Loader2 size={18} className="animate-spin" /> : <Send size={18} />}
+            <form onSubmit={(e) => { e.preventDefault(); handleSend(); }} className="p-4 border-t border-border dark:border-white/5 flex gap-2 shrink-0 bg-surface dark:bg-dark-alt">
+              <input value={input} onChange={(e) => setInput(e.target.value)} placeholder={placeholders[l] || placeholders.fr} disabled={loading} className="flex-1 px-4 py-2.5 rounded-xl border-2 border-border bg-transparent text-dark dark:text-white text-sm focus:border-accent outline-none disabled:opacity-50" />
+              <button type="submit" disabled={loading || !input.trim()} className="w-10 h-10 rounded-xl bg-accent text-white flex items-center justify-center hover:bg-accent-light disabled:opacity-40 transition-all shrink-0">
+                {loading ? <Loader2 size={18} className="animate-spin" /> : <Send size={18} />}
               </button>
             </form>
           </motion.div>
