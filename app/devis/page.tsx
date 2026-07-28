@@ -43,8 +43,8 @@ const stepLabels = [
   { fr: "Prestation", en: "Service", ar: "الخدمة" },
   { fr: "Surface", en: "Surface", ar: "المساحة" },
   { fr: "Ville", en: "City", ar: "المدينة" },
-  { fr: "Budget", en: "Budget", ar: "الميزانية" },
-  { fr: "Fichiers", en: "Files", ar: "الملفات" },
+  { fr: "Budget", en: "Budget", ar: "الميزانية", tzm: "ⴰⵣⵡⴰⵍ" },
+  { fr: "Fichiers", en: "Files", ar: "الملفات", tzm: "ⵉⴼⵓⵢⵍⴰ" },
   { fr: "Contact", en: "Contact", ar: "الاتصال", tzm: "ⴰⵎⵢⴰⵡⴰⴹ" },
 ];
 
@@ -330,6 +330,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
