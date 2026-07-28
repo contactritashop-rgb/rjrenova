@@ -105,7 +105,7 @@ export const servicesData: Record<string, ServiceData> = {
     "تجمع درابزينات RJ RENOVA بين الأمان والجمالية. مصممة حسب الطلب.",
     "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80",
     [{ title: { fr: "Sécurité Normée", en: "Standard Safety", ar: "أمان معياري" }, description: { fr: "Conforme aux normes.", en: "Standards compliant.", ar: "مطابق للمعايير." }, icon: "Shield" }, { title: { fr: "Design Minimaliste", en: "Minimalist Design", ar: "تصميم بسيط" }, description: { fr: "Profilés fins, transparence.", en: "Slim profiles, transparency.", ar: "بروفيلات رفيعة." }, icon: "Eye" }, { title: { fr: "Résistance", en: "Durability", ar: "متانة" }, description: { fr: "Anti-corrosion, zéro entretien.", en: "Anti-corrosion, zero maintenance.", ar: "مضاد للتآكل." }, icon: "ShieldCheck" }, { title: { fr: "Personnalisation", en: "Customization", ar: "تخصيص" }, description: { fr: "Verre, barreaux ou panneaux.", en: "Glass, bars, or panels.", ar: "زجاج، قضبان، ألواح." }, icon: "Palette" }],
-    [{ step: "01", title: { fr: "Métrage", en: "Measurement", ar: "قياس" }, description: { fr: "Relevé sur site.", en: "On-site measurement.", ar: "قياس في الموقع." }, icon: "ClipboardCheck" }, { step: "02", title: { fr: "Design", en: "Design", ar: "تصميم" }, description: { fr: "Modèles et finitions.", en: "Models and finishes.", ar: "نماذج وتشطيبات." }, icon: "PencilRuler" }, { step: "03", title: { fr: "Fabrication", en: "Manufacturing", ar: "تصنيع" }, description: { fr: "Découpe et assemblage.", en: "Cutting and assembly.", ar: "تقطيع وتجميع." }, icon: "Factory" }, { step: "04", title: { fr: "Pose", en: "Installation", ar: "تركيب" }, description: { fr: "Fixation sécurisée.", en: "Secure fixing.", ar: "تثبيت آمن." }, icon: "Wrench" }],
+    [{ step: "01", title: { fr: "Métrage", en: "Measurement", ar: "قياس", tzm: "ⴰⴽⵜⴰⵔ" }, description: { fr: "Relevé sur site.", en: "On-site measurement.", ar: "قياس في الموقع.", tzm: "ⴰⴽⵜⴰⵔ ⴳ ⵓⵙⴰⵜⵉ." }, icon: "ClipboardCheck" }, { step: "02", title: { fr: "Design", en: "Design", ar: "تصميم", tzm: "ⴰⵙⵇⵇⵙⵉ" }, description: { fr: "Modèles et finitions.", en: "Models and finishes.", ar: "نماذج وتشطيبات.", tzm: "ⵉⵎⵓⴷⴰⵔ ⴷ ⵜⴼⴰⴽⵜⵉⵏ." }, icon: "PencilRuler" }, { step: "03", title: { fr: "Fabrication", en: "Manufacturing", ar: "تصنيع", tzm: "ⴰⴼⴰⵔⵙ" }, description: { fr: "Découpe et assemblage.", en: "Cutting and assembly.", ar: "تقطيع وتجميع.", tzm: "ⴰⴳⵣⵣⵓⵎ ⴷ ⵓⵙⵎⵓⵏ." }, icon: "Factory" }, { step: "04", title: { fr: "Pose", en: "Installation", ar: "تركيب", tzm: "ⴰⵙⴱⴷⴷ" }, description: { fr: "Fixation sécurisée.", en: "Secure fixing.", ar: "تثبيت آمن.", tzm: "ⴰⵙⵙⵓⴷⵙ ⵉⵃⵔⵔⵣⵏ." }, icon: "Wrench" }],
     [{ src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80", alt: { fr: "Garde-corps", en: "Guardrail", ar: "درابزين" } }],
     [{ q: { fr: "Hauteur réglementaire ?", en: "Regulatory height?", ar: "الارتفاع القانوني؟" }, a: { fr: "1 mètre minimum, adaptable à votre projet.", en: "1 meter minimum, adaptable.", ar: "1 متر كحد أدنى." } }],
     "Sécurisez vos espaces avec style", "Secure your spaces with style", "أمّن مساحاتكم بأناقة"
@@ -141,6 +141,7 @@ export const servicesData: Record<string, ServiceData> = {
 
 export default servicesData;
 export const serviceSlugs = Object.keys(servicesData);
+
 
 
 
