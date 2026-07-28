@@ -37,8 +37,8 @@ export function ServicePageClient({ slug }: { slug: string }) {
               <span className="inline-block px-4 py-1.5 rounded-full glass border-white/20 text-white/90 text-sm mb-6">
                 {t("nav.services")}
               </span>
-              <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4">{service.title[loc]}</h1>
-              <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto">{service.subtitle[loc]}</p>
+              <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4">{tx(service.title)}</h1>
+              <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto">{tx(service.subtitle)}</p>
             </motion.div>
           </div>
         </section>
@@ -128,6 +128,7 @@ export function ServicePageClient({ slug }: { slug: string }) {
     </>
   );
 }
+
 
 
 
