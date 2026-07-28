@@ -41,7 +41,8 @@ export const servicesData: Record<string, ServiceData> = {
     [{ step: "01", title: { fr: "Diagnostic", en: "Diagnosis", ar: "تشخيص" }, description: { fr: "Analyse de la façade existante.", en: "Analysis of existing facade.", ar: "تحليل الواجهة الحالية." }, icon: "ClipboardCheck" }, { step: "02", title: { fr: "Design", en: "Design", ar: "تصميم" }, description: { fr: "Choix des finitions.", en: "Finish selection.", ar: "اختيار التشطيبات." }, icon: "PencilRuler" }, { step: "03", title: { fr: "Production", en: "Production", ar: "إنتاج" }, description: { fr: "Découpe et laquage.", en: "Cutting and lacquering.", ar: "تقطيع وطلاء." }, icon: "Factory" }, { step: "04", title: { fr: "Pose", en: "Installation", ar: "تركيب" }, description: { fr: "Fixation avec isolation.", en: "Fixing with insulation.", ar: "تثبيت مع عزل." }, icon: "Wrench" }],
     [{ src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80", alt: { fr: "Bardage moderne", en: "Modern cladding", ar: "تكسية عصرية" } }],
     [{ q: { fr: "Adapté au climat marocain ?", en: "Suitable for Morocco?", ar: "مناسب للمناخ المغربي؟" }, a: { fr: "Oui, résiste chaleur, soleil et air salin.", en: "Yes, resists heat, sun, and saline air.", ar: "نعم، يقاوم الحرارة والشمس والهواء المالح." } }],
-    "Transformez votre façade maintenant", "Transform your facade now", "حول واجهتك الآن"
+    "Transformez votre façade maintenant", "Transform your facade now", "حول واجهتك الآن",
+    "ⴰⵙⵙⵓⵎⵔ ⵏ ⵓⵍⵓⵎⵉⵏⵢⵓⵎ", "ⴰⵙⵙⵓⵎⵔ ⴰⵙⵜⵀⵉⵜⵉⴽ", "ⴰⵙⵙⵓⵎⵔ ⵏ ⵓⵍⵓⵎⵉⵏⵢⵓⵎ ⵙ ⵜⵓⵙⵙⵏⴰ", "ⵙⵙⵏⴼⵍ ⵜⴰⵡⵡⵓⵏⴽⵜ ⵏⵏⴽ ⵖⵉⵍⴰⴷ"
   ),
 
   "habillage-facade": s("habillage-facade", "PaintBucket", "Habillage de Façade", "Facade Dressing", "تلبيس الواجهات",
@@ -138,6 +139,7 @@ export const servicesData: Record<string, ServiceData> = {
 
 export default servicesData;
 export const serviceSlugs = Object.keys(servicesData);
+
 
 
 
