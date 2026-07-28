@@ -1,5 +1,7 @@
 "use client";
 
+"use client";
+
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { useI18n } from "@/lib/i18n/i18n-provider";
@@ -86,4 +88,5 @@ export default function PrivacyPage() {
     </>
   );
 }
+
 
