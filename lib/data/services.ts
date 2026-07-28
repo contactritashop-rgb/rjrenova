@@ -68,7 +68,8 @@ export const servicesData: Record<string, ServiceData> = {
     [{ step: "01", title: { fr: "Prise de Cotes", en: "Measurement", ar: "أخذ القياسات" }, description: { fr: "Relevé précis des dimensions.", en: "Precise measurement.", ar: "قياس دقيق." }, icon: "ClipboardCheck" }, { step: "02", title: { fr: "Devis 3D", en: "3D Quote", ar: "عرض سعر 3D" }, description: { fr: "Visualisation avant fabrication.", en: "Visualization before manufacturing.", ar: "تصور قبل التصنيع." }, icon: "PencilRuler" }, { step: "03", title: { fr: "Fabrication", en: "Manufacturing", ar: "تصنيع" }, description: { fr: "Usinage CNC de précision.", en: "Precision CNC machining.", ar: "تصنيع CNC دقيق." }, icon: "Factory" }, { step: "04", title: { fr: "Installation", en: "Installation", ar: "تركيب" }, description: { fr: "Pose soignée et finitions.", en: "Careful installation.", ar: "تركيب دقيق." }, icon: "Wrench" }],
     [{ src: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80", alt: { fr: "Baie vitrée coulissante design", en: "Design sliding bay window", ar: "نافذة كبيرة منزلقة" } }, { src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80", alt: { fr: "Fenêtres aluminium haute performance", en: "High-performance aluminum windows", ar: "نوافذ ألمنيوم عالية الأداء" } }, { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80", alt: { fr: "Porte-fenêtre aluminium minimaliste", en: "Minimalist aluminum French door", ar: "باب فرنسي ألمنيوم" } }, { src: "https://images.unsplash.com/photo-1600566753086-00f18f6b0050?w=600&q=80", alt: { fr: "Menuiserie aluminium sur mesure", en: "Custom aluminum joinery", ar: "نجارة ألمنيوم حسب الطلب" } }],
     [{ q: { fr: "Aluminium vs PVC ?", en: "Aluminum vs PVC?", ar: "الألمنيوم أم PVC؟" }, a: { fr: "Plus résistant, plus fin, 100% recyclable, durée de vie supérieure.", en: "Stronger, thinner, 100% recyclable, longer lifespan.", ar: "أقوى، أنحف، قابل للتدوير 100%." } }],
-    "Des menuiseries qui subliment vos espaces", "Joinery that enhances your spaces", "نجارة تضفي جمالاً"
+    "Des menuiseries qui subliment vos espaces", "Joinery that enhances your spaces", "نجارة تضفي جمالاً",
+    "ⵜⴰⵡⵡⵓⵔⵉ ⵏ ⵓⵍⵓⵎⵉⵏⵢⵓⵎ", "ⵜⵉⵣⴳⴰⵔ ⴷ ⵜⵉⴼⵍⵡⵉⵏ ⵙ ⵓⴽⵜⵜⵓⵔ", "ⵜⴰⵡⵡⵓⵔⵉ ⵏ ⵓⵍⵓⵎⵉⵏⵢⵓⵎ ⵙ ⵜⵓⵙⵙⵏⴰ", "ⵜⴰⵡⵡⵓⵔⵉ ⵏ ⵓⵍⵓⵎⵉⵏⵢⵓⵎ ⵏⵏⴰ ⵉⵙⴼⴰⵍⴽⵉⵏ"
   ),
 
   "verrieres": s("verrieres", "Sun", "Verrières Aluminium", "Aluminum Canopies", "مظلات زجاجية",
@@ -139,6 +140,7 @@ export const servicesData: Record<string, ServiceData> = {
 
 export default servicesData;
 export const serviceSlugs = Object.keys(servicesData);
+
 
 
 
