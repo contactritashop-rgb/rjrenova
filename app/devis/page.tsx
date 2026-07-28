@@ -192,7 +192,7 @@ export default function QuotePage() {
                   <h2 className="font-heading text-2xl font-bold text-dark dark:text-white mb-6">{loc === "fr" ? "Type de prestation" : loc === "en" ? "Service type" : "نوع الخدمة"}</h2>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                     {serviceTypes.map((st) => (
-                      <button key={st.id} onClick={() => update("serviceType", st.id)} className={`p-4 rounded-xl border-2 text-center text-sm font-medium transition-all ${form.serviceType === st.id ? "border-accent bg-accent/5 text-accent" : "border-border hover:border-accent/30 text-dark dark:text-white"}`}>{st[loc]}</button>
+                      <button key={st.id} onClick={() => update("serviceType", st.id)} className={`p-4 rounded-xl border-2 text-center text-sm font-medium transition-all ${form.serviceType === st.id ? "border-accent bg-accent/5 text-accent" : "border-border hover:border-accent/30 text-dark dark:text-white"}`}>{st[loc3]}</button>
                     ))}
                   </div>
                 </div>
@@ -330,6 +330,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
