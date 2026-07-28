@@ -8,11 +8,11 @@ import { Footer } from "@/components/layout/footer";
 import { useI18n } from "@/lib/i18n/i18n-provider";
 
 const buildingTypes = [
-  { id: "residential", icon: "🏠", fr: "Résidentiel", en: "Residential", ar: "سكني" },
-  { id: "commercial", icon: "🏢", fr: "Commercial", en: "Commercial", ar: "تجاري" },
-  { id: "industrial", icon: "🏭", fr: "Industriel", en: "Industrial", ar: "صناعي" },
-  { id: "hotel", icon: "🏨", fr: "Hôtelier", en: "Hotel", ar: "فندقي" },
-  { id: "institutional", icon: "🏛️", fr: "Institutionnel", en: "Institutional", ar: "مؤسساتي" },
+  { id: "residential", icon: "🏠", fr: "Résidentiel", en: "Residential", ar: "سكني", tzm: "ⴰⵙⴷⵔⴼⵉ" },
+  { id: "commercial", icon: "🏢", fr: "Commercial", en: "Commercial", ar: "تجاري", tzm: "ⴰⵙⵏⵣⵉ" },
+  { id: "industrial", icon: "🏭", fr: "Industriel", en: "Industrial", ar: "صناعي", tzm: "ⴰⵙⵏⴽⴰⵔⵉ" },
+  { id: "hotel", icon: "🏨", fr: "Hôtelier", en: "Hotel", ar: "فندقي", tzm: "ⴰⵙⵏⵙⵉ" },
+  { id: "institutional", icon: "🏛️", fr: "Institutionnel", en: "Institutional", ar: "مؤسساتي", tzm: "ⴰⵙⵏⵎⴰⵍⴰ" },
 ];
 
 const serviceTypes = [
@@ -329,6 +329,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
