@@ -132,7 +132,7 @@ export default function QuotePage() {
               <Check size={40} className="text-accent" />
             </div>
             <h1 className="font-heading text-3xl md:text-4xl font-extrabold text-dark dark:text-white mb-4">
-              {loc === "fr" ? "Merci !" : loc === "en" ? "Thank you!" : "شكراً !"}
+              {ui.merci}
             </h1>
             <p className="text-muted text-lg mb-8">
               {loc === "fr" ? "Votre demande de devis a été envoyée. Notre équipe vous répond sous 48h." : loc === "en" ? "Your quote request has been sent. Our team will respond within 48 hours." : "تم إرسال طلبكم. سيرد عليكم فريقنا في غضون 48 ساعة."}
@@ -330,6 +330,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
