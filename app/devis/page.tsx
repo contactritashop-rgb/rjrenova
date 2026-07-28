@@ -31,11 +31,11 @@ const serviceTypes = [
 const cities = ["Casablanca", "Rabat", "Marrakech", "Tanger", "Agadir", "Fès", "Meknès", "Oujda", "Tétouan", "Autre"];
 
 const budgetRanges = [
-  { id: "small", fr: "Moins de 100 000 MAD", en: "Under 100,000 MAD", ar: "أقل من 100,000 درهم" },
-  { id: "medium", fr: "100 000 - 500 000 MAD", en: "100,000 - 500,000 MAD", ar: "100,000 - 500,000 درهم" },
-  { id: "large", fr: "500 000 - 2 000 000 MAD", en: "500,000 - 2,000,000 MAD", ar: "500,000 - 2,000,000 درهم" },
-  { id: "xlarge", fr: "Plus de 2 000 000 MAD", en: "Over 2,000,000 MAD", ar: "أكثر من 2,000,000 درهم" },
-  { id: "unknown", fr: "Je ne sais pas encore", en: "I don't know yet", ar: "لا أعرف بعد" },
+  { id: "small", fr: "Moins de 100 000 MAD", en: "Under 100,000 MAD", ar: "أقل من 100,000 درهم", tzm: "ⴷⴷⴰⵡ 100 000 MAD" },
+  { id: "medium", fr: "100 000 - 500 000 MAD", en: "100,000 - 500,000 MAD", ar: "100,000 - 500,000 درهم", tzm: "100 000 - 500 000 MAD" },
+  { id: "large", fr: "500 000 - 2 000 000 MAD", en: "500,000 - 2,000,000 MAD", ar: "500,000 - 2,000,000 درهم", tzm: "500 000 - 2 000 000 MAD" },
+  { id: "xlarge", fr: "Plus de 2 000 000 MAD", en: "Over 2,000,000 MAD", ar: "أكثر من 2,000,000 درهم", tzm: "ⵓⴳⴳⴰⵔ ⵏ 2 000 000 MAD" },
+  { id: "unknown", fr: "Je ne sais pas encore", en: "I don't know yet", ar: "لا أعرف بعد", tzm: "ⵓⵔ ⵙⵙⵉⵏⵖ ⵖⵉⵍⴰⴷ" },
 ];
 
 const stepLabels = [
@@ -329,6 +329,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
