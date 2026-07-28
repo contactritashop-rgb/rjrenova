@@ -234,7 +234,7 @@ export default function QuotePage() {
 
               {step === 5 && (
                 <div>
-                  <h2 className="font-heading text-2xl font-bold text-dark dark:text-white mb-6">{loc === "fr" ? "Documents du projet (optionnel)" : loc === "en" ? "Project documents (optional)" : "وثائق المشروع (اختياري)"}</h2>
+                  <h2 className="font-heading text-2xl font-bold text-dark dark:text-white mb-6">{loc === "fr" ? "Documents du projet (optionnel)" : loc === "en" ? "Project documents (optional)" : loc === "ar" ? "وثائق المشروع (اختياري)" : "ⵉⵎⵓⵀⵉⵍⵏ ⵏ ⵓⵙⵏⴼⴰⵔ (ⴱⵍⴰ ⵎⴰⵔⵔⴰ)"}</h2>
                   <div className="border-2 border-dashed border-border rounded-2xl p-10 text-center hover:border-accent/50 transition-colors cursor-pointer" onClick={() => fileInputRef.current?.click()}>
                     <Upload size={40} className="mx-auto mb-4 text-muted" />
                     <p className="font-medium text-dark dark:text-white mb-1">{loc === "fr" ? "Déposez vos fichiers ici" : loc === "en" ? "Drop your files here" : "أسقط ملفاتكم هنا"}</p>
@@ -330,6 +330,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
