@@ -121,7 +121,8 @@ export const servicesData: Record<string, ServiceData> = {
     [{ step: "01", title: { fr: "Prise de Cotes", en: "Measurement", ar: "قياس" }, description: { fr: "Relevé précis.", en: "Precise measurement.", ar: "قياس دقيق." }, icon: "ClipboardCheck" }, { step: "02", title: { fr: "Choix Design", en: "Design", ar: "تصميم" }, description: { fr: "Modèle, couleur, accessoires.", en: "Model, color, accessories.", ar: "نموذج، لون." }, icon: "PencilRuler" }, { step: "03", title: { fr: "Fabrication", en: "Manufacturing", ar: "تصنيع" }, description: { fr: "Assemblage et contrôle.", en: "Assembly and QC.", ar: "تجميع ومراقبة." }, icon: "Factory" }, { step: "04", title: { fr: "Installation", en: "Installation", ar: "تركيب" }, description: { fr: "Pose avec réglage.", en: "Installation with adjustment.", ar: "تركيب مع ضبط." }, icon: "Wrench" }],
     [{ src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80", alt: { fr: "Porte", en: "Door", ar: "باب" } }],
     [{ q: { fr: "Résistantes aux effractions ?", en: "Burglar resistant?", ar: "مقاومة للكسر؟" }, a: { fr: "Oui, serrures A2P et vitrage anti-effraction.", en: "Yes, A2P locks and anti-burglary glazing.", ar: "نعم، أقفال A2P وزجاج مضاد." } }],
-    "Une porte à votre image", "A door in your image", "باب على صورتكم"
+    "Une porte à votre image", "A door in your image", "باب على صورتكم",
+    "ⵜⵉⴼⵍⵡⵉⵏ ⵏ ⵓⵍⵓⵎⵉⵏⵢⵓⵎ", "ⵜⵉⴼⵍⵡⵉⵏ ⵏ ⵓⴷⴰⴼ ⴷ ⵡⴰⵅⵅⴰⵎ", "ⵜⵉⴼⵍⵡⵉⵏ ⵜⵉⵎⵇⵇⵔⴰⵏⵉⵏ", "ⵜⴰⴼⵍⵡⵉⵜ ⵙ ⵡⴰⵏⴰⵡ ⵏⵏⴽ"
   ),
 
   "fenetres-aluminium": s("fenetres-aluminium", "AppWindow", "Fenêtres Aluminium", "Aluminum Windows", "نوافذ ألمنيوم",
@@ -140,6 +141,7 @@ export const servicesData: Record<string, ServiceData> = {
 
 export default servicesData;
 export const serviceSlugs = Object.keys(servicesData);
+
 
 
 
