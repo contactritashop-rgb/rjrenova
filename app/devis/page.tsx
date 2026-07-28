@@ -103,7 +103,7 @@ export default function QuotePage() {
           phone: form.phone,
           buildingType: buildingTypes.find((b) => b.id === form.buildingType)?.[loc] || form.buildingType,
           serviceType: form.serviceType,
-          serviceLabel: serviceTypes.find((s) => s.id === form.serviceType)?.[loc3] || form.serviceType,
+          serviceLabel: serviceTypes.find((s) => s.id === form.serviceType)?.[loc] || form.serviceType,
           surface: form.surface,
           city: form.city,
           budget: form.budget,
@@ -165,7 +165,7 @@ export default function QuotePage() {
             {stepLabels.map((label, i) => (
               <button key={i} onClick={() => i < step && setStep(i)} className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-medium transition-all whitespace-nowrap ${i === step ? "bg-accent text-white" : i < step ? "bg-accent/10 text-accent cursor-pointer" : "bg-surface-alt text-muted dark:bg-dark-alt"}`}>
                 <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold ${i === step ? "bg-white text-accent" : i < step ? "bg-accent/20" : "bg-muted/20"}`}>{i < step ? "✓" : i + 1}</span>
-                {label[loc3]}
+                {label[loc]}
               </button>
             ))}
           </div>
@@ -191,7 +191,7 @@ export default function QuotePage() {
                   <h2 className="font-heading text-2xl font-bold text-dark dark:text-white mb-6">{loc === "fr" ? "Type de prestation" : loc === "en" ? "Service type" : "نوع الخدمة"}</h2>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                     {serviceTypes.map((st) => (
-                      <button key={st.id} onClick={() => update("serviceType", st.id)} className={`p-4 rounded-xl border-2 text-center text-sm font-medium transition-all ${form.serviceType === st.id ? "border-accent bg-accent/5 text-accent" : "border-border hover:border-accent/30 text-dark dark:text-white"}`}>{st[loc3]}</button>
+                      <button key={st.id} onClick={() => update("serviceType", st.id)} className={`p-4 rounded-xl border-2 text-center text-sm font-medium transition-all ${form.serviceType === st.id ? "border-accent bg-accent/5 text-accent" : "border-border hover:border-accent/30 text-dark dark:text-white"}`}>{st[loc]}</button>
                     ))}
                   </div>
                 </div>
@@ -329,6 +329,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
