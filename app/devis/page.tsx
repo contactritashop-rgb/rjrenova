@@ -155,7 +155,7 @@ export default function QuotePage() {
         <div className="container-custom px-6 lg:px-12 max-w-3xl mx-auto">
           <div className="mb-12 text-center">
             <h1 className="font-heading text-4xl md:text-5xl font-extrabold text-dark dark:text-white mb-4">
-              {loc === "fr" ? "Configurateur de Devis" : loc === "en" ? "Quote Configurator" : "مكون عرض السعر"}
+              {loc === "fr" ? "Configurateur de Devis" : loc === "en" ? "Quote Configurator" : loc === "ar" ? "مكون عرض السعر" : "ⴰⵎⵙⴽⴰⵔ ⵏ ⵓⵙⵡⵉⵔⵉ"}
             </h1>
             <p className="text-muted">
               {loc === "fr" ? "7 étapes pour obtenir votre devis personnalisé" : loc === "en" ? "7 steps to get your personalized quote" : "7 خطوات للحصول على عرض السعر المخصص"}
@@ -330,6 +330,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
