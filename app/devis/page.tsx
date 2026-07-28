@@ -268,7 +268,7 @@ export default function QuotePage() {
 
               {step === 6 && (
                 <div>
-                  <h2 className="font-heading text-2xl font-bold text-dark dark:text-white mb-2">{loc === "fr" ? "Vos coordonnées" : loc === "en" ? "Your contact info" : "معلومات الاتصال"}</h2>
+                  <h2 className="font-heading text-2xl font-bold text-dark dark:text-white mb-2">{loc === "fr" ? "Vos coordonnées" : loc === "en" ? "Your contact info" : loc === "ar" ? "معلومات الاتصال" : "ⵉⵏⵖⵎⵉⵙⵏ ⵏⵏⴽ"}</h2>
                   <p className="text-muted text-sm mb-6">{loc === "fr" ? "Nous vous répondrons sous 48h." : loc === "en" ? "We will respond within 48 hours." : "سنرد عليكم في غضون 48 ساعة."}</p>
                   <div className="space-y-4">
                     <div>
@@ -341,6 +341,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
