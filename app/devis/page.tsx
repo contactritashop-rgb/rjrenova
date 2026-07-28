@@ -45,7 +45,7 @@ const stepLabels = [
   { fr: "Ville", en: "City", ar: "المدينة" },
   { fr: "Budget", en: "Budget", ar: "الميزانية" },
   { fr: "Fichiers", en: "Files", ar: "الملفات" },
-  { fr: "Contact", en: "Contact", ar: "الاتصال" },
+  { fr: "Contact", en: "Contact", ar: "الاتصال", tzm: "ⴰⵎⵢⴰⵡⴰⴹ" },
 ];
 
 const stepIcons = [Building2, Wrench, Ruler, MapPin, Wallet, Upload, Send];
@@ -329,6 +329,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
