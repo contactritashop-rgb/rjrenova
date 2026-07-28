@@ -31,7 +31,7 @@ export function ServicePageClient({ slug }: { slug: string }) {
       <main>
         <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 bg-dark/60 z-10" />
-          <img src={service.heroImage} alt={service.title[loc]} className="absolute inset-0 w-full h-full object-cover" />
+          <img src={service.heroImage} alt={tx(service.title)} className="absolute inset-0 w-full h-full object-cover" />
           <div className="relative z-20 container-custom px-6 lg:px-12 text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
               <span className="inline-block px-4 py-1.5 rounded-full glass border-white/20 text-white/90 text-sm mb-6">
@@ -128,6 +128,7 @@ export function ServicePageClient({ slug }: { slug: string }) {
     </>
   );
 }
+
 
 
 
