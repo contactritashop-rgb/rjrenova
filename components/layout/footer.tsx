@@ -3,6 +3,7 @@
 import { useI18n } from "@/lib/i18n/i18n-provider";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { Logo } from "@/components/ui/logo";
+import { Chatbot } from "@/components/chatbot/chatbot";
 
 const serviceLinks = [
   { key: "services.curtain", slug: "mur-rideau" },
@@ -105,4 +106,5 @@ export function Footer() {
     </footer>
   );
 }
+
 
