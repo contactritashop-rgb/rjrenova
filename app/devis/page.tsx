@@ -103,7 +103,7 @@ export default function QuotePage() {
           phone: form.phone,
           buildingType: buildingTypes.find((b) => b.id === form.buildingType)?.[loc] || form.buildingType,
           serviceType: form.serviceType,
-          serviceLabel: serviceTypes.find((s) => s.id === form.serviceType)?.[loc] || form.serviceType,
+          serviceLabel: (serviceTypes.find((s:any) => s.id === form.serviceType) as any)?.[loc] || form.serviceType,
           surface: form.surface,
           city: form.city,
           budget: form.budget,
@@ -329,6 +329,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
