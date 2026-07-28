@@ -44,14 +44,6 @@ R: Oui, avec lames orientables, motorisation, éclairage LED.
 `;
 
 export async function POST(req: Request) {
-  const url = new URL(req.url);
-
-  // Escalation endpoint: envoie un email avec la question complexe
-  if (url.pathname.endsWith("/escalate")) {
-    return handleEscalate(req);
-  }
-
-  // Chat stream endpoint
   return handleChatStream(req);
 }
 
@@ -146,4 +138,5 @@ async function handleChatStream(req: Request) {
     return NextResponse.json({ error: e?.message }, { status: 500 });
   }
 }
+
 
