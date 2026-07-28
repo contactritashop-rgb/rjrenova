@@ -30,7 +30,7 @@ const projects = [
 
 export default function ProjectsPage() {
   const { locale } = useI18n();
-  const l = locale as "fr" | "en" | "ar";
+  const l = locale as "fr" | "en" | "ar" | "tzm";
   const [filter, setFilter] = useState("all");
   const filtered = filter === "all" ? projects : projects.filter((p) => p.category === filter);
 
@@ -94,4 +94,5 @@ export default function ProjectsPage() {
     </>
   );
 }
+
 
