@@ -17,16 +17,16 @@ const buildingTypes = [
 ];
 
 const serviceTypes = [
-  { id: "mur-rideau", fr: "Mur Rideau", en: "Curtain Wall", ar: "واجهات زجاجية" },
-  { id: "bardage", fr: "Bardage", en: "Cladding", ar: "تكسية خارجية" },
-  { id: "menuiserie", fr: "Menuiserie Aluminium", en: "Aluminum Joinery", ar: "نجارة الألمنيوم" },
-  { id: "verrieres", fr: "Verrières", en: "Canopies", ar: "مظلات زجاجية" },
-  { id: "pergolas", fr: "Pergolas", en: "Pergolas", ar: "برجولات" },
-  { id: "garde-corps", fr: "Garde-corps", en: "Guardrails", ar: "درابزينات" },
-  { id: "portes", fr: "Portes Aluminium", en: "Aluminum Doors", ar: "أبواب ألمنيوم" },
-  { id: "fenetres", fr: "Fenêtres Aluminium", en: "Aluminum Windows", ar: "نوافذ ألمنيوم" },
-  { id: "habillage", fr: "Habillage de Façade", en: "Facade Dressing", ar: "تلبيس الواجهات" },
-  { id: "other", fr: "Autre", en: "Other", ar: "أخرى" },
+  { id: "mur-rideau", fr: "Mur Rideau", en: "Curtain Wall", ar: "واجهات زجاجية", tzm: "ⵉⵖⴼⴰⵡⵏ ⵏ ⵜⵣⴳⴰ" },
+  { id: "bardage", fr: "Bardage", en: "Cladding", ar: "تكسية خارجية", tzm: "ⴰⵙⵙⵓⵎⵔ" },
+  { id: "menuiserie", fr: "Menuiserie Aluminium", en: "Aluminum Joinery", ar: "نجارة الألمنيوم", tzm: "ⵜⴰⵡⵡⵓⵔⵉ" },
+  { id: "verrieres", fr: "Verrières", en: "Canopies", ar: "مظلات زجاجية", tzm: "ⵜⵉⵎⴱⵡⴰⵢⵉⵏ" },
+  { id: "pergolas", fr: "Pergolas", en: "Pergolas", ar: "برجولات", tzm: "ⵉⴱⵔⴰⵔⵏ" },
+  { id: "garde-corps", fr: "Garde-corps", en: "Guardrails", ar: "درابزينات", tzm: "ⵉⵃⵟⵟⴰⵏ" },
+  { id: "portes", fr: "Portes Aluminium", en: "Aluminum Doors", ar: "أبواب ألمنيوم", tzm: "ⵜⵉⴼⵍⵡⵉⵏ" },
+  { id: "fenetres", fr: "Fenêtres Aluminium", en: "Aluminum Windows", ar: "نوافذ ألمنيوم", tzm: "ⵜⵉⵣⴳⴰⵔ" },
+  { id: "habillage", fr: "Habillage de Façade", en: "Facade Dressing", ar: "تلبيس الواجهات", tzm: "ⴰⵙⵙⵓⵏ" },
+  { id: "other", fr: "Autre", en: "Other", ar: "أخرى", tzm: "ⵡⴰⵅⴹⴰ" },
 ];
 
 const cities = ["Casablanca", "Rabat", "Marrakech", "Tanger", "Agadir", "Fès", "Meknès", "Oujda", "Tétouan", "Autre"];
@@ -330,6 +330,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
