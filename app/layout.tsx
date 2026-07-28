@@ -37,7 +37,6 @@ export default function RootLayout({
         <I18nProvider>
           {children}
         </I18nProvider>
-        <ChatbotWrapper />
         <LocalBusinessSchema />
         <FAQSchema />
         <BreadcrumbSchema />
@@ -46,6 +45,7 @@ export default function RootLayout({
     </html>
   );
 }
+
 
 
 
