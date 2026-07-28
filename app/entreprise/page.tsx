@@ -81,7 +81,7 @@ export default function EntreprisePage() {
                   <motion.div key={v.key} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="flex gap-5 p-6 rounded-2xl bg-surface-alt dark:bg-dark-alt">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0"><v.icon size={24} className="text-primary" /></div>
                     <div>
-                      <h3 className="font-heading font-bold text-dark dark:text-white mb-1">{t(v)}</h3>
+                      <h3 className="font-heading font-bold text-dark dark:text-white mb-1">{l === "fr" ? v.fr : l === "en" ? v.en : l === "ar" ? v.ar : v.tzm}</h3>
                       <p className="text-muted text-sm">{l === "fr" ? v.frDesc : l === "en" ? v.enDesc : l === "ar" ? v.arDesc : v.tzmDesc}</p>
                     </div>
                   </motion.div>
@@ -134,5 +134,6 @@ export default function EntreprisePage() {
     </>
   );
 }
+
 
 
