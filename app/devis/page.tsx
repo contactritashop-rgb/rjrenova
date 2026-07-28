@@ -166,7 +166,7 @@ export default function QuotePage() {
             {stepLabels.map((label, i) => (
               <button key={i} onClick={() => i < step && setStep(i)} className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-medium transition-all whitespace-nowrap ${i === step ? "bg-accent text-white" : i < step ? "bg-accent/10 text-accent cursor-pointer" : "bg-surface-alt text-muted dark:bg-dark-alt"}`}>
                 <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold ${i === step ? "bg-white text-accent" : i < step ? "bg-accent/20" : "bg-muted/20"}`}>{i < step ? "✓" : i + 1}</span>
-                {label[loc]}
+                {label[loc3]}
               </button>
             ))}
           </div>
@@ -330,6 +330,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
