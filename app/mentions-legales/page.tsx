@@ -1,6 +1,7 @@
 "use client";
 
 import { Header } from "@/components/layout/header";
+import { useI18n } from "@/lib/i18n/i18n-provider";
 
 const SimpleFooter = () => (
   <footer className="bg-dark text-white/50 py-8 text-center text-sm">© 2026 RJ RENOVA - Tous droits réservés.</footer>
@@ -55,6 +56,7 @@ export default function LegalPage() {
     </>
   );
 }
+
 
 
 
