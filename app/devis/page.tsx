@@ -134,7 +134,7 @@ export default function QuotePage() {
               {loc === "fr" ? "Merci !" : loc === "en" ? "Thank you!" : "شكراً !"}
             </h1>
             <p className="text-muted text-lg mb-8">
-              {ui.merciSub}
+              {loc === "fr" ? "Votre demande a été envoyée. Réponse sous 48h." : loc === "en" ? "Your request has been sent. Response within 48h." : loc === "ar" ? "تم إرسال طلبكم." : "ⵜⵡⴰⵣⵏ ⵜⵓⵜⵜⵔⴰ. ⴰⵔ ⴰⵡⵏ ⵏⵜⵜⴰⵔⴰ."}
             </p>
             <a href="/" className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-semibold rounded-full hover:bg-accent-light transition-all">
               {t("nav.home")}
@@ -329,6 +329,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
