@@ -221,7 +221,7 @@ export default function QuotePage() {
 
               {step === 4 && (
                 <div>
-                  <h2 className="font-heading text-2xl font-bold text-dark dark:text-white mb-6">{loc === "fr" ? "Budget estimé" : loc === "en" ? "Estimated budget" : "الميزانية المقدرة"}</h2>
+                  <h2 className="font-heading text-2xl font-bold text-dark dark:text-white mb-6">{loc === "fr" ? "Budget estimé" : loc === "en" ? "Estimated budget" : loc === "ar" ? "الميزانية المقدرة" : "ⴰⵣⵡⴰⵍ ⵉⵜⵜⵡⴰⵇⴷⴰⵔⵏ"}</h2>
                   <div className="space-y-3">
                     {budgetRanges.map((br) => (
                       <button key={br.id} onClick={() => update("budget", br.id)} className={`w-full p-5 rounded-xl border-2 text-left transition-all ${form.budget === br.id ? "border-accent bg-accent/5" : "border-border hover:border-accent/30"}`}>
@@ -330,6 +330,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
