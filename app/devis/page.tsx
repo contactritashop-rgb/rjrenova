@@ -143,7 +143,7 @@ export default function QuotePage() {
               <Check size={40} className="text-accent" />
             </div>
             <h1 className="font-heading text-3xl md:text-4xl font-extrabold text-dark dark:text-white mb-4">
-              {loc === "fr" ? "Merci !" : loc === "en" ? "Thank you!" : "شكراً !"}
+              {loc === "fr" ? "Merci !" : loc === "en" ? "Thank you!" : loc === "ar" ? "شكراً !" : "ⵜⴰⵏⵎⵎⵉⵔⵜ !"}
             </h1>
             <p className="text-muted text-lg mb-8">
               {loc === "fr" ? "Votre demande a été envoyée. Réponse sous 48h." : loc === "en" ? "Your request has been sent. Response within 48h." : loc === "ar" ? "تم إرسال طلبكم." : "ⵜⵡⴰⵣⵏ ⵜⵓⵜⵜⵔⴰ. ⴰⵔ ⴰⵡⵏ ⵏⵜⵜⴰⵔⴰ."}
@@ -341,6 +341,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
