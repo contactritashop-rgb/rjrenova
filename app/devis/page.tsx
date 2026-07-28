@@ -289,7 +289,7 @@ export default function QuotePage() {
                       <div className="flex justify-between"><span className="text-muted">{loc === "fr" ? "Prestation" : "Service"}</span><span className="font-medium text-dark dark:text-white">{serviceTypes.find((s) => s.id === form.serviceType)?.[loc] || "-"}</span></div>
                       <div className="flex justify-between"><span className="text-muted">{loc === "fr" ? "Surface" : "Surface"}</span><span className="font-medium text-dark dark:text-white">{form.surface ? `${form.surface} m²` : "—"}</span></div>
                       <div className="flex justify-between"><span className="text-muted">{loc === "fr" ? "Ville" : "City"}</span><span className="font-medium text-dark dark:text-white">{form.city || "-"}</span></div>
-                      <div className="flex justify-between"><span className="text-muted">{loc === "fr" ? "Budget" : "Budget"}</span><span className="font-medium text-dark dark:text-white">{budgetRanges.find((b) => b.id === form.budget)?.[loc] || "-"}</span></div>
+                      <div className="flex justify-between"><span className="text-muted">{loc === "fr" ? "Budget" : "Budget"}</span><span className="font-medium text-dark dark:text-white">{(budgetRanges.find((b:any) => b.id === form.budget) as any)?.[loc] || "-"}</span></div>
                       <div className="flex justify-between"><span className="text-muted">{loc === "fr" ? "Fichiers" : "Files"}</span><span className="font-medium text-dark dark:text-white">{form.files.length > 0 ? `${form.files.length} fichier(s)` : "Aucun"}</span></div>
                     </div>
                   </div>
@@ -329,6 +329,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
