@@ -1,4 +1,8 @@
 "use client";
 
-export { Chatbot } from "./chatbot";
+import { Chatbot } from "./chatbot";
+
+export function ChatbotWrapper() {
+  return <Chatbot />;
+}
 
