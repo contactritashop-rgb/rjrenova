@@ -39,10 +39,10 @@ const budgetRanges = [
 ];
 
 const stepLabels = [
-  { fr: "Bâtiment", en: "Building", ar: "المبنى" },
-  { fr: "Prestation", en: "Service", ar: "الخدمة" },
-  { fr: "Surface", en: "Surface", ar: "المساحة" },
-  { fr: "Ville", en: "City", ar: "المدينة" },
+  { fr: "Bâtiment", en: "Building", ar: "المبنى", tzm: "ⴰⵙⴽⴰ" },
+  { fr: "Prestation", en: "Service", ar: "الخدمة", tzm: "ⵜⴰⵡⵓⵔⵉ" },
+  { fr: "Surface", en: "Surface", ar: "المساحة", tzm: "ⵜⴰⵊⵓⵎⵎⴰ" },
+  { fr: "Ville", en: "City", ar: "المدينة", tzm: "ⵜⴰⵖⵔⵎⵜ" },
   { fr: "Budget", en: "Budget", ar: "الميزانية", tzm: "ⴰⵣⵡⴰⵍ" },
   { fr: "Fichiers", en: "Files", ar: "الملفات", tzm: "ⵉⴼⵓⵢⵍⴰ" },
   { fr: "Contact", en: "Contact", ar: "الاتصال", tzm: "ⴰⵎⵢⴰⵡⴰⴹ" },
@@ -330,6 +330,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
