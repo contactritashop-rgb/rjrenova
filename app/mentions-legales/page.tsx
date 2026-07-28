@@ -1,5 +1,8 @@
 import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
+
+const SimpleFooter = () => (
+  <footer className="bg-dark text-white/50 py-8 text-center text-sm">© 2026 RJ RENOVA - Tous droits réservés.</footer>
+);
 
 const content = {
   fr: {
@@ -50,4 +53,5 @@ export default function LegalPage() {
     </>
   );
 }
+
 
