@@ -40,7 +40,7 @@ const content = {
 
 export default function EntreprisePage() {
   const { locale } = useI18n();
-  const l = locale as "fr" | "en" | "ar";
+  const l = (locale === "tzm" ? "fr" : locale) as "fr" | "en" | "ar";
 
   return (
     <>
@@ -138,6 +138,7 @@ export default function EntreprisePage() {
     </>
   );
 }
+
 
 
 
