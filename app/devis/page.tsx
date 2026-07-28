@@ -29,7 +29,18 @@ const serviceTypes = [
   { id: "other", fr: "Autre", en: "Other", ar: "أخرى", tzm: "ⵡⴰⵅⴹⴰ" },
 ];
 
-const cities = ["Casablanca", "Rabat", "Marrakech", "Tanger", "Agadir", "Fès", "Meknès", "Oujda", "Tétouan", "Autre"];
+const cities = [
+  { fr: "Casablanca", tzm: "ⴰⵏⴼⴰ" },
+  { fr: "Rabat", tzm: "ⵕⵕⴱⴰⵟ" },
+  { fr: "Marrakech", tzm: "ⵎⵕⵕⴰⴽⵛ" },
+  { fr: "Tanger", tzm: "ⵟⴰⵏⵊⴰ" },
+  { fr: "Agadir", tzm: "ⴰⴳⴰⴷⵉⵔ" },
+  { fr: "Fès", tzm: "ⴼⴰⵙ" },
+  { fr: "Meknès", tzm: "ⵎⴽⵏⴰⵙ" },
+  { fr: "Oujda", tzm: "ⵡⵓⵊⴷⴰ" },
+  { fr: "Tétouan", tzm: "ⵜⵉⵟⵟⴰⵡⵉⵏ" },
+  { fr: "Autre", tzm: "ⵡⴰⵅⴹⴰ" },
+];
 
 const budgetRanges = [
   { id: "small", fr: "Moins de 100 000 MAD", en: "Under 100,000 MAD", ar: "أقل من 100,000 درهم", tzm: "ⴷⴷⴰⵡ 100 000 MAD" },
@@ -330,6 +341,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
