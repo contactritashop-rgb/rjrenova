@@ -1,3 +1,5 @@
+"use client";
+
 import { Header } from "@/components/layout/header";
 
 const SimpleFooter = () => (
@@ -53,6 +55,7 @@ export default function LegalPage() {
     </>
   );
 }
+
 
 
 
