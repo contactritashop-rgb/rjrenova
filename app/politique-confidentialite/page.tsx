@@ -1,14 +1,19 @@
+"use client";
+
 import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
+
+const SimpleFooter = () => (
+  <footer className="bg-dark text-white/50 py-8 text-center text-sm">© 2026 RJ RENOVA - Tous droits réservés.</footer>
+);
 
 const content = {
   fr: {
     title: "Politique de Confidentialité", update: "Dernière mise à jour : Juillet 2026",
-    s1t: "1. Collecte des données", s1b: "RJ RENOVA collecte les données personnelles que vous fournissez volontairement via nos formulaires : nom, email, téléphone, et informations projet.",
-    s2t: "2. Utilisation", s2b: "Vos données servent exclusivement à traiter vos demandes et établir des devis. Jamais vendues ni cédées.",
-    s3t: "3. Conservation", s3b: "Données conservées pendant la durée de la relation commerciale, maximum 5 ans après le dernier contact.",
-    s4t: "4. Vos droits", s4b: "Conformément à la loi 09-08, vous avez un droit d'accès, rectification et suppression. Contact : contact@rjrenova.ma",
-    s5t: "5. Cookies", s5b: "Notre site utilise des cookies techniques nécessaires. Aucun cookie publicitaire sans consentement.",
+    s1t: "1. Collecte", s1b: "RJ RENOVA collecte les données personnelles fournies volontairement via nos formulaires : nom, email, téléphone.",
+    s2t: "2. Utilisation", s2b: "Vos données servent exclusivement à traiter vos demandes. Jamais vendues ni cédées.",
+    s3t: "3. Conservation", s3b: "Données conservées pendant la relation commerciale, max 5 ans après dernier contact.",
+    s4t: "4. Vos droits", s4b: "Droit d'accès, rectification, suppression. Contact : contact@rjrenova.ma",
+    s5t: "5. Cookies", s5b: "Cookies techniques uniquement. Aucun cookie publicitaire sans consentement.",
   },
 };
 
@@ -28,7 +33,7 @@ export default function PrivacyPage() {
           <section className="mb-8"><h2 className="font-heading text-2xl font-bold text-dark dark:text-white mb-3">{t.s5t}</h2><p className="text-dark/70 dark:text-white/70 leading-relaxed">{t.s5b}</p></section>
         </div>
       </main>
-      <Footer />
+      <SimpleFooter />
     </>
   );
 }
