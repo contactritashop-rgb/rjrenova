@@ -47,7 +47,7 @@ export function ServicePageClient({ slug }: { slug: string }) {
           <div className="container-custom px-6 lg:px-12">
             <div className="max-w-4xl mx-auto">
               <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-lg text-dark/70 dark:text-white/70 leading-relaxed mb-16">
-                {service.description[loc]}
+                {tx(service.description)}
               </motion.p>
 
               <h2 className="font-heading text-3xl font-bold text-dark dark:text-white mb-10 text-center">Avantages</h2>
@@ -128,6 +128,7 @@ export function ServicePageClient({ slug }: { slug: string }) {
     </>
   );
 }
+
 
 
 
