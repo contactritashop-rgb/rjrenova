@@ -49,9 +49,10 @@ export default function LegalPage() {
           <section className="mb-8"><h2 className="font-heading text-2xl font-bold text-dark dark:text-white mb-3">{t.s4t}</h2><p className="text-dark/70 dark:text-white/70 leading-relaxed">{t.s4b}</p></section>
         </div>
       </main>
-      <Footer />
+      <SimpleFooter />
     </>
   );
 }
+
 
 
