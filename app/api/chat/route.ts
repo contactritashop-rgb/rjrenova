@@ -50,7 +50,7 @@ export async function POST(req: Request) {
 
   const result = streamText({
     model: openai("gpt-4.1-mini"),
-    messages: convertToModelMessages(messages),
+    messages: await convertToModelMessages(messages),
     system: SYSTEM_PROMPT,
     tools: {
       capture_contact: tool({
@@ -71,4 +71,5 @@ export async function POST(req: Request) {
 
   return result.toUIMessageStreamResponse();
 }
+
 
