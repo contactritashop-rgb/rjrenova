@@ -82,7 +82,7 @@ export default function EntreprisePage() {
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0"><v.icon size={24} className="text-primary" /></div>
                     <div>
                       <h3 className="font-heading font-bold text-dark dark:text-white mb-1">{t(v)}</h3>
-                      <p className="text-muted text-sm">{v[l + "Desc" as keyof typeof v] || v.frDesc}</p>
+                      <p className="text-muted text-sm">{l === "fr" ? v.frDesc : l === "en" ? v.enDesc : l === "ar" ? v.arDesc : v.tzmDesc}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -134,4 +134,5 @@ export default function EntreprisePage() {
     </>
   );
 }
+
 
