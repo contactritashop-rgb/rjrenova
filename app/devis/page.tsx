@@ -316,7 +316,7 @@ export default function QuotePage() {
                 ) : (
                   <Send size={20} />
                 )}
-                {sending ? (loc === "fr" ? "Envoi..." : loc === "en" ? "Sending..." : "جاري الإرسال...") : (loc === "fr" ? "Envoyer la demande" : loc === "en" ? "Send request" : "إرسال الطلب")}
+                {sending ? (loc === "fr" ? "Envoi..." : loc === "en" ? "Sending..." : loc === "ar" ? "جاري الإرسال..." : "ⴰⵣⵏ...") : (loc === "fr" ? "Envoyer la demande" : loc === "en" ? "Send request" : loc === "ar" ? "إرسال الطلب" : "ⴰⵣⵏ ⵜⵓⵜⵜⵔⴰ")}
               </button>
             )}
           </div>
@@ -330,6 +330,7 @@ export default function QuotePage() {
     </>
   );
 }
+
 
 
 
