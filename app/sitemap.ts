@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 import type { MetadataRoute } from "next";
 
 const BASE_URL = "https://rjrenova.codewords.run";
@@ -31,4 +33,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...servicePages,
   ];
 }
+
 
