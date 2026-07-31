@@ -22,8 +22,8 @@ export function Footer() {
       <div className="container-custom px-6 lg:px-12 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-1">
-            <a href="/" className="block mb-5">
-              <Logo variant="full" dark={true} className="h-16 w-auto" />
+            <a href="/" className="inline-block mb-5 bg-white/95 rounded-xl p-2 hover:bg-white transition-colors duration-200">
+              <Logo variant="full" className="h-14 w-auto" />
             </a>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               {t("footer.description")}
