@@ -48,12 +48,14 @@ export function Header() {
         }`}
       >
         <div className="container-custom px-6 lg:px-12 flex items-center justify-between">
-          <a href="/" className="flex items-center">
-            {/* Logo compact: adapts color based on scroll/dark mode */}
+          <a
+            href="/"
+            className="flex items-center bg-white/90 rounded-xl px-2.5 py-1.5 shadow-sm backdrop-blur-sm hover:bg-white transition-all duration-200"
+            aria-label="RJ RENOVA - Accueil"
+          >
             <Logo
               variant="compact"
-              dark={scrolled ? dark : true}
-              className="h-8 w-auto"
+              className="h-10 w-auto"
             />
           </a>
 
